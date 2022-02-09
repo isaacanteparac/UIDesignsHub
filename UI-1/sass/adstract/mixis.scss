@@ -1,0 +1,44 @@
+@mixin no_underline_copy {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@mixin rounded_border($width, $height, $radius) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}
+
+@mixin position_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin position_column {
+  display: flex;
+
+  flex-direction: column;
+}
+
+@mixin position_centerColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin position_left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+@mixin position_leftColumn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+}

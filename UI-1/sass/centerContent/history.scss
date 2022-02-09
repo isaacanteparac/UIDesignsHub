@@ -1,0 +1,29 @@
+.history{
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    height: 80px;
+}
+
+.contentHTitle{
+    color: black;
+    font-family: Segoe UI;
+    margin: 0;
+}
+
+.contentHistory{
+    background-color: blueviolet;
+    height: 60px;
+    width: 100%;
+
+    display: inline-block;
+}
+
+.contentUserH{
+    background-color: gray;
+    @include rounded_border(50px, 50px, map-get($radiusSize, _big));
+    margin: 0 4px;
+    position: relative;
+    top:5px;
+    @include position_center;
+}
