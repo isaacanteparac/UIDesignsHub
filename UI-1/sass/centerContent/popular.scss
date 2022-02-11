@@ -1,0 +1,149 @@
+div.popular {
+  background-color: red;
+  margin: auto;
+  margin-top: 10px;
+  @include rounded_border(100%, 350px, map-get($radiusSize, _medium));
+  @include position_center;
+}
+
+div.contentPopular {
+  background-color: blue;
+  @include rounded_border(50%, 325px, map-get($radiusSize, _medium));
+  margin: auto 5px;
+  @include position_leftColumn;
+  img.postImg {
+    @include rounded_border(100%, 325px, map-get($radiusSize, _medium));
+  }
+}
+
+div.title {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+div.infoUser {
+  margin: 0;
+  @include position_center;
+  overflow: hidden;
+  background-color: green;
+  margin: 3px auto;
+  padding: 0;
+  @include rounded_border(70%, 50px, map-get($radiusSize, _medium));
+  float: inline-start;
+  position: relative;
+  bottom: 50px;
+  div.photo {
+    @include rounded_border(40px, 40px, map-get($radiusSize, _small));
+    border: none;
+    img {
+      @include rounded_border(40px, 40px, map-get($radiusSize, _small));
+    }
+  }
+  label.fullName {
+    position: relative;
+    bottom: 10px;
+  }
+
+  label.userName {
+    position: relative;
+    top: 10px;
+    right: 70px;
+  }
+}
+
+div.post {
+  background-color: yellow;
+  position: relative;
+  bottom: 50px;
+}
+
+/*
+.userPost {
+  border-radius: map-get($radiusSize, _big);
+  background-color: transparent;
+  padding: 0;
+  margin: auto;
+  width: 50%;
+  height: 325px;
+  /*box-shadow: 5px 5px 5px $leftoverBoxDark; 
+}
+
+.information {
+  border-radius: map-get($radiusSize, _mega);
+  width: 80%;
+  height: 40px;
+  border: none;
+  backdrop-filter: 5px;
+  margin: auto;
+  //border: 2px solid $boderBlurBox;
+  float: left;
+  left: 20%;
+  position: relative;
+  bottom: 320px;
+  background-color: blue;
+  @include position_center;
+
+  .nameUser {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    position: relative;
+    left: 55px;
+    bottom: 57px;
+    color: white;
+  }
+
+  .usernamePost {
+    width: 250px;
+    position: relative;
+    left: 55px;
+    bottom: 78px;
+    color: wheat;
+  }
+
+  .photoUser {
+    @include rounded_border(40px, 40px, map-get($radiusSize, _big));
+    background-color: black;
+    @include position_centerColumn;
+    //@include notUnderline;
+    overflow: hidden;
+    position: relative;
+    top: 5px;
+    left: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.fileUser {
+  width: 100%;
+  height: 325px;
+  border-radius: map-get($radiusSize, _big);
+  @include position_center;
+  background: black;
+  border: 1px solid red;
+  overflow: hidden;
+}
+
+.contentImagen,
+.contentVideo {
+  width: 100%;
+  height: 325px;
+}
+
+.interactionPost {
+  @include position_center;
+  @include rounded_border(60%, 40px, map-get($radiusSize, _mega));
+  backdrop-filter: 5px;
+  background-color: red;
+  //border: 2px solid $boderBlurBox;
+  float: right;
+  //padding: 0 5px;
+  position: relative;
+  bottom: 105px;
+  right: 20%;
+}
+*/
