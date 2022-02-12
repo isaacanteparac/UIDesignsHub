@@ -1,36 +1,35 @@
 @import "../adstract/mixis.scss";
-div.contentCenter {
-  @include rounded_border(100%, auto, map-get($radiusSize, _medium));
-  margin: auto;
-  padding: 0;
+div.title {
   background-color: transparent;
-  overflow: hidden;
-  @include no_underline_copy;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
   position: relative;
-
-  .title {
-    background-color: transparent;
+  margin: 0 5px;
+ 
+  h3 {
+    color: map-get($fontColor, _black);
+    font-family: "Segoe UI";
     margin: 0;
     padding: 0;
-    width: 95%;
-    position: relative;
-    top: 10px;
-    left: 1%;
-    h4 {
-      color: map-get($fontColor, _black);
-      font-family: "Segoe UI";
-      margin: 0;
-      padding: 0;
-    }
   }
 }
 
-div.contentPopular {
+div._popularT{
+  position: relative;
+  bottom: 10px;
+}
+
+div.popular {
   background-color: transparent;
   @include rounded_border(100%, 450px, map-get($radiusSize, _medium));
+  margin: 0;
   display: flex;
   align-items: center;
   overflow-x: scroll;
+  position: relative;
+  bottom: 20px;
 }
 
 .userPost {

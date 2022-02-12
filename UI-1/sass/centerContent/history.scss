@@ -15,9 +15,12 @@
 .contentHistory {
   background-color: transparent;
   height: 65px;
+  margin: 0;
   display: flex;
   align-items: center;
   overflow-x: scroll;
+  position: relative;
+  bottom: 5px;
 }
 
 .photo {

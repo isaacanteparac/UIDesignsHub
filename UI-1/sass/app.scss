@@ -19,6 +19,16 @@ body {
   width: 50%;
   height: 100%;
   background-color: transparent;
+  div.contentCenter {
+    @include rounded_border(100%, auto, map-get($radiusSize, _medium));
+    margin: auto;
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    @include no_underline_copy;
+    position: relative;
+    padding-top:30px; 
+  }
 }
 
 .right {
