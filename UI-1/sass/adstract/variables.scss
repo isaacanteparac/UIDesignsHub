@@ -9,6 +9,7 @@ $fontSize: (
 $fontColor: (
   _mineShaft: #3a3a3a,
   _white: #fff,
+  _black: #000,
 );
 
 $fontWeight: (
@@ -37,14 +38,34 @@ $borderSize: (
 $borderColor: (
   _mineShaft: #252424,
   _white: #c6c3c3,
+  _blue: #0055ff,
 );
 
 //TITLE:COLORS
 $transparent: (
-  _black: rgba(37, 36, 36, 0.236),
+  _black: rgba(37, 36, 36, 0.354),
 );
 
 $color:(
   _gray:rgb(212, 207, 207),
-  _blue: rgb(0, 76, 255),
-)
+  _blue: #0055ff,
+  _black: #000,
+  _eilish:#0fee7e,
+);
+
+$shade:(
+  _gray: gray,
+);
+
+$gradientColor:(
+  _white:radial-gradient(
+    circle at 49.65% 49.65%,
+    #ffffff 0,
+    #ffffff 16.67%,
+    #fffffe 33.33%,
+    #f5efef 50%,
+    #d9dfdf 66.67%,
+    #c1d1cf 83.33%,
+    #adc5bf 100%
+  ),
+);

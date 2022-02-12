@@ -3,6 +3,7 @@
   margin-top: 10px;
   width: 100%;
   height: 80px;
+  @include no_underline_copy;
 }
 
 .contentHTitle {
@@ -30,6 +31,7 @@
   border: 2px solid #df1937;
   padding: 2px;
   img {
-    @include rounded_border (45px, 48px, 15px);
+    @include no_underline_copy;
+    @include rounded_border(45px, 48px, 15px);
   }
 }

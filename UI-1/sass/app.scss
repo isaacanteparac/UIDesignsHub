@@ -11,17 +11,21 @@ body {
   width: 25%;
   overflow-y: scroll;
   margin: 5px;
+  background-color: green;
 }
 
-.contentCenter {
+.center {
   width: 50%;
   height: 100%;
   background-color: transparent;
 }
 
 .contentRight {
-  @extend .contentLeft;
-  background-color: transparent;
+  height: 585px;
+  width: 25%;
+  overflow-y: scroll;
+  display: none;
+  background-color: blue;
 }
 ::-webkit-scrollbar {
   @include rounded_border(2px, 2px, 50px);
@@ -35,5 +39,5 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: map-get($radiusSize, small);
-  background-color: map-get($color, _gray);
+  background-color: map-get($color, _blue);
 }

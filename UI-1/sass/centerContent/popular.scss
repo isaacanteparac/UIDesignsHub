@@ -1,23 +1,24 @@
-div.popular{
+@import "../adstract/mixis.scss";
+div.contentCenter {
   @include rounded_border(100%, auto, map-get($radiusSize, _medium));
   margin: auto;
-  margin-top: 15px;
   padding: 0;
   background-color: transparent;
   overflow: hidden;
+  @include no_underline_copy;
+  position: relative;
 
-
-  .title{
+  .title {
     background-color: transparent;
     margin: 0;
     padding: 0;
     width: 95%;
     position: relative;
-    top:10px;
+    top: 10px;
     left: 1%;
-    h4{
-      color: black;
-      font-family: 'Segoe UI';
+    h4 {
+      color: map-get($fontColor, _black);
+      font-family: "Segoe UI";
       margin: 0;
       padding: 0;
     }
@@ -32,7 +33,6 @@ div.contentPopular {
   overflow-x: scroll;
 }
 
-
 .userPost {
   border-radius: map-get($radiusSize, _big);
   background-color: transparent;
@@ -40,7 +40,7 @@ div.contentPopular {
   margin: 0 5px;
   width: 47%;
   height: 400px;
-  box-shadow: 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px map-get($borderColor, _white);
 }
 
 .information {
@@ -48,57 +48,60 @@ div.contentPopular {
   width: 95%;
   height: 50px;
   border: none;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
   margin: auto;
   margin: 0;
   float: left;
-  left:3%;
+  left: 3%;
   position: relative;
-  bottom: 395px;
+  //bottom: 395px;
+  bottom: 60px;
   border: none;
   @include position_center;
-  border-radius: 1px solid map-get($transparent, _black);
+  background-color: map-get($transparent, _black);
 
   .nameUser {
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 250px;
     position: relative;
-    left:15px;
-    color: black;
+    left: 15px;
+    color: map-get($fontColor, _white);
     background-color: transparent;
     padding: 0;
     margin: 0;
     height: 20px;
-    bottom:10px;
+    bottom: 10px;
     @include position_leftColumn;
-    font-family: 'Segoe UI';
-    font-size: map-get($fontSize, _medium );;
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _medium);
   }
 
   .usernamePost {
-    width: 300px;
+    width: 250px;
     background-color: transparent;
     position: relative;
-    top:10px;
-    right:102px;
-    font-family: 'Segoe UI';
-    font-size: map-get($fontSize, _small );;
-    color: black;
+    top: 10px;
+    right: 85px;
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _small);
+    color: map-get($fontColor, _white);
   }
 
   .photoUser {
-    @include rounded_border(100px, 40px, map-get($radiusSize, _medium));
+    @include rounded_border(90px, 40px, map-get($radiusSize, _medium));
     background-color: transparent;
     @include position_centerColumn;
     overflow: hidden;
     position: relative;
     left: 10px;
-    border: 2px solid white;
+    border: 2px solid map-get($borderColor, _blue);
 
     img {
       width: 100%;
       height: 40px;
+      border-radius: map-get($radiusSize, _small);
+      @include no_underline_copy;
     }
   }
 }
@@ -108,17 +111,18 @@ div.contentPopular {
   height: 400px;
   border-radius: map-get($radiusSize, _big);
   @include position_center;
-  background: gray;
+  background-image: map-get($gradientColor, _white);
   overflow: hidden;
-
 }
 
 .contentImagen,
 .contentVideo {
   width: 100%;
-  height: 400px;
+  max-height: 400px;
+  @include no_underline_copy;
 }
 
+/*
 .description {
   @include position_center;
   @include rounded_border(90%, 90px, map-get($radiusSize, _small));
@@ -133,24 +137,33 @@ div.contentPopular {
     @include rounded_border(2px, 2px, 50px);
     background-color: transparent;
   }
-  
+
   ::-webkit-scrollbar-track {
     border-radius: map-get($radiusSize, small);
     background-color: transparent;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     border-radius: map-get($radiusSize, small);
     background-color: map-get($color, _blue);
   }
-  p{
+  p {
     margin: 0;
     padding: 0;
-    color: black;
+    color: map-get($fontColor, _black);
     @include rounded_border(100%, 90px, map-get($radiusSize, _small));
     overflow-y: scroll;
-    font-family: 'Segoe UI';
-    font-size: map-get($fontSize, _medium );
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _medium);
   }
+}
+*/
 
+div.topN {
+  @include rounded_border(80px, 35px, map-get($radiusSize, _small));
+  background-color: map-get($color, _eilish);
+  font-family: "Segoe UI";
+  font-weight: map-get($fontWeight, _small);
+  @include position_center;
+  margin-right: 5px;
 }

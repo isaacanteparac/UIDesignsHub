@@ -4,20 +4,25 @@ body {
   padding: 0;
   margin: 0; }
 
-.contentLeft, .contentRight {
+.contentLeft {
   background-color: transparent;
   height: 585px;
   width: 25%;
   overflow-y: scroll;
-  margin: 5px; }
+  margin: 5px;
+  background-color: green; }
 
-.contentCenter {
+.center {
   width: 50%;
   height: 100%;
   background-color: transparent; }
 
 .contentRight {
-  background-color: transparent; }
+  height: 585px;
+  width: 25%;
+  overflow-y: scroll;
+  display: none;
+  background-color: blue; }
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -29,13 +34,17 @@ body {
   background-color: transparent; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d4cfcf; }
+  background-color: #0055ff; }
 
 .history {
   margin: auto;
   margin-top: 10px;
   width: 100%;
-  height: 80px; }
+  height: 80px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
 
 .contentHTitle {
   color: black;
@@ -63,20 +72,28 @@ body {
   border: 2px solid #df1937;
   padding: 2px; }
   .photo img {
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     width: 45px;
     height: 48px;
     border-radius: 15px; }
 
-div.popular {
+div.contentCenter {
   width: 100%;
   height: auto;
   border-radius: 15px;
   margin: auto;
-  margin-top: 15px;
   padding: 0;
   background-color: transparent;
-  overflow: hidden; }
-  div.popular .title {
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  position: relative; }
+  div.contentCenter .title {
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -84,9 +101,9 @@ div.popular {
     position: relative;
     top: 10px;
     left: 1%; }
-    div.popular .title h4 {
-      color: black;
-      font-family: 'Segoe UI';
+    div.contentCenter .title h4 {
+      color: #000;
+      font-family: "Segoe UI";
       margin: 0;
       padding: 0; }
 
@@ -106,32 +123,32 @@ div.contentPopular {
   margin: 0 5px;
   width: 47%;
   height: 400px;
-  box-shadow: 5px 5px 5px gray; }
+  box-shadow: 5px 5px 5px #c6c3c3; }
 
 .information {
   border-radius: 15px;
   width: 95%;
   height: 50px;
   border: none;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
   margin: auto;
   margin: 0;
   float: left;
   left: 3%;
   position: relative;
-  bottom: 395px;
+  bottom: 60px;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1px solid rgba(37, 36, 36, 0.236); }
+  background-color: rgba(37, 36, 36, 0.354); }
   .information .nameUser {
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 250px;
     position: relative;
     left: 15px;
-    color: black;
+    color: #fff;
     background-color: transparent;
     padding: 0;
     margin: 0;
@@ -141,19 +158,19 @@ div.contentPopular {
     align-items: flex-start;
     justify-content: left;
     flex-direction: column;
-    font-family: 'Segoe UI';
+    font-family: "Segoe UI";
     font-size: 15px; }
   .information .usernamePost {
-    width: 300px;
+    width: 250px;
     background-color: transparent;
     position: relative;
     top: 10px;
-    right: 102px;
-    font-family: 'Segoe UI';
+    right: 85px;
+    font-family: "Segoe UI";
     font-size: 12px;
-    color: black; }
+    color: #fff; }
   .information .photoUser {
-    width: 100px;
+    width: 90px;
     height: 40px;
     border-radius: 15px;
     background-color: transparent;
@@ -164,10 +181,15 @@ div.contentPopular {
     overflow: hidden;
     position: relative;
     left: 10px;
-    border: 2px solid white; }
+    border: 2px solid #0055ff; }
     .information .photoUser img {
       width: 100%;
-      height: 40px; }
+      height: 40px;
+      border-radius: 10px;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none; }
 
 .fileUser {
   width: 100%;
@@ -176,43 +198,77 @@ div.contentPopular {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: gray;
+  background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
   overflow: hidden; }
 
 .contentImagen,
 .contentVideo {
   width: 100%;
-  height: 400px; }
+  max-height: 400px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
 
+/*
 .description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  height: 90px;
-  border-radius: 10px;
+  @include position_center;
+  @include rounded_border(90%, 90px, map-get($radiusSize, _small));
   backdrop-filter: blur(5px);
   float: right;
   position: relative;
   bottom: 145px;
   right: 5%;
-  padding: 0 1px; }
-  .description ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-    border-radius: 50px;
-    background-color: transparent; }
-  .description ::-webkit-scrollbar-track {
-    background-color: transparent; }
-  .description ::-webkit-scrollbar-thumb {
-    background-color: #004cff; }
-  .description p {
+  padding: 0 1px;
+
+  ::-webkit-scrollbar {
+    @include rounded_border(2px, 2px, 50px);
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: map-get($radiusSize, small);
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: map-get($radiusSize, small);
+    background-color: map-get($color, _blue);
+  }
+  p {
     margin: 0;
     padding: 0;
-    color: black;
-    width: 100%;
-    height: 90px;
-    border-radius: 10px;
+    color: map-get($fontColor, _black);
+    @include rounded_border(100%, 90px, map-get($radiusSize, _small));
     overflow-y: scroll;
-    font-family: 'Segoe UI';
-    font-size: 15px; }
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _medium);
+  }
+}
+*/
+div.topN {
+  width: 80px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #0fee7e;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px; }
+
+.listStreaming {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  margin: auto;
+  padding: 0;
+  background-color: transparent;
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  background-color: red; }

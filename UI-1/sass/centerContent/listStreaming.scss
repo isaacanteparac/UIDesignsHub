@@ -1,0 +1,10 @@
+.listStreaming{
+    @include rounded_border(100%, 500px, map-get($radiusSize, _medium));
+    margin: auto;
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    @include no_underline_copy;
+    position: relative;
+    background-color: red;
+}
