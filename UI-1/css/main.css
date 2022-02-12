@@ -2,15 +2,15 @@ body {
   display: flex;
   flex-flow: row nowrap;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 20px; }
 
 .left, .right {
   background-color: transparent;
   height: 585px;
   width: 25%;
   overflow-y: scroll;
-  margin: 5px;
-  background-color: green; }
+  margin: 5px; }
 
 .center {
   width: 50%;
@@ -30,9 +30,6 @@ body {
     -ms-user-select: none;
     position: relative;
     padding-top: 30px; }
-
-.right {
-  background-color: blue; }
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -267,7 +264,7 @@ div.topN {
 
 .listStreaming {
   width: 100%;
-  height: 500px;
+  height: 540px;
   border-radius: 15px;
   margin: auto;
   padding: 0;
@@ -278,4 +275,99 @@ div.topN {
   -webkit-user-select: none;
   -ms-user-select: none;
   position: relative;
-  background-color: red; }
+  flex-wrap: wrap;
+  display: inline-flex;
+  overflow-x: scroll; }
+
+div.stream {
+  background-color: transparent;
+  width: 45%;
+  height: 250px;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 3px; }
+  div.stream:hover {
+    box-shadow: 5px 5px 5px #c6c3c3;
+    border: 1px solid #c6c3c3; }
+  div.stream:active {
+    background-color: rgba(37, 36, 36, 0.354); }
+
+div.imagStream {
+  background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
+  margin: auto;
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden; }
+  div.imagStream img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    position: relative;
+    margin: auto;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; }
+
+div.informationStream {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column; }
+  div.informationStream .photo {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px; }
+    div.informationStream .photo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none; }
+  div.informationStream .descripUser {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    float: right;
+    position: relative;
+    bottom: 44px;
+    left: 50px;
+    font-family: 'Segoe UI';
+    font-size: 15px; }
+    div.informationStream .descripUser p {
+      margin: 0;
+      padding: 0;
+      height: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    div.informationStream .descripUser label {
+      font-weight: 700; }
+
+.tagStream {
+  position: relative;
+  bottom: 30px;
+  height: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left; }
+  .tagStream label {
+    background-color: rgba(37, 36, 36, 0.354);
+    text-align: center;
+    padding: 3px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    margin: 0 2px;
+    border-radius: 10px;
+    color: #000; }
+    .tagStream label:active {
+      background-color: transparent; }

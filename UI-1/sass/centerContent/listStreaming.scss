@@ -1,10 +1,106 @@
 .listStreaming{
-    @include rounded_border(100%, 500px, map-get($radiusSize, _medium));
+    @include rounded_border(100%, 540px, map-get($radiusSize, _medium));
     margin: auto;
     padding: 0;
     background-color: transparent;
     overflow: hidden;
     @include no_underline_copy;
     position: relative;
-    background-color: red;
+
+    flex-wrap: wrap;
+    display: inline-flex;
+    //background-color: red;
+    //overflow: hidden;
+    overflow-x: scroll;
+
+}
+
+
+div.stream{
+    background-color: transparent;
+    @include rounded_border(45%, 250px, map-get($radiusSize, _medium));
+    margin: 5px;
+    padding: 3px;
+    &:hover{
+        box-shadow: 5px 5px 5px map-get($borderColor, _white);
+        border: 1px solid map-get($borderColor, _white);
+    }
+
+    &:active{
+        background-color: map-get($transparent, _black );
+    }
+}
+
+div.imagStream{
+    background-image: map-get($gradientColor, _white );
+    margin: auto;
+    @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
+    @include position_center;
+    padding: 0;
+    overflow: hidden;
+
+    img{
+        @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
+        position: relative;
+        margin: auto;
+        @include no_underline_copy;
+    }
+}
+
+
+div.informationStream{
+    margin-top: 15px;
+    @include position_column;
+    .photo{
+        padding: 0;
+        margin: 0;
+        border: none;
+        @include rounded_border(45px, 45px, map-get($radiusSize, _small));
+        img{
+            @include rounded_border(45px, 45px, map-get($radiusSize, _small));
+            @include no_underline_copy;
+        }
+    }
+
+    .descripUser{
+        @include position_column;
+        width: 200px;
+        float: right;
+        position: relative;
+        bottom: 44px;
+        left: 50px;
+        font-family: 'Segoe UI';
+        font-size: map-get($fontSize, _medium );
+
+        p{
+            margin: 0;
+            padding: 0;
+            height: 20px;
+            @include threeDots;
+        }
+
+        label{
+            font-weight: map-get($fontWeight, _small);
+        }
+    }   
+}
+
+.tagStream{
+    position: relative;
+    bottom: 30px;
+    height: 25px;
+    @include position_left;
+    label{
+        background-color: map-get($transparent, _black );
+        text-align: center;
+        padding: 3px;
+        font-family: 'Segoe UI';
+        font-size: map-get($fontSize, _small );
+        margin: 0 2px;
+        border-radius: map-get($radiusSize, _small );
+        color: map-get($fontColor, _black );
+        &:active{
+            background-color: transparent;
+        }
+    }
 }

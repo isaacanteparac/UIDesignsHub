@@ -5,6 +5,12 @@
   -ms-user-select: none;
 }
 
+@mixin threeDots {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin rounded_border($width, $height, $radius) {
   width: $width;
   height: $height;
