@@ -5,13 +5,14 @@ body {
   margin: 0;
 }
 
-.contentLeft {
+.left {
   background-color: transparent;
   height: 585px;
   width: 25%;
   overflow-y: scroll;
   margin: 5px;
   background-color: green;
+  //position: fixed;
 }
 
 .center {
@@ -20,11 +21,8 @@ body {
   background-color: transparent;
 }
 
-.contentRight {
-  height: 585px;
-  width: 25%;
-  overflow-y: scroll;
-  display: none;
+.right {
+  @extend .left;
   background-color: blue;
 }
 ::-webkit-scrollbar {
