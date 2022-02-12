@@ -68,159 +68,127 @@ body {
     border-radius: 15px; }
 
 div.popular {
-  background-color: red;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 15px;
   width: 100%;
-  height: 350px;
+  height: 450px;
   border-radius: 15px;
+  display: flex;
+  align-items: center;
+  display: inline-flex; }
+
+.userPost {
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 0;
+  margin: 0 5px;
+  width: 50%;
+  height: 400px;
+  box-shadow: 5px 5px 5px gray; }
+
+.information {
+  border-radius: 15px;
+  width: 95%;
+  height: 50px;
+  border: none;
+  backdrop-filter: blur(5px);
+  margin: auto;
+  margin: 0;
+  float: left;
+  left: 3%;
+  position: relative;
+  bottom: 395px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center; }
-
-div.contentPopular {
-  background-color: blue;
-  width: 50%;
-  height: 325px;
-  border-radius: 15px;
-  margin: auto 5px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: left;
-  flex-direction: column; }
-  div.contentPopular img.postImg {
-    width: 100%;
-    height: 325px;
-    border-radius: 15px; }
-
-div.title {
-  margin: 0;
-  padding: 0;
-  background-color: gray; }
-
-div.infoUser {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: green;
-  margin: 3px auto;
-  padding: 0;
-  width: 70%;
-  height: 50px;
-  border-radius: 15px;
-  float: inline-start;
-  position: relative;
-  bottom: 50px; }
-  div.infoUser div.photo {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    border: none; }
-    div.infoUser div.photo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px; }
-  div.infoUser label.fullName {
-    position: relative;
-    bottom: 10px; }
-  div.infoUser label.userName {
-    position: relative;
-    top: 10px;
-    right: 70px; }
-
-div.post {
-  background-color: yellow;
-  position: relative;
-  bottom: 50px; }
-
-/*
-.userPost {
-  border-radius: map-get($radiusSize, _big);
-  background-color: transparent;
-  padding: 0;
-  margin: auto;
-  width: 50%;
-  height: 325px;
-  /*box-shadow: 5px 5px 5px $leftoverBoxDark; 
-}
-
-.information {
-  border-radius: map-get($radiusSize, _mega);
-  width: 80%;
-  height: 40px;
-  border: none;
-  backdrop-filter: 5px;
-  margin: auto;
-  //border: 2px solid $boderBlurBox;
-  float: left;
-  left: 20%;
-  position: relative;
-  bottom: 320px;
-  background-color: blue;
-  @include position_center;
-
-  .nameUser {
+  .information .nameUser {
     margin: 0;
     padding: 0;
-    width: 250px;
+    width: 350px;
     position: relative;
-    left: 55px;
-    bottom: 57px;
-    color: white;
-  }
-
-  .usernamePost {
-    width: 250px;
+    left: 5%;
+    color: black;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    font-family: 'Segoe UI';
+    font-size: 15px; }
+  .information .usernamePost {
+    width: 350px;
+    background-color: transparent;
     position: relative;
-    left: 55px;
-    bottom: 78px;
-    color: wheat;
-  }
-
-  .photoUser {
-    @include rounded_border(40px, 40px, map-get($radiusSize, _big));
-    background-color: black;
-    @include position_centerColumn;
-    //@include notUnderline;
+    top: 10px;
+    right: 38%;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color: black; }
+  .information .photoUser {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     overflow: hidden;
     position: relative;
-    top: 5px;
     left: 10px;
-
-    img {
+    border: 2px solid white; }
+    .information .photoUser img {
       width: 100%;
-    }
-  }
-}
+      height: 40px; }
 
 .fileUser {
   width: 100%;
-  height: 325px;
-  border-radius: map-get($radiusSize, _big);
-  @include position_center;
-  background: black;
-  border: 1px solid red;
-  overflow: hidden;
-}
+  height: 400px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: gray;
+  overflow: hidden; }
 
 .contentImagen,
 .contentVideo {
   width: 100%;
-  height: 325px;
-}
+  height: 400px; }
 
-.interactionPost {
-  @include position_center;
-  @include rounded_border(60%, 40px, map-get($radiusSize, _mega));
-  backdrop-filter: 5px;
-  background-color: red;
-  //border: 2px solid $boderBlurBox;
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 90px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
   float: right;
-  //padding: 0 5px;
   position: relative;
-  bottom: 105px;
-  right: 20%;
-}
-*/
+  bottom: 155px;
+  right: 1%;
+  padding: 0 1px; }
+  .description ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: transparent; }
+  .description ::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .description ::-webkit-scrollbar-thumb {
+    background-color: #004cff; }
+  .description p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    width: 100%;
+    height: 90px;
+    overflow-y: scroll;
+    font-family: 'Segoe UI';
+    font-size: 15px; }

@@ -1,149 +1,132 @@
 div.popular {
-  background-color: red;
+  //background-color: red;
   margin: auto;
-  margin-top: 10px;
-  @include rounded_border(100%, 350px, map-get($radiusSize, _medium));
-  @include position_center;
+  margin-top: 15px;
+  @include rounded_border(100%, 450px, map-get($radiusSize, _medium));
+  display: flex;
+  align-items: center;
+  display: inline-flex;
 }
 
-div.contentPopular {
-  background-color: blue;
-  @include rounded_border(50%, 325px, map-get($radiusSize, _medium));
-  margin: auto 5px;
-  @include position_leftColumn;
-  img.postImg {
-    @include rounded_border(100%, 325px, map-get($radiusSize, _medium));
-  }
-}
 
-div.title {
-  margin: 0;
-  padding: 0;
-  background-color: gray;
-}
-
-div.infoUser {
-  margin: 0;
-  @include position_center;
-  overflow: hidden;
-  background-color: green;
-  margin: 3px auto;
-  padding: 0;
-  @include rounded_border(70%, 50px, map-get($radiusSize, _medium));
-  float: inline-start;
-  position: relative;
-  bottom: 50px;
-  div.photo {
-    @include rounded_border(40px, 40px, map-get($radiusSize, _small));
-    border: none;
-    img {
-      @include rounded_border(40px, 40px, map-get($radiusSize, _small));
-    }
-  }
-  label.fullName {
-    position: relative;
-    bottom: 10px;
-  }
-
-  label.userName {
-    position: relative;
-    top: 10px;
-    right: 70px;
-  }
-}
-
-div.post {
-  background-color: yellow;
-  position: relative;
-  bottom: 50px;
-}
-
-/*
 .userPost {
   border-radius: map-get($radiusSize, _big);
   background-color: transparent;
   padding: 0;
-  margin: auto;
+  margin: 0 5px;
   width: 50%;
-  height: 325px;
-  /*box-shadow: 5px 5px 5px $leftoverBoxDark; 
+  height: 400px;
+  box-shadow: 5px 5px 5px gray;
 }
 
 .information {
-  border-radius: map-get($radiusSize, _mega);
-  width: 80%;
-  height: 40px;
+  border-radius: map-get($radiusSize, _medium);
+  width: 95%;
+  height: 50px;
   border: none;
-  backdrop-filter: 5px;
+  backdrop-filter: blur(5px);
   margin: auto;
-  //border: 2px solid $boderBlurBox;
+  margin: 0;
   float: left;
-  left: 20%;
+  left:3%;
   position: relative;
-  bottom: 320px;
-  background-color: blue;
+  bottom: 395px;
+  border: none;
   @include position_center;
 
   .nameUser {
     margin: 0;
     padding: 0;
-    width: 250px;
+    width: 350px;
     position: relative;
-    left: 55px;
-    bottom: 57px;
-    color: white;
+    left:5%;
+    color: black;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    bottom:10px;
+    @include position_leftColumn;
+    font-family: 'Segoe UI';
+    font-size: map-get($fontSize, _medium );;
   }
 
   .usernamePost {
-    width: 250px;
+    width: 350px;
+    background-color: transparent;
     position: relative;
-    left: 55px;
-    bottom: 78px;
-    color: wheat;
+    top:10px;
+    right: 38%;
+    font-family: 'Segoe UI';
+    font-size: map-get($fontSize, _small );;
+    color: black;
   }
 
   .photoUser {
-    @include rounded_border(40px, 40px, map-get($radiusSize, _big));
-    background-color: black;
+    @include rounded_border(100px, 40px, map-get($radiusSize, _medium));
+    background-color: transparent;
     @include position_centerColumn;
-    //@include notUnderline;
     overflow: hidden;
     position: relative;
-    top: 5px;
     left: 10px;
+    border: 2px solid white;
 
     img {
       width: 100%;
+      height: 40px;
     }
   }
 }
 
 .fileUser {
   width: 100%;
-  height: 325px;
+  height: 400px;
   border-radius: map-get($radiusSize, _big);
   @include position_center;
-  background: black;
-  border: 1px solid red;
+  background: gray;
   overflow: hidden;
+
 }
 
 .contentImagen,
 .contentVideo {
   width: 100%;
-  height: 325px;
+  height: 400px;
 }
 
-.interactionPost {
+.description {
   @include position_center;
-  @include rounded_border(60%, 40px, map-get($radiusSize, _mega));
-  backdrop-filter: 5px;
-  background-color: red;
-  //border: 2px solid $boderBlurBox;
+  @include rounded_border(95%, 90px, map-get($radiusSize, _small));
+  backdrop-filter: blur(5px);
   float: right;
-  //padding: 0 5px;
   position: relative;
-  bottom: 105px;
-  right: 20%;
+  bottom: 155px;
+  right: 1%;
+  padding: 0 1px;
+
+  ::-webkit-scrollbar {
+    @include rounded_border(2px, 2px, 50px);
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: map-get($radiusSize, small);
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: map-get($radiusSize, small);
+    background-color: map-get($color, _blue);
+  }
+  p{
+    margin: 0;
+    padding: 0;
+    color: black;
+    width: 100%;
+    height: 90px;
+    overflow-y: scroll;
+    font-family: 'Segoe UI';
+    font-size: map-get($fontSize, _medium );
+  }
+
 }
-*/
