@@ -1,34 +1,35 @@
 .listStreaming{
-    @include rounded_border(100%, 540px, map-get($radiusSize, _medium));
+    @include rounded_border(100%, 550px, map-get($radiusSize, _medium));
     margin: auto;
     padding: 0;
     background-color: transparent;
     overflow: hidden;
     @include no_underline_copy;
     position: relative;
-
-    flex-wrap: wrap;
-    display: inline-flex;
-    //background-color: red;
-    //overflow: hidden;
+    bottom: 5px;
     overflow-x: scroll;
-
+    display: grid;
+    grid-template-columns: repeat(10, 45%);
+    //grid-template-rows: 210px;
+    grid-gap: 10px;
 }
 
+div._listStreamT{
+    margin-top: 5px;
+    bottom: 15px;
+}
 
 div.stream{
     background-color: transparent;
-    @include rounded_border(45%, 250px, map-get($radiusSize, _medium));
-    margin: 5px;
+    //@include rounded_border(45%, 250px, map-get($radiusSize, _medium));
+    height: 250px;
+    border-radius: map-get($radiusSize, _medium);
     padding: 3px;
     &:hover{
         box-shadow: 5px 5px 5px map-get($borderColor, _white);
         border: 1px solid map-get($borderColor, _white);
     }
 
-    &:active{
-        background-color: map-get($transparent, _black );
-    }
 }
 
 div.imagStream{
@@ -51,6 +52,7 @@ div.imagStream{
 div.informationStream{
     margin-top: 15px;
     @include position_column;
+    overflow: hidden;
     .photo{
         padding: 0;
         margin: 0;
@@ -64,22 +66,27 @@ div.informationStream{
 
     .descripUser{
         @include position_column;
-        width: 200px;
+        width: 300px;
         float: right;
         position: relative;
         bottom: 44px;
         left: 50px;
         font-family: 'Segoe UI';
         font-size: map-get($fontSize, _medium );
-
         p{
             margin: 0;
             padding: 0;
             height: 20px;
             @include threeDots;
+            width: 70%;
+            &::first-letter{
+                text-transform: capitalize;
+            }
+            
         }
 
         label{
+            width: 70%;
             font-weight: map-get($fontWeight, _small);
         }
     }   
@@ -101,6 +108,9 @@ div.informationStream{
         color: map-get($fontColor, _black );
         &:active{
             background-color: transparent;
+        }
+        &::first-letter{
+            text-transform: capitalize;
         }
     }
 }

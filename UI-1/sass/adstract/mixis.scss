@@ -11,6 +11,11 @@
   text-overflow: ellipsis;
 }
 
+@mixin warpF {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 @mixin rounded_border($width, $height, $radius) {
   width: $width;
   height: $height;
