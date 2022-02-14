@@ -25,7 +25,7 @@
 
 .photo {
   background-color: transparent;
-  @include rounded_border(80px, 50px, map-get($radiusSize, _big));
+  @include rounded_border(40px, 40px, map-get($radiusSize, _medium));
   margin: 0 4px;
   position: relative;
   @include position_center;
@@ -35,16 +35,6 @@
   padding: 2px;
   img {
     @include no_underline_copy;
-    @include rounded_border(45px, 48px, 15px);
+    @include rounded_border(40px, 40px, map-get($radiusSize, _small));
   }
 }
-/*
-button.btnScroll{
-  float: left;
-  position: static;
-}
-
-button.scrollDiv{
-  float: left;
-  position: static;
-}*/

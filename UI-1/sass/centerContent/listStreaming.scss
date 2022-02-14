@@ -1,116 +1,116 @@
-.listStreaming{
-    @include rounded_border(100%, 550px, map-get($radiusSize, _medium));
-    margin: auto;
-    padding: 0;
-    background-color: transparent;
-    overflow: hidden;
-    @include no_underline_copy;
-    position: relative;
-    bottom: 5px;
-    overflow-x: scroll;
-    display: grid;
-    grid-template-columns: repeat(10, 45%);
-    //grid-template-rows: 210px;
-    grid-gap: 10px;
+.listStreaming {
+  width: 100%;
+  max-height: 550px;
+  min-height: 300px;
+  border-radius: map-get($radiusSize, _medium);
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 0;
+  background-color: transparent;
+  overflow: hidden;
+  @include no_underline_copy;
+  position: relative;
+  left: 50%;
+  bottom: 5px;
+  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: repeat(10, 45%);
+  //grid-template-rows: 210px;
+  grid-gap: 10px;
 }
 
-div._listStreamT{
-    margin-top: 5px;
-    bottom: 15px;
+div._listStreamT {
+  margin-top: 5px;
+  bottom: 15px;
+  left: 50%;
 }
 
-div.stream{
-    background-color: transparent;
-    //@include rounded_border(45%, 250px, map-get($radiusSize, _medium));
-    height: 250px;
-    border-radius: map-get($radiusSize, _medium);
-    padding: 3px;
-    &:hover{
-        box-shadow: 5px 5px 5px map-get($borderColor, _white);
-        border: 1px solid map-get($borderColor, _white);
-    }
-
+div.stream {
+  background-color: transparent;
+  //@include rounded_border(45%, 250px, map-get($radiusSize, _medium));
+  height: 250px;
+  border-radius: map-get($radiusSize, _medium);
+  padding: 3px;
+  //@include shadowBelow(map-get($shade, _grayL ));
+  //box-shadow: 5px 5px 5px map-get($shade, _gray);
+  &:hover {
+    box-shadow: 5px 5px 5px map-get($shade, _gray);
+    border: 1px solid map-get($shade, _gray);
+  }
 }
 
-div.imagStream{
-    background-image: map-get($gradientColor, _white );
-    margin: auto;
+div.imagStream {
+  background-image: map-get($gradientColor, _white);
+  margin: auto;
+  @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
+  @include position_center;
+  padding: 0;
+  overflow: hidden;
+
+  img {
     @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
-    @include position_center;
-    padding: 0;
-    overflow: hidden;
-
-    img{
-        @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
-        position: relative;
-        margin: auto;
-        @include no_underline_copy;
-    }
-}
-
-
-div.informationStream{
-    margin-top: 15px;
-    @include position_column;
-    overflow: hidden;
-    .photo{
-        padding: 0;
-        margin: 0;
-        border: none;
-        @include rounded_border(45px, 45px, map-get($radiusSize, _small));
-        img{
-            @include rounded_border(45px, 45px, map-get($radiusSize, _small));
-            @include no_underline_copy;
-        }
-    }
-
-    .descripUser{
-        @include position_column;
-        width: 300px;
-        float: right;
-        position: relative;
-        bottom: 44px;
-        left: 50px;
-        font-family: 'Segoe UI';
-        font-size: map-get($fontSize, _medium );
-        p{
-            margin: 0;
-            padding: 0;
-            height: 20px;
-            @include threeDots;
-            width: 70%;
-            &::first-letter{
-                text-transform: capitalize;
-            }
-            
-        }
-
-        label{
-            width: 70%;
-            font-weight: map-get($fontWeight, _small);
-        }
-    }   
-}
-
-.tagStream{
     position: relative;
-    bottom: 30px;
-    height: 25px;
-    @include position_left;
-    label{
-        background-color: map-get($transparent, _black );
-        text-align: center;
-        padding: 3px;
-        font-family: 'Segoe UI';
-        font-size: map-get($fontSize, _small );
-        margin: 0 2px;
-        border-radius: map-get($radiusSize, _small );
-        color: map-get($fontColor, _black );
-        &:active{
-            background-color: transparent;
-        }
-        &::first-letter{
-            text-transform: capitalize;
-        }
+    margin: auto;
+    @include no_underline_copy;
+  }
+}
+
+div.informationStream {
+  margin-top: 15px;
+  @include position_column;
+  overflow: hidden;
+  .photo {
+    padding: 0;
+    margin: 0;
+    border: none;
+    @include rounded_border(40px, 40px, map-get($radiusSize, _small));
+    img {
+      @include rounded_border(40px, 40px, map-get($radiusSize, _small));
+      @include no_underline_copy;
     }
+  }
+}
+div.descripUser {
+  @include position_column;
+  width: 300px;
+  float: right;
+  position: relative;
+  bottom: 40px;
+  left: 50px;
+  font-family: "Segoe UI";
+  font-size: map-get($fontSize, _medium);
+}
+
+p.description {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  @include threeDots;
+  width: 70%;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+.tagStream {
+  position: relative;
+  bottom: 30px;
+  height: 25px;
+  @include position_left;
+  label {
+    background-color: map-get($btnColor, _grayL);
+    text-align: center;
+    padding: 3px;
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _small);
+    margin: 0 2px;
+    border-radius: map-get($radiusSize, _small);
+    color: map-get($fontColor, _black);
+    &:active {
+      color: map-get($fontColor, _white);
+      background-color: map-get($btnColor, _grayD);
+    }
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
 }

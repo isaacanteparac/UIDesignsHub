@@ -11,6 +11,13 @@
   text-overflow: ellipsis;
 }
 
+@mixin shadowBelow($colorShade) {
+  -moz-box-shadow: 0 3px 5px $colorShade;
+  -webkit-box-shadow: 0 3px 5px $colorShade;
+  -o-box-shadow: 0 3px 5px $colorShade;
+  box-shadow: 0 3px 5px $colorShade;
+}
+
 @mixin warpF {
   flex-wrap: wrap;
   display: flex;

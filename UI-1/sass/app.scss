@@ -11,9 +11,9 @@ body {
   height: 585px;
   width: 25%;
   overflow-y: scroll;
-  margin: 5px;
+  margin-right:2px;
   //background-color: green;
-  //position: fixed;
+  position: fixed;
 }
 
 .center {
@@ -23,18 +23,38 @@ body {
   div.contentCenter {
     @include rounded_border(100%, auto, map-get($radiusSize, _medium));
     margin: auto;
+    left: 50%; 
     padding: 0;
     background-color: transparent;
     overflow: hidden;
     @include no_underline_copy;
     position: relative;
-    padding-top:30px; 
+    padding-top:30px;  
   }
 }
 
 .right {
   @extend .left;
-  //background-color: blue;
+  left: 75%;
+  margin-left:2px;
+
+  div.contentRigth{
+    @include rounded_border(100%, auto, map-get($radiusSize, _medium));
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    @include no_underline_copy;
+    position: relative;
+    padding-top:30px;
+    @include position_column; 
+    //background-color: gray;
+
+    div.title{
+      margin: 0;
+      width: 100%;
+    }
+  }
 }
 ::-webkit-scrollbar {
   @include rounded_border(2px, 2px, 50px);

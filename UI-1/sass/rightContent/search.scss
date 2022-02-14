@@ -1,0 +1,44 @@
+div.search {
+  @include position_center;
+}
+
+input.inputSearch {
+  @include rounded_border(70%, 30px, map-get($radiusSize, _small));
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  font-family: "Segoe UI";
+  font-size: map-get($fontSize, _medium);
+  color: map-get($fontColor, _black);
+  border: 1px solid map-get($borderColor, _white);
+  &::first-letter {
+    text-transform: capitalize;
+  }
+  &::placeholder {
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _medium);
+    font-weight: map-get($fontWeight, _nano);
+  }
+}
+
+button.btnSearch {
+  @include rounded_border(20%, 30px, map-get($radiusSize, _small));
+  margin: 0;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-weight: map-get($fontWeight, _nano);
+  font-family: "Segoe UI";
+  font-size: map-get($fontSize, _medium);
+  background-color: map-get($btnColor, _blueL);
+  color: map-get($fontColor, _white);
+  @include position_center;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  &:active {
+    background-color: map-get($btnColor, _blueD);
+  }
+}

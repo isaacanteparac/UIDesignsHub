@@ -10,6 +10,7 @@ $fontColor: (
   _mineShaft: #3a3a3a,
   _white: #fff,
   _black: #000,
+  _blue: #0055ff,
 );
 
 $fontWeight: (
@@ -17,6 +18,7 @@ $fontWeight: (
   _big: 800,
   _medium: 750,
   _small: 700,
+  _nano: 600,
 );
 
 //TITLE:BORDER
@@ -43,29 +45,39 @@ $borderColor: (
 
 //TITLE:COLORS
 $transparent: (
-  _black: rgba(37, 36, 36, 0.354),
+  _black: rgba(0, 0, 0, 0.444),
+  
 );
 
-$color:(
-  _gray:rgb(212, 207, 207),
+$color: (
+  _gray: rgb(212, 207, 207),
   _blue: #0055ff,
   _black: #000,
-  _eilish:#0fee7e,
+  _eilish: #0fee7e,
 );
 
-$shade:(
-  _gray: gray,
+$btnColor: (
+  _blueL: #0055ff,
+  _blueD: #0338a1,
+  _grayD: #999,
+  _grayL: #ccc,
 );
 
-$gradientColor:(
-  _white:radial-gradient(
-    circle at 49.65% 49.65%,
-    #ffffff 0,
-    #ffffff 16.67%,
-    #fffffe 33.33%,
-    #f5efef 50%,
-    #d9dfdf 66.67%,
-    #c1d1cf 83.33%,
-    #adc5bf 100%
-  ),
+$shade: (
+  _gray: #999,
+  _grayL: #ccc,
+);
+
+$gradientColor: (
+  _white:
+    radial-gradient(
+      circle at 49.65% 49.65%,
+      #ffffff 0,
+      #ffffff 16.67%,
+      #fffffe 33.33%,
+      #f5efef 50%,
+      #d9dfdf 66.67%,
+      #c1d1cf 83.33%,
+      #adc5bf 100%
+    ),
 );

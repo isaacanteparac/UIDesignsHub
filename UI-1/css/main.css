@@ -9,7 +9,8 @@ body {
   height: 585px;
   width: 25%;
   overflow-y: scroll;
-  margin: 5px; }
+  margin-right: 2px;
+  position: fixed; }
 
 .center {
   width: 50%;
@@ -20,6 +21,7 @@ body {
     height: auto;
     border-radius: 15px;
     margin: auto;
+    left: 50%;
     padding: 0;
     background-color: transparent;
     overflow: hidden;
@@ -29,6 +31,29 @@ body {
     -ms-user-select: none;
     position: relative;
     padding-top: 30px; }
+
+.right {
+  left: 75%;
+  margin-left: 2px; }
+  .right div.contentRigth {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    position: relative;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column; }
+    .right div.contentRigth div.title {
+      margin: 0;
+      width: 100%; }
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -69,9 +94,9 @@ body {
 
 .photo {
   background-color: transparent;
-  width: 80px;
-  height: 50px;
-  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
   margin: 0 4px;
   position: relative;
   display: flex;
@@ -85,20 +110,10 @@ body {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    width: 45px;
-    height: 48px;
-    border-radius: 15px; }
+    width: 40px;
+    height: 40px;
+    border-radius: 10px; }
 
-/*
-button.btnScroll{
-  float: left;
-  position: static;
-}
-
-button.scrollDiv{
-  float: left;
-  position: static;
-}*/
 div.title {
   background-color: transparent;
   margin: 0;
@@ -112,7 +127,7 @@ div.title {
   -webkit-user-select: none;
   -ms-user-select: none; }
   div.title h3 {
-    color: #000;
+    color: #0055ff;
     font-family: "Segoe UI";
     margin: 0;
     padding: 0; }
@@ -134,79 +149,44 @@ div.popular {
   bottom: 20px; }
 
 .userPost {
-  border-radius: 20px;
   background-color: transparent;
   padding: 0;
   margin: 0 5px;
-  width: 47%;
+  width: 45%;
   height: 400px;
-  box-shadow: 5px 5px 5px #c6c3c3; }
-
-.information {
-  border-radius: 15px;
-  width: 95%;
-  height: 50px;
-  border: none;
-  backdrop-filter: blur(1px);
-  margin: auto;
-  margin: 0;
-  float: left;
-  left: 3%;
-  position: relative;
-  bottom: 60px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(37, 36, 36, 0.354); }
-  .information .nameUser {
-    margin: 0;
-    padding: 0;
-    width: 250px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #999; }
+  .userPost .informationStream {
     position: relative;
-    left: 15px;
-    color: #fff;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    height: 20px;
-    bottom: 10px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    flex-direction: column;
-    font-family: "Segoe UI";
-    font-size: 15px; }
-  .information .usernamePost {
-    width: 250px;
-    background-color: transparent;
-    position: relative;
-    top: 10px;
-    right: 85px;
-    font-family: "Segoe UI";
-    font-size: 12px;
-    color: #fff; }
-  .information .photoUser {
-    width: 90px;
-    height: 40px;
+    bottom: 60px;
+    margin: auto;
+    width: 95%;
+    left: 0;
+    height: 55px;
     border-radius: 15px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    left: 10px;
-    border: 2px solid #0055ff; }
-    .information .photoUser img {
-      width: 100%;
-      height: 40px;
-      border-radius: 10px;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-      -webkit-user-select: none;
-      -ms-user-select: none; }
+    background-color: rgba(0, 0, 0, 0.444);
+    backdrop-filter: blur(1px); }
+    .userPost .informationStream div.photo {
+      margin-left: 6px;
+      margin-top: 3px;
+      border: 1px solid #0055ff; }
+    .userPost .informationStream div.descripUser {
+      width: 55%;
+      position: relative;
+      left: 55px; }
+      .userPost .informationStream div.descripUser label.fullname {
+        color: #fff; }
+      .userPost .informationStream div.descripUser label.username {
+        color: #fff; }
+
+label.fullname {
+  font-family: "Segoe UI";
+  font-size: 15px; }
+
+label.username {
+  font-weight: 600;
+  font-family: "Segoe UI";
+  font-size: 12px; }
 
 .fileUser {
   width: 100%;
@@ -221,7 +201,7 @@ div.popular {
 .contentImagen,
 .contentVideo {
   width: 100%;
-  max-height: 400px;
+  height: 100%;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
@@ -264,22 +244,33 @@ div.popular {
 }
 */
 div.topN {
-  width: 80px;
-  height: 35px;
+  width: 35px;
+  height: 30px;
   border-radius: 10px;
   background-color: #0fee7e;
-  font-family: "Segoe UI";
-  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 5px; }
+  position: relative;
+  left: 80%;
+  bottom: 75px; }
+  div.topN label {
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI";
+    font-weight: 700; }
 
 .listStreaming {
   width: 100%;
-  height: 550px;
+  max-height: 550px;
+  min-height: 300px;
   border-radius: 15px;
   margin: auto;
+  margin-bottom: 15px;
   padding: 0;
   background-color: transparent;
   overflow: hidden;
@@ -288,6 +279,7 @@ div.topN {
   -webkit-user-select: none;
   -ms-user-select: none;
   position: relative;
+  left: 50%;
   bottom: 5px;
   overflow-x: scroll;
   display: grid;
@@ -296,7 +288,8 @@ div.topN {
 
 div._listStreamT {
   margin-top: 5px;
-  bottom: 15px; }
+  bottom: 15px;
+  left: 50%; }
 
 div.stream {
   background-color: transparent;
@@ -304,8 +297,8 @@ div.stream {
   border-radius: 15px;
   padding: 3px; }
   div.stream:hover {
-    box-shadow: 5px 5px 5px #c6c3c3;
-    border: 1px solid #c6c3c3; }
+    box-shadow: 5px 5px 5px #999;
+    border: 1px solid #999; }
 
 div.imagStream {
   background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
@@ -338,40 +331,39 @@ div.informationStream {
     padding: 0;
     margin: 0;
     border: none;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px; }
     div.informationStream .photo img {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       -moz-user-select: none;
       -webkit-user-drag: none;
       -webkit-user-select: none;
       -ms-user-select: none; }
-  div.informationStream .descripUser {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    float: right;
-    position: relative;
-    bottom: 44px;
-    left: 50px;
-    font-family: 'Segoe UI';
-    font-size: 15px; }
-    div.informationStream .descripUser p {
-      margin: 0;
-      padding: 0;
-      height: 20px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 70%; }
-      div.informationStream .descripUser p::first-letter {
-        text-transform: capitalize; }
-    div.informationStream .descripUser label {
-      width: 70%;
-      font-weight: 700; }
+
+div.descripUser {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  float: right;
+  position: relative;
+  bottom: 40px;
+  left: 50px;
+  font-family: "Segoe UI";
+  font-size: 15px; }
+
+p.description {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%; }
+  p.description::first-letter {
+    text-transform: capitalize; }
 
 .tagStream {
   position: relative;
@@ -381,15 +373,88 @@ div.informationStream {
   align-items: flex-start;
   justify-content: left; }
   .tagStream label {
-    background-color: rgba(37, 36, 36, 0.354);
+    background-color: #ccc;
     text-align: center;
     padding: 3px;
-    font-family: 'Segoe UI';
+    font-family: "Segoe UI";
     font-size: 12px;
     margin: 0 2px;
     border-radius: 10px;
     color: #000; }
     .tagStream label:active {
-      background-color: transparent; }
+      color: #fff;
+      background-color: #999; }
     .tagStream label::first-letter {
       text-transform: capitalize; }
+
+div.search {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+input.inputSearch {
+  width: 70%;
+  height: 30px;
+  border-radius: 10px;
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #c6c3c3; }
+  input.inputSearch::first-letter {
+    text-transform: capitalize; }
+  input.inputSearch::placeholder {
+    font-family: "Segoe UI";
+    font-size: 15px;
+    font-weight: 600; }
+
+button.btnSearch {
+  width: 20%;
+  height: 30px;
+  border-radius: 10px;
+  margin: 0;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  background-color: #0055ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  button.btnSearch::first-letter {
+    text-transform: capitalize; }
+  button.btnSearch:active {
+    background-color: #0338a1; }
+
+div.suggestions {
+  height: auto;
+  width: 100%;
+  min-height: 70px; }
+
+div.cardUser {
+  width: 95%;
+  height: 60px;
+  margin: 5px auto;
+  width: 95%;
+  height: 60px;
+  border-radius: 15px;
+  -moz-box-shadow: 0 3px 5px #999;
+  -webkit-box-shadow: 0 3px 5px #999;
+  -o-box-shadow: 0 3px 5px #999;
+  box-shadow: 0 3px 5px #999;
+  border: 0.5px solid #999; }
+  div.cardUser div.informationStream {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    left: 0;
+    margin: auto; }
+    div.cardUser div.informationStream div.photo {
+      margin-left: 6px;
+      margin-top: 6px; }
