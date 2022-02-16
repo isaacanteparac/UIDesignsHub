@@ -42,6 +42,7 @@ body {
     @include rounded_border(100%, auto, map-get($radiusSize, _medium));
     margin: 0;
     padding: 0;
+    padding-bottom: 10px;
     background-color: transparent;
     overflow: hidden;
     @include no_underline_copy;

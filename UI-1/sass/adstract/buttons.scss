@@ -1,0 +1,86 @@
+div.topN {
+  @include rounded_border(35px, 30px, map-get($radiusSize, _small));
+  background-color: map-get($color, _eilish);
+  @include position_center;
+  position: relative;
+  left: 80%;
+  bottom: 70px;
+
+  label {
+    @include rounded_border(35px, 30px, map-get($radiusSize, _small));
+    @include position_center;
+    font-family: "Segoe UI";
+    font-weight: map-get($fontWeight, _small);
+  }
+}
+
+div.tagStream {
+  position: relative;
+  bottom: 30px;
+  height: 25px;
+  @include position_left;
+  label {
+    background-color: map-get($btnColor, _grayL);
+    text-align: center;
+    padding: 3px;
+    font-family: "Segoe UI";
+    font-size: map-get($fontSize, _small);
+    margin: 0 2px;
+    border-radius: map-get($radiusSize, _small);
+    color: map-get($fontColor, _black);
+    &:active {
+      color: map-get($fontColor, _white);
+      background-color: map-get($btnColor, _grayD);
+    }
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
+
+button.btnSearch {
+  @include rounded_border(20%, 30px, map-get($radiusSize, _small));
+  margin: 0;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-weight: map-get($fontWeight, _nano);
+  font-family: "Segoe UI";
+  font-size: map-get($fontSize, _medium);
+  background-color: map-get($btnColor, _blueL);
+  color: map-get($fontColor, _white);
+  @include position_center;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  &:active {
+    background-color: map-get($btnColor, _blueD);
+  }
+}
+
+div.d_btnadd{
+  background-color:transparent;
+  position: relative;
+  left: 80%;
+  bottom: 90px;
+  @include rounded_border(45px, 30px, map-get($radiusSize, _small));
+  @include position_center;
+
+}
+
+button.btnAdd{
+  background-color: map-get($btnColor, _blueL);
+  @include rounded_border(45px, 30px, map-get($radiusSize, _small));
+  color: map-get($fontColor, _white);
+  @include position_center;
+  outline: none;
+  border: none;
+  margin: 0;
+  font-weight: map-get($fontWeight, _nano);
+  font-family: "Segoe UI";
+  &:active {
+    background-color: map-get($btnColor, _blueD);
+  }
+}

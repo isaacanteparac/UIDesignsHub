@@ -138,18 +138,7 @@ label.username {
 }
 */
 
-div.topN {
-  @include rounded_border(35px, 30px, map-get($radiusSize, _small));
-  background-color: map-get($color, _eilish);
-  @include position_center;
-  position: relative;
-  left: 80%;
-  bottom: 75px;
 
-  label{
-    @include rounded_border(35px, 30px, map-get($radiusSize, _small));
-    @include position_center;
-    font-family: "Segoe UI";
-    font-weight: map-get($fontWeight, _small);
-  }
-}
+
+
+

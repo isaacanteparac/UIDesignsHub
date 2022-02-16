@@ -6,7 +6,7 @@ div.suggestions {
 
 div.cardUser {
   width: 95%;
-  height: 60px;
+  height: 65px;
   margin: 5px auto;
   @include rounded_border(95%, 60px, map-get($radiusSize, _medium));
   @include shadowBelow(map-get($shade, _gray));
@@ -15,14 +15,26 @@ div.cardUser {
 
   div.informationStream{
     bottom: 0;
-    @include rounded_border(100%, 60px, map-get($radiusSize, _medium));
+    @include rounded_border(100%, 65px, map-get($radiusSize, _medium));
     left: 0;
     margin: auto;
-
-
     div.photo{
         margin-left: 6px;
-        margin-top: 6px;
+        margin-top: 3px;
     }
   }
 }
+
+
+div.followSuscr{
+  width: 90%;
+  height: 20px;
+  position: relative;
+  bottom: 3px;
+  right: 5px;
+  background-color: transparent;
+  @include position_left;
+  overflow: hidden;
+}
+
+

@@ -1,0 +1,24 @@
+svg.icon {
+  width: 15px;
+  @include position_center;
+  margin: 0;
+  padding: 0;
+}
+
+label.iconLabel {
+  @include position_center;
+  padding: 0;
+  margin: 0;
+  margin: 0 3px;
+  color: map-get($fontColor, _osloGray);
+  font-weight: map-get($fontWeight, _nano );
+}
+
+svg.follow {
+  width: 20px;
+  color: map-get($iconColor, _purpleHeart )!important;
+}
+
+svg.subscriber{
+    color: map-get($iconColor, _keyLimePie )!important;
+}
