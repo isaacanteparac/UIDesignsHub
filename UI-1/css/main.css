@@ -1,6 +1,6 @@
 div.topN {
-  width: 35px;
-  height: 30px;
+  width: 40px;
+  height: 35px;
   border-radius: 10px;
   background-color: #0fee7e;
   display: flex;
@@ -250,7 +250,8 @@ div.title {
     color: #0055ff;
     font-family: "Segoe UI";
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    text-transform: capitalize; }
 
 div._popularT {
   position: relative;
@@ -318,8 +319,7 @@ label.username {
   background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
   overflow: hidden; }
 
-.contentImagen,
-.contentVideo {
+.contentImagen {
   width: 100%;
   height: 100%;
   -moz-user-select: none;
@@ -327,42 +327,6 @@ label.username {
   -webkit-user-select: none;
   -ms-user-select: none; }
 
-/*
-.description {
-  @include position_center;
-  @include rounded_border(90%, 90px, map-get($radiusSize, _small));
-  backdrop-filter: blur(5px);
-  float: right;
-  position: relative;
-  bottom: 145px;
-  right: 5%;
-  padding: 0 1px;
-
-  ::-webkit-scrollbar {
-    @include rounded_border(2px, 2px, 50px);
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-track {
-    border-radius: map-get($radiusSize, small);
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: map-get($radiusSize, small);
-    background-color: map-get($color, _blue);
-  }
-  p {
-    margin: 0;
-    padding: 0;
-    color: map-get($fontColor, _black);
-    @include rounded_border(100%, 90px, map-get($radiusSize, _small));
-    overflow-y: scroll;
-    font-family: "Segoe UI";
-    font-size: map-get($fontSize, _medium);
-  }
-}
-*/
 .listStreaming {
   width: 100%;
   max-height: 550px;
@@ -467,7 +431,8 @@ p.description {
 div.search {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 10px; }
 
 input.inputSearch {
   width: 70%;
@@ -508,7 +473,7 @@ button.btnSearch {
   button.btnSearch:active {
     background-color: #0338a1; }
 
-div.suggestions {
+div.suggestionsFollow {
   height: auto;
   width: 100%;
   min-height: 70px; }
@@ -516,15 +481,16 @@ div.suggestions {
 div.cardUser {
   width: 95%;
   height: 65px;
-  margin: 5px auto;
+  margin: 10px auto;
   width: 95%;
   height: 60px;
-  border-radius: 15px;
-  -moz-box-shadow: 0 3px 5px #999;
-  -webkit-box-shadow: 0 3px 5px #999;
-  -o-box-shadow: 0 3px 5px #999;
-  box-shadow: 0 3px 5px #999;
-  border: 0.5px solid #999; }
+  border-radius: 15px; }
+  div.cardUser:hover {
+    -moz-box-shadow: 0 3px 5px #999;
+    -webkit-box-shadow: 0 3px 5px #999;
+    -o-box-shadow: 0 3px 5px #999;
+    box-shadow: 0 3px 5px #999;
+    border: 0.1px solid #999; }
   div.cardUser div.informationStream {
     bottom: 0;
     width: 100%;
@@ -547,3 +513,47 @@ div.followSuscr {
   align-items: flex-start;
   justify-content: left;
   overflow: hidden; }
+
+div.suggestionsGames {
+  height: auto;
+  width: 100%;
+  min-height: 70px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-gap: 20px; }
+
+div.cardGame {
+  height: 150px;
+  border-radius: 10px;
+  background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #999;
+  box-shadow: 5px 5px 5px #999;
+  display: flex;
+  flex-direction: column; }
+  div.cardGame div.topN {
+    left: 67%;
+    bottom: 150px;
+    background-color: rgba(0, 0, 0, 0.444);
+    border-radius: 0;
+    border-bottom-left-radius: 10px; }
+    div.cardGame div.topN label {
+      color: #fff;
+      font-weight: 600; }
+
+div.previewImgGame, img.imgGame {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0;
+  margin: 0; }

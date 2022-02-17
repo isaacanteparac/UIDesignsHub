@@ -1,5 +1,5 @@
 div.topN {
-  @include rounded_border(35px, 30px, map-get($radiusSize, _small));
+  @include rounded_border(40px, 35px, map-get($radiusSize, _small));
   background-color: map-get($color, _eilish);
   @include position_center;
   position: relative;

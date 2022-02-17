@@ -1,16 +1,21 @@
-div.suggestions {
+div.suggestionsFollow {
   height: auto;
   width: 100%;
   min-height: 70px;
+
 }
 
 div.cardUser {
   width: 95%;
   height: 65px;
-  margin: 5px auto;
+  margin: 10px auto;
   @include rounded_border(95%, 60px, map-get($radiusSize, _medium));
-  @include shadowBelow(map-get($shade, _gray));
-  border: 0.5px solid map-get($shade, _gray);
+
+
+  &:hover{
+    @include shadowBelow(map-get($shade, _gray));
+    border: 0.1px solid map-get($shade, _gray);
+  }
 
 
   div.informationStream{

@@ -1,0 +1,47 @@
+div.suggestionsGames {
+  height: auto;
+  width: 100%;
+  min-height: 70px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-gap: 20px;
+}
+
+div.cardGame {
+  height: 150px;
+  border-radius: map-get($radiusSize, _small);
+  background-image: map-get($gradientColor, _white);
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid map-get($shade, _gray);
+  box-shadow: 5px 5px 5px map-get($shade, _gray);
+  @include position_column;
+
+
+  div.topN {
+    left: 67%;
+    bottom: 150px;
+    background-color: map-get($transparent, _black);
+    border-radius: 0;
+    border-bottom-left-radius: map-get($radiusSize, _small);
+    label {
+      color: map-get($fontColor, _white);
+      font-weight: map-get($fontWeight, _nano);
+    }
+  }
+}
+
+div.previewImgGame {
+  @include rounded_border(100%, 150px, map-get($radiusSize, _small));
+  @include no_underline_copy;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+img.imgGame {
+  @extend div.previewImgGame;
+}
