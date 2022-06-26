@@ -125,7 +125,7 @@ body {
 
 .left, .right {
   background-color: transparent;
-  height: 585px;
+  height: 100%;
   width: 25%;
   overflow-y: scroll;
   margin-right: 2px;
@@ -176,8 +176,8 @@ body {
       width: 100%; }
 
 ::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
+  width: 5px;
+  height: 5px;
   border-radius: 50px;
   background-color: transparent; }
 
@@ -185,7 +185,7 @@ body {
   background-color: transparent; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: transparent; }
+  background-color: #999; }
 
 .history {
   margin: auto;
