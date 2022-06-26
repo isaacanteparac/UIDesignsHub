@@ -12,10 +12,7 @@ div.cardUser {
   @include rounded_border(95%, 60px, map-get($radiusSize, _medium));
 
 
-  &:hover{
-    @include shadowBelow(map-get($shade, _gray));
-    border: 0.1px solid map-get($shade, _gray);
-  }
+ 
 
 
   div.informationStream{

@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  .left {
+    background-color: transparent;
+    height: 585px;
+    width: 25%;
+    overflow-y: scroll;
+    margin-right:2px;
+    //background-color: green;
+    position: fixed;
+  }
+  
+  .center {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    div.contentCenter {
+      @include rounded_border(100%, auto, map-get($radiusSize, _medium));
+      margin: auto;
+      left: 50%; 
+      padding: 0;
+      background-color: transparent;
+      overflow: hidden;
+      @include no_underline_copy;
+      position: relative;
+      padding-top:30px;  
+    }
+  }
+  
+  .right {
+    @extend .left;
+    left: 75%;
+    margin-left:2px;
+  
+  
+    div.contentRigth{
+      @include rounded_border(100%, auto, map-get($radiusSize, _medium));
+      margin: 0;
+      padding: 0;
+      padding-bottom: 10px;
+      background-color: transparent;
+      overflow: hidden;
+      @include no_underline_copy;
+      position: relative;
+      padding-top:30px;
+      @include position_column; 
+      div.title{
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    @include rounded_border(2px, 2px, 50px);
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: map-get($radiusSize, small);
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: map-get($radiusSize, small);
+    background-color: transparent;
+  }
+  

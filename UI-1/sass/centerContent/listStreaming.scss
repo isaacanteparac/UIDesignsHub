@@ -33,22 +33,19 @@ div.stream {
   padding: 3px;
   //@include shadowBelow(map-get($shade, _grayL ));
   //box-shadow: 5px 5px 5px map-get($shade, _gray);
-  &:hover {
-    box-shadow: 5px 5px 5px map-get($shade, _gray);
-    border: 1px solid map-get($shade, _gray);
-  }
+
 }
 
 div.imagStream {
   background-image: map-get($gradientColor, _white);
   margin: auto;
-  @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
+  @include rounded_border(100%, 200px, map-get($radiusSize, _medium));
   @include position_center;
   padding: 0;
   overflow: hidden;
 
   img {
-    @include rounded_border(100%, 150px, map-get($radiusSize, _medium));
+    @include rounded_border(100%, 200px, map-get($radiusSize, _medium));
     position: relative;
     margin: auto;
     @include no_underline_copy;

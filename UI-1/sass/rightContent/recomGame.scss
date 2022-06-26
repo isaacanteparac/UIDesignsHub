@@ -27,6 +27,7 @@ div.cardGame {
     background-color: map-get($transparent, _black);
     border-radius: 0;
     border-bottom-left-radius: map-get($radiusSize, _small);
+    border-bottom-right-radius:  map-get($radiusSize, _small);
     label {
       color: map-get($fontColor, _white);
       font-weight: map-get($fontWeight, _nano);
