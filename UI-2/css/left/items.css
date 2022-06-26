@@ -1,0 +1,9 @@
+.contentLeft {
+  margin-top: 15px;
+  padding: 0 10px; }
+
+.contentLogo .icon {
+  float: left; }
+
+.contentLogo .logoText {
+  font-family: 'Segoe UI'; }

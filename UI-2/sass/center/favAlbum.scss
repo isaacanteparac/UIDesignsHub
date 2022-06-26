@@ -1,6 +1,6 @@
 .favAlbum {
   margin: auto;
-  margin-top: 15px;
+  margin-top: 25px;
   width: 100%;
   display: inline-flex;
 }
@@ -15,14 +15,14 @@
 }
 
 .contentImgAlbum {
-  @include rounded_border(250px, 250px, 20px);
+  @include rounded_border(250px, 300px, 20px);
   margin: 5px auto;
   position: relative;
   overflow: hidden;
 }
 
 .imgAlbum {
-  @include rounded_border(250px, 250px, 20px);
+  @include rounded_border(250px, 300px, 20px);
 }
 
 .chipAlbum {
@@ -39,5 +39,68 @@
 
 .music {
   width: 70%;
-  background-color: blue;
+  background-color: transparent;
+}
+
+.cardMusic{
+    background-color: #fff;
+    @include rounded_border(96%, 55px, 15px);
+    margin: 15px auto;
+    margin-top: 5px;
+    padding: 5px;
+    display: inline-flex;
+    .contentImgProfile{
+        height: 50px;
+        background-color: transparent;
+        width: 60%;
+        @include position_left;
+        background-color: transparent;
+
+    }
+    .imgProfile{
+        @include rounded_border(50px, 50px, 25px);
+    }
+    -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+}
+
+.infoMusic{
+    @include position_leftColumn;
+    margin-left: 3px;
+}
+
+.nameMusic{
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    font-size: 20px;
+}
+
+.breedingLine{
+    background-color: transparent;
+    position: relative;
+    width: 20%;
+    height: 50px;
+    @include position_center;
+    margin-right: 50px;
+}
+
+.timeMusic{
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+}
+
+.btnPlay{
+    @include position_center;
+    @include rounded_border(40px, 40px, 20px);
+    float: left;
+    background-color: transparent;
+    position: relative;
+    top: 6px;
+    border: 1px solid #ccc;
+
+    .icon{
+        color:#2a70eb;
+    }
 }

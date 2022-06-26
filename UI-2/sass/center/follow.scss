@@ -1,5 +1,5 @@
 .follow {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .titleSection{
@@ -24,12 +24,13 @@
     .imgProfile {
       @include rounded_border(50px, 50px, 25px);
     }
-    label {
-      text-transform: capitalize;
-      color: map-get($fontColor, _osloGray);
-      font-size: 14px;
-      font-family: "Segoe UI";
-      font-weight: 600;
-    }
   }
+}
+
+.nameArtist{
+  color: map-get($fontColor, _osloGray);
+  font-size: 14px;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  text-transform: capitalize;
 }

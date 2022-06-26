@@ -154,7 +154,7 @@ body {
   margin-left: 30px; }
 
 .follow {
-  margin-top: 10px; }
+  margin-top: 20px; }
 
 .titleSection {
   margin-bottom: 15px; }
@@ -178,16 +178,17 @@ body {
       width: 50px;
       height: 50px;
       border-radius: 25px; }
-    .artistFollow .contentImgProfile label {
-      text-transform: capitalize;
-      color: #949797;
-      font-size: 14px;
-      font-family: "Segoe UI";
-      font-weight: 600; }
+
+.nameArtist {
+  color: #949797;
+  font-size: 14px;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  text-transform: capitalize; }
 
 .favAlbum {
   margin: auto;
-  margin-top: 15px;
+  margin-top: 25px;
   width: 100%;
   display: inline-flex; }
 
@@ -203,7 +204,7 @@ body {
 
 .contentImgAlbum {
   width: 250px;
-  height: 250px;
+  height: 300px;
   border-radius: 20px;
   margin: 5px auto;
   position: relative;
@@ -211,7 +212,7 @@ body {
 
 .imgAlbum {
   width: 250px;
-  height: 250px;
+  height: 300px;
   border-radius: 20px; }
 
 .chipAlbum {
@@ -227,4 +228,124 @@ body {
 
 .music {
   width: 70%;
-  background-color: blue; }
+  background-color: transparent; }
+
+.cardMusic {
+  background-color: #fff;
+  width: 96%;
+  height: 55px;
+  border-radius: 15px;
+  margin: 15px auto;
+  margin-top: 5px;
+  padding: 5px;
+  display: inline-flex;
+  -webkit-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  -moz-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  box-shadow: 1px 0px 5px 3px #e4e5f1; }
+  .cardMusic .contentImgProfile {
+    height: 50px;
+    background-color: transparent;
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: transparent; }
+  .cardMusic .imgProfile {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px; }
+
+.infoMusic {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  margin-left: 3px; }
+
+.nameMusic {
+  font-weight: bold;
+  font-family: 'Segoe UI';
+  font-size: 20px; }
+
+.breedingLine {
+  background-color: transparent;
+  position: relative;
+  width: 20%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px; }
+
+.timeMusic {
+  font-size: 18px;
+  font-family: 'Segoe UI';
+  font-weight: 500; }
+
+.btnPlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  float: left;
+  background-color: transparent;
+  position: relative;
+  top: 6px;
+  border: 1px solid #ccc; }
+  .btnPlay .icon {
+    color: #2a70eb; }
+
+.contentLeft {
+  margin-top: 15px;
+  padding: 0 10px; }
+
+.contentLogo {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .contentLogo .icon {
+    float: left; }
+  .contentLogo .logoText {
+    font-family: 'Secular One', sans-serif; }
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15px; }
+
+.items {
+  background-color: transparent;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  margin: 10px auto; }
+  .items .icon {
+    float: left;
+    color: #999;
+    position: relative;
+    left: 20px;
+    top: 5px; }
+  .items .textItem {
+    font-family: "Segoe UI";
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+    position: relative;
+    left: 25px;
+    top: 5px; }
+  .items:active {
+    -webkit-box-shadow: 1px 0px 5px 3px #e4e5f1;
+    -moz-box-shadow: 1px 0px 5px 3px #e4e5f1;
+    box-shadow: 1px 0px 5px 3px #e4e5f1; }
+    .items:active .icon {
+      color: #000; }
+    .items:active .textItem {
+      color: #000; }

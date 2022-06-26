@@ -1,0 +1,56 @@
+.contentLeft {
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.contentLogo {
+  background-color: transparent;
+  @include position_center;
+  .icon {
+    float: left;
+  }
+  .logoText {
+    font-family: 'Secular One', sans-serif;
+  }
+}
+
+.navigation {
+  @include position_centerColumn;
+  padding-top: 15px;
+}
+
+.items {
+  background-color: transparent;
+  @include rounded_border(200px, 40px, 20px);
+  @include position_left;
+  margin: 10px auto;
+  .icon {
+    float: left;
+    color: #999;
+    position: relative;
+    left:20px;
+    top: 5px;
+  }
+  .textItem {
+    font-family: "Segoe UI";
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+    position: relative;
+    left: 25px;
+    top: 5px;
+  }
+
+  &:active {
+    -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    .icon {
+      color: #000;
+    }
+    .textItem {
+      color: #000;
+    }
+  }
+}
+
