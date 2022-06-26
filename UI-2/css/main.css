@@ -6,7 +6,7 @@ body {
   background-color: #fbfbfb; }
 
 .left, .right {
-  background-color: blue;
+  background-color: transparent;
   height: 100%;
   width: 20%;
   overflow-y: scroll;
@@ -184,3 +184,47 @@ body {
       font-size: 14px;
       font-family: "Segoe UI";
       font-weight: 600; }
+
+.favAlbum {
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+  display: inline-flex; }
+
+.album {
+  width: 30%;
+  background-color: transparent; }
+
+.contentAlbum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.contentImgAlbum {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  margin: 5px auto;
+  position: relative;
+  overflow: hidden; }
+
+.imgAlbum {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px; }
+
+.chipAlbum {
+  float: left;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Segoe UI';
+  position: relative;
+  bottom: 40px;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 3px 5px; }
+
+.music {
+  width: 70%;
+  background-color: blue; }

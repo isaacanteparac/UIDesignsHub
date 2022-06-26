@@ -1,0 +1,43 @@
+.favAlbum {
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+  display: inline-flex;
+}
+
+.album {
+  width: 30%;
+  background-color: transparent;
+}
+
+.contentAlbum{
+   @include position_centerColumn;
+}
+
+.contentImgAlbum {
+  @include rounded_border(250px, 250px, 20px);
+  margin: 5px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgAlbum {
+  @include rounded_border(250px, 250px, 20px);
+}
+
+.chipAlbum {
+  float: left;
+  background-color: #fff;
+  color: map-get($fontColor, _black);
+  font-family: 'Segoe UI';
+  position: relative;
+  bottom: 40px;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 3px 5px;
+}
+
+.music {
+  width: 70%;
+  background-color: blue;
+}
