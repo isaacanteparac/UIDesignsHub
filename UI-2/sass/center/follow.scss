@@ -1,0 +1,35 @@
+.follow {
+  margin-top: 10px;
+}
+
+.titleSection{
+    margin-bottom: 15px;
+
+    .word{
+        font-size: 20px;
+    }
+    .wordEmphasis{
+        font-size: 25px;
+    }
+}
+
+.artistFollow {
+  display: inline-flex;
+  .contentImgProfile {
+    margin: 0 1px;
+    width: 80px;
+    height: auto;
+    @include position_centerColumn;
+    text-align: center;
+    .imgProfile {
+      @include rounded_border(50px, 50px, 25px);
+    }
+    label {
+      text-transform: capitalize;
+      color: map-get($fontColor, _osloGray);
+      font-size: 14px;
+      font-family: "Segoe UI";
+      font-weight: 600;
+    }
+  }
+}

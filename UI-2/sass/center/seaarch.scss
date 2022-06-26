@@ -1,0 +1,80 @@
+.search {
+  width: 100%;
+  margin: auto;
+  background-color: transparent;
+  padding: 5px;
+  margin-top: 15px;
+  display: inline-flex;
+}
+
+.DivGreeting {
+  background-color: transparent;
+  height: 35px;
+  display: block;
+  margin-right: 5px;
+  width: 40%;
+}
+
+.contentImgProfile {
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  @include position_center;
+}
+
+.imgProfile {
+  @include rounded_border(40px, 40px, 20px);
+}
+
+.contentGreeting {
+  position: relative;
+  bottom: 35px;
+  left: 45px;
+  width: 100%;
+}
+
+.word{
+  font-family: "Segoe UI";
+  font-weight: 500;
+  font-size: 18px;
+  color: map-get($fontColor, _black);
+}
+
+.wordEmphasis {
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-size: 20px;
+  color: map-get($fontColor, _black);
+
+}
+
+.contentSearch {
+  background-color: #fff;
+  @include rounded_border(40%, 40px, 10px);
+  border-radius: 10px;
+  @include position_center;
+  input {
+    border: none;
+    background-color: transparent;
+    color: map-get($fontColor, _black);
+    @include rounded_border(100%, 40px, 10px);
+    outline: none;
+  }
+ /* -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+  -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+  box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);*/
+}
+
+.btnFilter{
+    @include rounded_border(40px, 40px, 10px);
+    @include position_center;
+    background-color: #fff;
+    /*-webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);*/
+    border: none;
+    overflow: hidden;
+    margin: 0 5px;
+    margin-left: 30px;
+}
