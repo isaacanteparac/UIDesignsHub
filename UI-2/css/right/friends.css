@@ -1,0 +1,8 @@
+.friendsAll {
+  background-color: blue; }
+
+.cardFriend {
+  background-color: red;
+  display: inline-flex; }
+  .cardFriend .nameMusic {
+    font-size: 15px; }

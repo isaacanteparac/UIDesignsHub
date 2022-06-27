@@ -15,14 +15,14 @@
 }
 
 .contentImgAlbum {
-  @include rounded_border(250px, 300px, 20px);
+  @include rounded_border(250px, 250px, 20px);
   margin: 5px auto;
   position: relative;
   overflow: hidden;
 }
 
 .imgAlbum {
-  @include rounded_border(250px, 300px, 20px);
+  @include rounded_border(250px, 250px, 20px);
 }
 
 .chipAlbum {
