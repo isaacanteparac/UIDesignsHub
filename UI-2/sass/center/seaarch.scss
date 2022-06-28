@@ -54,6 +54,7 @@
   @include rounded_border(40%, 40px, 10px);
   border-radius: 10px;
   @include position_center;
+  padding: 0 5px;
   input {
     border: none;
     background-color: transparent;
@@ -61,18 +62,18 @@
     @include rounded_border(100%, 40px, 10px);
     outline: none;
   }
- /* -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+ -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
   -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
-  box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);*/
+  box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
 }
 
 .btnFilter{
     @include rounded_border(40px, 40px, 10px);
     @include position_center;
     background-color: #fff;
-    /*-webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
+    -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
     -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
-    box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);*/
+    box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
     border: none;
     overflow: hidden;
     margin: 0 5px;

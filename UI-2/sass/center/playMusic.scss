@@ -1,0 +1,60 @@
+.playMusic{
+    background-color: rgba(255, 255, 255, 0.703);
+    @include rounded_border(100%, 70px, 10px);
+    margin: auto;
+    position:fixed;
+    top: 91%;
+    backdrop-filter: blur(2px);
+}
+
+.contentPlayMusic{
+    background-color: transparent;
+    width: 90%;
+    margin: auto 5%;
+    height: 100%;
+    display: inline-block;
+    .contentImgProfile{
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        width: 30%;
+        float: left;
+        @include position_left;
+        height: 100%;
+
+        .imgProfile{
+            margin-top: 5px;
+            @include rounded_border(60px, 60px, 30px);
+        }
+        .infoMusic{
+            margin-top: 5px;
+            .nameMusic{
+                font-size: 25px;
+            }
+        }
+    }
+    .breedingLine{
+
+        background-color: transparent;
+        height: 100%;
+        width: 35%;
+    }
+}
+
+.btnMusic{
+    display: inline-flex;
+    float: left;
+    background-color: transparent;
+    height: 100%;
+    margin: 0 5px;
+    .btnPlay{
+        margin: 0 5px;
+        margin-top: 10px;
+        &:active{
+            background-color: #ccc;
+        }
+    }
+    .icon{
+        border: none;
+    }
+}

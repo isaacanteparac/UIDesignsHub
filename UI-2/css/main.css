@@ -125,9 +125,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* -webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
-  -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
-  box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);*/ }
+  padding: 0 5px;
+  -webkit-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  -moz-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  box-shadow: 1px 0px 5px 3px #e4e5f1; }
   .contentSearch input {
     border: none;
     background-color: transparent;
@@ -145,9 +146,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  /*-webkit-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
-    -moz-box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);
-    box-shadow: 1px 0px 5px 3px map-get($borderColor, shadow_);*/
+  -webkit-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  -moz-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  box-shadow: 1px 0px 5px 3px #e4e5f1;
   border: none;
   overflow: hidden;
   margin: 0 5px;
@@ -393,22 +394,22 @@ body {
     border-radius: 10px; }
 
 .sectionPremium {
-  background-image: radial-gradient(circle at 50% -20.71%, #ffcc00 0, #fad400 6.25%, #e6db00 12.5%, #d0e100 18.75%, #b8e71c 25%, #9feb34 31.25%, #81f04a 37.5%, #5cf35f 43.75%, #0df675 50%, #00f88b 56.25%, #00faa2 62.5%, #00fcba 68.75%, #00fdd1 75%, #00fde9 81.25%, #00fdff 87.5%, #00fdff 93.75%, #00fcff 100%);
+  background-image: radial-gradient(circle at 87.5% 12.5%, #ff77c1 0, #fa6ec7 12.5%, #ea65cd 25%, #d65cd3 37.5%, #be55d8 50%, #a150dd 62.5%, #7d4fe3 75%, #4950e8 87.5%, #0052ec 100%);
   margin: auto;
-  width: 245px;
-  height: 245px;
+  margin-top: 15px;
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
   padding: 5px;
   display: flex;
   flex-direction: column; }
   .sectionPremium label {
-    font-family: 'Segoe UI';
-    color: #FFF;
+    font-family: "Segoe UI";
+    color: #fff;
     font-weight: bold;
-    font-size: 45px; }
+    font-size: 35px; }
   .sectionPremium button {
     position: relative;
-    left: 50px;
     background-color: #fff;
     font-weight: bold;
     border: none;
@@ -417,4 +418,58 @@ body {
     height: 30px;
     border-radius: 20px;
     margin: auto;
-    font-family: 'Segoe UI'; }
+    font-family: "Segoe UI"; }
+
+.playMusic {
+  background-color: rgba(255, 255, 255, 0.703);
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  margin: auto;
+  position: fixed;
+  top: 91%;
+  backdrop-filter: blur(2px); }
+
+.contentPlayMusic {
+  background-color: transparent;
+  width: 90%;
+  margin: auto 5%;
+  height: 100%;
+  display: inline-block; }
+  .contentPlayMusic .contentImgProfile {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    float: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    height: 100%; }
+    .contentPlayMusic .contentImgProfile .imgProfile {
+      margin-top: 5px;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px; }
+    .contentPlayMusic .contentImgProfile .infoMusic {
+      margin-top: 5px; }
+      .contentPlayMusic .contentImgProfile .infoMusic .nameMusic {
+        font-size: 25px; }
+  .contentPlayMusic .breedingLine {
+    background-color: transparent;
+    height: 100%;
+    width: 35%; }
+
+.btnMusic {
+  display: inline-flex;
+  float: left;
+  background-color: transparent;
+  height: 100%;
+  margin: 0 5px; }
+  .btnMusic .btnPlay {
+    margin: 0 5px;
+    margin-top: 10px; }
+    .btnMusic .btnPlay:active {
+      background-color: #ccc; }
+  .btnMusic .icon {
+    border: none; }
