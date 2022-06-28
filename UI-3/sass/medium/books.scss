@@ -12,7 +12,7 @@
   -webkit-box-shadow: 1px 0px 5px 3px map-get($colorBackground, shadowBook);
   -moz-box-shadow: 1px 0px 5px 3px map-get($colorBackground, shadowBook);
   box-shadow: 1px 0px 5px 3px map-get($colorBackground, shadowBook);
-  margin: 20px 15px;
+  margin: 20px 25px;
   padding: 0 30px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .nameAutor{
-    color: #7a7a7a;
+    color: map-get($colorText, white_);
 }
 
 .titleSection{
@@ -54,4 +54,21 @@
     font-weight: 500;
     width: 90%;
     margin: auto;
+}
+
+.contentStar{
+  float: left;
+  background-color: transparent;
+  height: 30px;
+  width: 160px;
+  @include position_left;
+  margin-top: 5px;
+}
+
+.star{
+  margin: 1 3px;
+  color: rgba(255, 255, 255, 0.518);
+  &:active{
+    color: rgb(255, 247, 0);
+  }
 }

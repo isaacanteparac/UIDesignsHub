@@ -37,7 +37,6 @@ body {
   background-color: #ccc; }
 
 .logo {
-  background-color: blue;
   width: 150px;
   background-color: transparent;
   display: flex;
@@ -45,10 +44,10 @@ body {
   justify-content: center; }
 
 .iconLogo {
-  color: #00fd76; }
+  color: #0055FF; }
 
 .logoText {
-  color: #00fd76;
+  color: #0055FF;
   font-family: "Segoe UI";
   font-size: 30px;
   font-weight: bold; }
@@ -103,7 +102,7 @@ body {
   display: flex; }
 
 .cardBook {
-  background-image: radial-gradient(circle at 50% -20.71%, #f4deff 0, #e0caf9 25%, #c8b5f2 50%, #aca2ec 75%, #8c91e7 100%);
+  background-image: radial-gradient(circle at 87.5% 12.5%, #ad86ff 0, #6d6eff 25%, #0054ff 50%, #003bcd 75%, #00269e 100%);
   width: 550px;
   height: 300px;
   border-radius: 15px;
@@ -111,7 +110,7 @@ body {
   -webkit-box-shadow: 1px 0px 5px 3px #e4e5f1;
   -moz-box-shadow: 1px 0px 5px 3px #e4e5f1;
   box-shadow: 1px 0px 5px 3px #e4e5f1;
-  margin: 20px 15px;
+  margin: 20px 25px;
   padding: 0 30px; }
 
 .contentBook {
@@ -144,7 +143,7 @@ body {
   color: #fff; }
 
 .nameAutor {
-  color: #7a7a7a; }
+  color: #fff; }
 
 .titleSection {
   background-color: transparent;
@@ -153,6 +152,22 @@ body {
   font-weight: 500;
   width: 90%;
   margin: auto; }
+
+.contentStar {
+  float: left;
+  background-color: transparent;
+  height: 30px;
+  width: 160px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  margin-top: 5px; }
+
+.star {
+  margin: 1 3px;
+  color: rgba(255, 255, 255, 0.518); }
+  .star:active {
+    color: #fff700; }
 
 .sectionBrowser {
   background-color: transparent;

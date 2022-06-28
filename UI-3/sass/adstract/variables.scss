@@ -13,7 +13,7 @@ $gradientColor: (
 );
 
 $colorText: (
-  logo: rgb(0, 253, 118),
+  logo: #0055FF,
   text: #000,
   white_: #fff,
 );
@@ -21,15 +21,7 @@ $colorText: (
 $colorBackground: (
   search: #fff,
   header_: #fff,
-  cardBook:
-    radial-gradient(
-      circle at 50% -20.71%,
-      #f4deff 0,
-      #e0caf9 25%,
-      #c8b5f2 50%,
-      #aca2ec 75%,
-      #8c91e7 100%
-    ),
+  cardBook:radial-gradient(circle at 87.5% 12.5%, #ad86ff 0, #6d6eff 25%, #0054ff 50%, #003bcd 75%, #00269e 100%),
   colorBackground: #ccc,
   shadowBook:#e4e5f1,
   shadowBookMini:#C9B5F2,
