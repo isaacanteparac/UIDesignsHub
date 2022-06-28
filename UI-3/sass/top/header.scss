@@ -1,0 +1,57 @@
+.logo {
+  background-color: blue;
+  width: 150px;
+  background-color: transparent;
+  @include position_center;
+}
+.iconLogo{
+    color: map-get($colorText, logo);
+}
+.logoText {
+  color: map-get($colorText, logo);
+  font-family: "Segoe UI";
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.search {
+  background-color: map-get($colorBackground, search);
+  margin: auto;
+  @include position_left;
+  height: 50px;
+  @include rounded_border(300px, 30px, 15px);
+  border: none;
+  label {
+    font-size: 19px;
+    position: relative;
+  }
+
+  input {
+    @include rounded_border(100%, 30px, 15px);
+    background-color: transparent;
+    outline: none;
+    font-family: "Segoe UI";
+    border: none;
+    color: map-get($colorText, text);
+    font-size: 17px;
+  }
+}
+
+.userPhoto{
+    background-color: transparent;
+    @include position_center;
+    margin-right: 50px;
+        label {
+            color: map-get($colorText, text);
+            font-size: 17px;
+            font-family: "Segoe UI";
+            font-weight: 500;
+            margin-left: 3px;
+          }
+    
+}
+
+.photo{
+    @include rounded_border(30px, 30px, 15px);
+
+}

@@ -1,0 +1,57 @@
+.allBook{
+    overflow-y: scroll;
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+.cardBook {
+  background-image: map-get($colorBackground, cardBook);
+  @include rounded_border(550px, 300px, 15px);
+  display: inline-flex;
+  -webkit-box-shadow: 1px 0px 5px 3px map-get($colorBackground, shadowBook);
+  -moz-box-shadow: 1px 0px 5px 3px map-get($colorBackground, shadowBook);
+  box-shadow: 1px 0px 5px 3px map-get($colorBackground, shadowBook);
+  margin: 20px 15px;
+  padding: 0 30px;
+}
+
+.contentBook {
+  @include rounded_border(192px, 269px, 10px);
+  @include position_center;
+  margin: auto;
+}
+
+.book {
+  @include rounded_border(192px, 269px, 10px);
+}
+
+.infBook {
+  background-color: transparent;
+  width: 250px;
+  height: 200px;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.titleBook {
+  text-transform: capitalize;
+  font-family: "Segoe UI";
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: map-get($colorText, white_);
+}
+
+.nameAutor{
+    color: #7a7a7a;
+}
+
+.titleSection{
+    background-color: transparent;
+    text-transform: capitalize;
+    font-family: "Segoe UI";
+    font-weight: 500;
+    width: 90%;
+    margin: auto;
+}

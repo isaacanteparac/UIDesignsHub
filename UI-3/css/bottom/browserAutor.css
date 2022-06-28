@@ -1,0 +1,13 @@
+.sectionBrowser {
+  background-color: red;
+  width: 60%;
+  padding: 0 10px; }
+
+.sectionAutor {
+  background-color: blue;
+  width: 20%; }
+
+.miniCard {
+  background-color: black;
+  width: 400px;
+  height: 300px; }

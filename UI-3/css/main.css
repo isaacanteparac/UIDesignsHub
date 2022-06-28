@@ -1,0 +1,214 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fbfbfb; }
+
+.header {
+  background-color: rgba(255, 255, 255, 0.568);
+  display: inline-flex;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  backdrop-filter: blur(5px); }
+
+.contentMain {
+  background-color: transparent;
+  margin-top: 60px; }
+
+.contentSecundary {
+  background-color: transparent;
+  display: inline-flex;
+  width: 100%;
+  height: 100%; }
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  border-radius: 50px;
+  background-color: transparent; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ccc; }
+
+.logo {
+  background-color: blue;
+  width: 150px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.iconLogo {
+  color: #00fd76; }
+
+.logoText {
+  color: #00fd76;
+  font-family: "Segoe UI";
+  font-size: 30px;
+  font-weight: bold; }
+
+.search {
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  height: 50px;
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  border: none; }
+  .search label {
+    font-size: 19px;
+    position: relative; }
+  .search input {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Segoe UI";
+    border: none;
+    color: #000;
+    font-size: 17px; }
+
+.userPhoto {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px; }
+  .userPhoto label {
+    color: #000;
+    font-size: 17px;
+    font-family: "Segoe UI";
+    font-weight: 500;
+    margin-left: 3px; }
+
+.photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+
+.allBook {
+  overflow-y: scroll;
+  width: 100%;
+  height: 350px;
+  display: flex; }
+
+.cardBook {
+  background-image: radial-gradient(circle at 50% -20.71%, #f4deff 0, #e0caf9 25%, #c8b5f2 50%, #aca2ec 75%, #8c91e7 100%);
+  width: 550px;
+  height: 300px;
+  border-radius: 15px;
+  display: inline-flex;
+  -webkit-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  -moz-box-shadow: 1px 0px 5px 3px #e4e5f1;
+  box-shadow: 1px 0px 5px 3px #e4e5f1;
+  margin: 20px 15px;
+  padding: 0 30px; }
+
+.contentBook {
+  width: 192px;
+  height: 269px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; }
+
+.book {
+  width: 192px;
+  height: 269px;
+  border-radius: 10px; }
+
+.infBook {
+  background-color: transparent;
+  width: 250px;
+  height: 200px;
+  margin: auto;
+  margin-left: 10px; }
+
+.titleBook {
+  text-transform: capitalize;
+  font-family: "Segoe UI";
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff; }
+
+.nameAutor {
+  color: #7a7a7a; }
+
+.titleSection {
+  background-color: transparent;
+  text-transform: capitalize;
+  font-family: "Segoe UI";
+  font-weight: 500;
+  width: 90%;
+  margin: auto; }
+
+.sectionBrowser {
+  background-color: transparent;
+  width: 80%;
+  padding: 0 10px;
+  margin-right: 10px; }
+
+.sectionAutor {
+  background-color: transparent;
+  width: 20%; }
+
+.contentMiniBook {
+  background-color: transparent;
+  height: 100%;
+  padding: auto;
+  width: 90%;
+  margin: auto; }
+
+.miniCard {
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-flex;
+  margin: 15px; }
+  .miniCard .contentBook {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px; }
+    .miniCard .contentBook .book {
+      width: 150px;
+      height: 200px;
+      border-radius: 10px; }
+  .miniCard .infBook {
+    width: 200px; }
+    .miniCard .infBook .titleBook {
+      font-size: 20px;
+      color: #000; }
+  .miniCard:active {
+    -webkit-box-shadow: 1px 0px 5px 3px #C9B5F2;
+    -moz-box-shadow: 1px 0px 5px 3px #C9B5F2;
+    box-shadow: 1px 0px 5px 3px #C9B5F2; }
+
+.contentAuthor {
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column; }
+  .contentAuthor .userPhoto {
+    margin: 0;
+    margin: 10px 0; }
+    .contentAuthor .userPhoto .photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px; }
+    .contentAuthor .userPhoto label {
+      margin-left: 10px; }
