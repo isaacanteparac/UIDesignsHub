@@ -39,6 +39,18 @@
             font-size: 20px;
             color: map-get($colorText, text);
         }
+        .nameAutor{
+            color: map-get($colorText, text);
+        }
+    }
+    .contentStar{
+        width: 120px;
+        .star{
+            color:#ccc;
+            &:active{
+                color: #0055FF;
+              }
+        }
     }
 
     &:active{
