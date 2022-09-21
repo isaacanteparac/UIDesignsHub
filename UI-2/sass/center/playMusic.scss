@@ -1,18 +1,24 @@
 .playMusic{
-    background-color: rgba(255, 255, 255, 0.703);
-    @include rounded_border(100%, 70px, 10px);
+    background-color: transparent;
+    @include rounded_border(100%, 80px, 10px);
+    overflow: hidden;
     margin: auto;
     position:fixed;
-    top: 91%;
-    backdrop-filter: blur(2px);
+
+    top: 90%;
+
+    @include position_center;
 }
 
 .contentPlayMusic{
-    background-color: transparent;
-    width: 90%;
+    background-color: #fff;
+    border: none;
     margin: auto 5%;
-    height: 100%;
+    backdrop-filter: blur(4px);
+    @include rounded_border(90%, 70px, 15px);   
+    padding: 0 10px; 
     display: inline-block;
+
     .contentImgProfile{
         background-color: transparent;
         margin: 0;
@@ -40,6 +46,9 @@
         width: 35%;
     }
 }
+
+
+  
 
 .btnMusic{
     display: inline-flex;

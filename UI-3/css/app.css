@@ -6,6 +6,7 @@ body {
 .header {
   background-color: rgba(255, 255, 255, 0.568);
   display: inline-flex;
+  backdrop-filter: blur(2px);
   padding: 10px 0;
   width: 100%;
   position: fixed;
@@ -23,8 +24,8 @@ body {
   height: 100%; }
 
 ::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
+  width: 5px;
+  height: 5px;
   border-radius: 50px;
   background-color: transparent; }
 
@@ -34,4 +35,4 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: transparent; }
+  background-color: #d6d2d2; }

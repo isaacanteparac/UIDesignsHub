@@ -24,7 +24,7 @@
     padding: 10px;
     display: inline-flex;
     margin: 15px;
-   
+
     .contentBook{
         @include rounded_border(150px, 200px, 10px);
         .book{

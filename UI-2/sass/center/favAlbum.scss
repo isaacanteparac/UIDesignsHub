@@ -27,14 +27,16 @@
 
 .chipAlbum {
   float: left;
-  background-color: #fff;
-  color: map-get($fontColor, _black);
+  background-color: rgba(255, 255, 255, 0.322);
+  backdrop-filter: blur(2px);
+  color: map-get($fontColor, _white);
   font-family: 'Segoe UI';
   position: relative;
   bottom: 40px;
   border-radius: 50px;
   margin-left: 10px;
   padding: 3px 5px;
+  font-weight: bold;
 }
 
 .music {
