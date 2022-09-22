@@ -132,15 +132,14 @@ body {
   position: fixed; }
 
 .center {
-  width: 50%;
+  width: 74%;
   height: 100%;
-  background-color: transparent; }
+  background-color: #fff; }
   .center div.contentCenter {
     width: 100%;
     height: auto;
     border-radius: 15px;
     margin: auto;
-    left: 50%;
     padding: 0;
     background-color: transparent;
     overflow: hidden;
@@ -153,7 +152,8 @@ body {
 
 .right {
   left: 75%;
-  margin-left: 2px; }
+  margin-left: 2px;
+  background-color: #fff; }
   .right div.contentRigth {
     width: 100%;
     height: auto;
@@ -246,7 +246,7 @@ div.title {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none; }
-  div.title h3 {
+  div.title h2, div.title h3 {
     color: #0055ff;
     font-family: "Segoe UI";
     margin: 0;
@@ -260,21 +260,22 @@ div._popularT {
 div.popular {
   background-color: transparent;
   width: 100%;
-  height: 450px;
+  height: 410px;
   border-radius: 15px;
+  padding-top: 5px;
+  padding-left: 10px;
   margin: 0;
-  display: flex;
-  align-items: center;
   overflow-x: scroll;
-  position: relative;
-  bottom: 20px; }
+  display: grid;
+  grid-template-columns: repeat(8, 250px);
+  grid-gap: 20px;
+  margin-bottom: 35px; }
 
 .userPost {
   background-color: transparent;
   padding: 0;
-  margin: 0 5px;
-  width: 45%;
-  height: 400px;
+  width: 250px;
+  height: 390px;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #999; }
   .userPost .informationStream {
@@ -329,8 +330,7 @@ label.username {
 
 .listStreaming {
   width: 100%;
-  max-height: 550px;
-  min-height: 300px;
+  height: auto;
   border-radius: 15px;
   margin: auto;
   margin-bottom: 15px;
@@ -342,23 +342,24 @@ label.username {
   -webkit-user-select: none;
   -ms-user-select: none;
   position: relative;
-  left: 50%;
   bottom: 5px;
   overflow-x: scroll;
   display: grid;
-  grid-template-columns: repeat(10, 45%);
-  grid-gap: 10px; }
+  grid-template-columns: repeat(5, 300px);
+  grid-gap: 40px;
+  padding-left: 10px; }
 
 div._listStreamT {
   margin-top: 5px;
-  bottom: 15px;
-  left: 50%; }
+  bottom: 15px; }
 
 div.stream {
   background-color: transparent;
-  height: 250px;
+  width: 300px;
+  height: 290px;
   border-radius: 15px;
-  padding: 3px; }
+  padding: 3px;
+  margin: 0; }
 
 div.imagStream {
   background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
@@ -511,13 +512,16 @@ div.suggestionsGames {
   min-height: 70px;
   padding-bottom: 10px;
   background-color: transparent;
-  margin-top: 5px;
+  margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 40%);
-  grid-gap: 20px; }
+  grid-template-columns: repeat(2, 130px);
+  grid-gap: 25px;
+  padding-left: 20px;
+  padding-top: 5px; }
 
 div.cardGame {
-  height: 150px;
+  height: 130px;
+  width: 130px;
   border-radius: 10px;
   background-image: radial-gradient(circle at 49.65% 49.65%, #ffffff 0, #ffffff 16.67%, #fffffe 33.33%, #f5efef 50%, #d9dfdf 66.67%, #c1d1cf 83.33%, #adc5bf 100%);
   overflow: hidden;
@@ -528,18 +532,20 @@ div.cardGame {
   flex-direction: column; }
   div.cardGame div.topN {
     left: 67%;
-    bottom: 150px;
-    background-color: rgba(0, 0, 0, 0.444);
+    bottom: 130px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.34);
     border-radius: 0;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; }
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px; }
     div.cardGame div.topN label {
       color: #fff;
       font-weight: 600; }
 
 div.previewImgGame, img.imgGame {
-  width: 100%;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 10px;
   -moz-user-select: none;
   -webkit-user-drag: none;

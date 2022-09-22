@@ -1,7 +1,7 @@
 .listStreaming {
   width: 100%;
-  max-height: 550px;
-  min-height: 300px;
+  height: auto;
+ 
   border-radius: map-get($radiusSize, _medium);
   margin: auto;
   margin-bottom: 15px;
@@ -10,30 +10,28 @@
   overflow: hidden;
   @include no_underline_copy;
   position: relative;
-  left: 50%;
+
   bottom: 5px;
   overflow-x: scroll;
   display: grid;
-  grid-template-columns: repeat(10, 45%);
-  //grid-template-rows: 210px;
-  grid-gap: 10px;
+  grid-template-columns: repeat(5, 300px);
+  grid-gap: 40px;
+
+  padding-left: 10px;
 }
 
 div._listStreamT {
   margin-top: 5px;
   bottom: 15px;
-  left: 50%;
 }
 
 div.stream {
   background-color: transparent;
-  //@include rounded_border(45%, 250px, map-get($radiusSize, _medium));
-  height: 250px;
+  width: 300px;
+  height: 290px;
   border-radius: map-get($radiusSize, _medium);
   padding: 3px;
-  //@include shadowBelow(map-get($shade, _grayL ));
-  //box-shadow: 5px 5px 5px map-get($shade, _gray);
-
+  margin: 0;
 }
 
 div.imagStream {
