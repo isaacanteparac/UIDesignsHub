@@ -1,0 +1,111 @@
+.resident {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contentResident {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+}
+
+.informationHouse {
+  background-color: transparent;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: sticky;
+  top: 5%;
+  display: none;
+}
+
+
+@media screen and (max-width : 725px){
+  .containerTable {
+    width: 100%;
+    background-color: blue;
+    position: relative;
+  }
+  .informationHouse {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: red;
+  }
+  .infHouseUser {
+    width: 100%;
+  }
+
+  .contentInfHouse {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1345px) {
+  /*URBANIZATION HOUSES*/
+  .urbanization {
+    width: 95%;
+  }
+
+  /*TITLE:CONTENT INFORMATION RESIDENT*/
+  .informationHouse {
+    width: 30%;
+    margin-left: 3%;
+  }
+
+  /*TITLE:INFORMATION RESIDENT*/
+  .contentInfHouse {
+    width: 95%;
+    border: none;
+  }
+
+  .infHouseUser {
+    width: 80%;
+  }
+
+  .contentInfHouse .cotainerTitle{
+    margin-bottom: 25px;
+  }
+
+  /*TITLE: REGISTER RESIDENT*/
+  .containerDataForm {
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    right: 9px;
+  }
+
+  /*TTITLE: TABLE */
+  .containerTable {
+    width: 64%;
+  }
+}
+
+@media only screen and (min-width: 1345px) {
+  .containerDataForm {
+    width: 100%;
+    position: relative;
+    right: 5px;
+  }
+
+  .informationHouse {
+    height: 100%;
+  }
+
+  .containerTable {
+    margin-top: 25px;
+    width: 74%;
+    position: relative;
+    right: 13%;
+  }
+}

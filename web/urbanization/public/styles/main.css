@@ -1,0 +1,11 @@
+@import url("variables.css");
+@import url("./layout/app.css");
+@import url("./layout/header.css");
+@import url("./layout/navigation.css");
+@import url("./models/buttons.css");
+@import url("./models/profileHouse.css");
+@import url("./models/table.css");
+@import url("./models/urbanization.css");
+@import url("./models/form.css");
+@import url("./resident.css");
+@import url("./models/img.css");

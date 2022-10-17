@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*VARIABLES*/
+
+body {
+  background-color: var(--colorBg);
+}
+
+.app {
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  *gap: 10px;
+}
+
+.main {
+  grid-column: col-start 3 / span 11;
+  grid-row: 2;
+  background-color: var(--colorComponentMain);
+  margin: 15px 0;
+  margin-right: 15px;
+  height: 100%;
+  *height: 820px; /*790px*/
+  border-radius: var(--borderRadiusBig);
+  border: none;
+  overflow-y: scroll;
+}
+
+.containerMain {
+  background-color: transparent;
+  padding-bottom: 20px;
+}
+
+.footer {
+  grid-column: col-start 3 / span 11;
+  grid-row: 3;
+  background-color: var(--colorBg);
+  color: #000;
+  height: 50px;
+  padding: 10px 5px;
+  border: none;
+  border-radius: var(--borderRadiusSection);
+  background-color: red;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #16151746;
+}
+
+@media screen and (max-width: 1345px) {
+  :root {
+    --colorComponentMain: #fff;
+  }
+  .main {
+    grid-column: col-start / span 12;
+    grid-row: 2;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+  }
+
+  .navigation {
+    grid-column: col-start 2 / span 10;
+    grid-row: 1;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+  }
+
+  .containerItems {
+    align-items: flex-end;
+    justify-content: right;
+    padding: 0;
+    width: 80%;
+    position: relative;
+    left: 20%;
+    bottom: 30px;
+  }
+
+  .containerItems .items {
+    width: auto;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: none;
+  }
+
+  .containerItems .items {
+    background-color: transparent;
+  }
+
+  .logo {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    margin-bottom: 10px;
+  }
+}
+
+/*PC*/
+@media only screen and (min-width: 1345px) {
+  .navigation {
+    grid-column: col-start / span 2;
+    grid-row: 1/3;
+    padding: 10px;
+    top: 0%;
+    height: 96%;
+  }
+
+  .logo {
+    margin: 20px 0;
+  }
+
+  .containerItems {
+    margin-top: 0;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,70 @@
+.containerTable {
+  background-color: transparent;
+  width: 98%;
+  display: none;
+}
+
+.table {
+  width: 95%;
+  margin: auto;
+  background-color: var(--colorComponet);
+  border-radius: var(--borderRadiusSection);
+  padding: 5px;
+  border: 1px solid var(--borderColorContentMain);
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.tableHeader {
+  height: 30px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.textHdrTable {
+  color: var(--colorHdrText);
+  font-size: 17px;
+  text-transform: capitalize;
+  font-family: "Segoe UI";
+  text-align: center;
+}
+
+
+
+.tableBody:hover {
+  background-color: var(--colorHoverBdBodyT);
+}
+
+.textBdTable {
+  color: var(--colorBdTable);
+  font-family: "Segoe UI";
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 8px;
+  padding: 2px 0;
+}
+
+.textBdTable:hover{
+  background-color: var(--coloHoverBgBox);
+}
+
+
+
+.status{
+  font-weight: 600;
+}
+
+.pendingStatus {
+  color: var(--colorPending);
+}
+
+.delayedStatus {
+  color: var(--colorDelayed);
+}
+
+.paidStatus {
+  color: var(--colorPaid);
+}
+

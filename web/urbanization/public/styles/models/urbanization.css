@@ -1,0 +1,187 @@
+.urbanization {
+  background-color: transparent;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contentUrbanization {
+  background-color: var(--colorUrbanizationBg);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "topHouses topHouses topHouses topHouses   topHouses   topHouses   topHouses   topHouses topHouses"
+    "leftHouses leftHouses centerHouses centerHouses centerHouses centerHouses centerHouses rightHouses rightHouses"
+    "bottomHouses bottomHouses bottomHouses bottomHouses   bottomHouses   bottomHouses   bottomHouses   bottomHouses bottomHouses";
+  gap: 15px;
+  border-radius: var(--borderRadiusSection);
+}
+
+.houses {
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
+}
+
+
+.house {
+  background-color: var(--colorFree);
+  float: left;
+  margin: 5px 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--borderRadiusSection);
+  border: 1px solid var(--borderColorContentMain);
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.house:hover {
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  border: 4px dashed var(--colorFree);
+}
+
+.house:hover .locationName {
+  color: var(--colorFree);
+}
+
+.locationName {
+  font-weight: 600;
+  font-family: "Segoe UI";
+  font-size: 25px;
+  color: var(--colorTextHouse);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeStatusPending {
+  background-color: var(--colorPending);
+}
+
+.homeStatusPending:hover {
+  background-color: transparent;
+  border: 4px dashed var(--colorPending);
+}
+
+.homeStatusPending:hover .locationName {
+  color: var(--colorPending);
+}
+
+.homeStatusDelayed {
+  background-color: var(--colorDelayed);
+}
+
+.homeStatusDelayed:hover {
+  background-color: transparent;
+  border: 4px dashed var(--colorDelayed);
+}
+
+.homeStatusDelayed:hover .locationName {
+  color: var(--colorDelayed);
+}
+
+.homeStatusPaid {
+  background-color: var(--colorPaid);
+}
+
+.homeStatusPaid:hover {
+  background-color: transparent;
+  border: 4px dashed var(--colorPaid);
+}
+
+.homeStatusPaid:hover .locationName {
+  color: var(--colorPaid);
+}
+
+.urbanizationArea {
+  width: 100px;
+  height: 90px;
+  border-radius: var(--borderRadiusSection);
+  float: left;
+  margin: 5px 5px;
+  background-color: var(--colorParkBg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.urbanizationArea:hover {
+  background-color: transparent;
+  width: 92px;
+  height: 82px;
+  border: 4px dashed var(--colorParkBg);
+}
+
+.urbanizationArea:hover .locationName {
+  color: var(--colorParkBg);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topHouses {
+  background-color: var(--colorComponet);
+  grid-area: topHouses;
+  border-bottom: 2px solid var(--borderColorUrbanization);
+  border-top-left-radius: var(--borderRadiusSection);
+  border-top-right-radius: var(--borderRadiusSection);
+}
+
+.bottomHouses {
+  grid-area: bottomHouses;
+  background-color: var(--colorComponet);
+  border-top: 2px solid var(--borderColorUrbanization);
+  border-bottom-right-radius: var(--borderRadiusSection);
+  border-bottom-left-radius: var(--borderRadiusSection);
+}
+
+.centerHouses {
+  grid-area: centerHouses;
+  background-color: var(--colorComponet);
+  border-radius: var(--borderRadiusSection);
+  border: 2px solid var(--borderColorUrbanization);
+}
+
+.leftHouses {
+  grid-area: leftHouses;
+  background-color: var(--colorComponet);
+  border-top-right-radius: var(--borderRadiusSection);
+  border-bottom-right-radius: var(--borderRadiusSection);
+  border: 2px solid var(--borderColorUrbanization);
+  border-left: none;
+}
+
+.rightHouses {
+  background-color: var(--colorComponet);
+  grid-area: rightHouses;
+  border-top-left-radius: var(--borderRadiusSection);
+  border-bottom-left-radius: var(--borderRadiusSection);
+  border: 2px solid var(--borderColorUrbanization);
+  border-right: none;
+}

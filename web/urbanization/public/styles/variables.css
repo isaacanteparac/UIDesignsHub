@@ -1,0 +1,50 @@
+:root {
+    --colorComponet: #fff;
+    --colorBg: #fff;
+    --colorComponentMain: #F4F6F8;
+    --borderRadiusSection: 10px;
+    --borderColorSection:#ccc;
+    --colorShadow:#ccc;
+    --borderColorContentMain:#ccc;
+    --colorHoverTrans: rgba(153, 153, 153, 0.146);
+    --borderRadiusBig: 20px;
+  
+    /*NAVIGATION*/
+    --colorItemsNav: #999;
+    --colorHoverBgItems: rgba(0, 0, 0, 0.084);
+    --colorActBgItems: #0051ff36;
+    --colorActTextItems: #0051ff;
+    /*TABLE*/
+    --colorHdrText: #000;
+    --colorBdTable: #999;
+    --colorHoverBdBodyT: #0000001a;
+    --coloHoverBgBox:#000;
+    /*STATUS*/
+    --colorPending: #F5C900;
+    --colorDelayed: #FD4E97;
+    --colorPaid: #01E7BD;
+    --colorFree: rgb(178, 203, 238);
+    /*form*/
+    --colorTitleForm: #5c4efd;
+    --colorTextForm:#999;
+    --borderColorInput: #999;
+    --colorTextInput:#000;
+
+    /*btn*/
+    --colorBgbtnCancel:#FD4E97;
+    --colorActBgbtnCancel: #ca3e79;
+    --colorBgBtnSave:#3530e6;
+    --colorActBtnSave:#302bcf;
+    --borderColorBtnTrasn: #999;
+    --colorTextBtnTrasn:rgb(128, 124, 124);
+    --actBorderColorBtnTrans: #000;
+    --colorTextBtn:#fff;
+    --actBgBtnTrans: #fcfcfd;
+    /*urbanization*/
+    --colorUrbanizationBg: rgb(113, 113, 113);
+    --borderColorUrbanization: #ccc;
+    --colorTextHouse:#fff;
+    --colorParkBg:#5c4efd;
+    /*INFORMATION USER*/
+  }
+  

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyect</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../public/styles/main.css"
+    />
+    <script src="../../logic/main.js"></script>
+    <script src="../../logic/resident.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body onload="main()">
+    <div class="app">
+      <section class="main">
+        <div class="containerMain">
+          <section class="resident" id="residentMain">
+            <div class="contentResident">
+              <section class="urbanization" id="urbanization">
+                <!--TITLE: SIGNIFICADO DE CADA COLOR-->
+                <div class="colorMeaning">
+                  <label class="colorFreeLabel">Residencia sin dueño</label>
+                  <label class="colorPaidLabel">Residencia pagada</label>
+                  <label class="colorPendingLabel"
+                    >Residencia pendiente de pagar</label
+                  >
+                  <label class="colorDelayedLabel"
+                    >Residencia atrazada de pagar</label
+                  >
+                  <label class="colorUrbanizatioLabel"
+                    >Area de recreacion</label
+                  >
+                  <label class="colorPavementLabel">Pavimento</label>
+                </div>
+
+                <!--TITLE: RESIDENCIAS-->
+                <div class="contentUrbanization">
+                  <!--NOTE: POSICION DE RESIDENCIA TOP-->
+                  <div class="houses warp topHouses">
+                    <div class="house homeStatusPending">
+                      <label class="locationName" onclick="infoResident()">
+                        I
+                      </label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">2</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">3</label>
+                    </div>
+
+                    <div class="house">
+                      <label class="locationName" onclick="registerResident()"
+                        >r</label
+                      >
+                    </div>
+                  </div>
+
+                  <!--NOTE: POSICION DE RESIDENCIA LEFT-->
+                  <div class="houses warp leftHouses">
+                    <div class="house homeStatusPending">
+                      <label class="locationName">1</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">2</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">3</label>
+                    </div>
+                    <div class="house homeStatusPending">
+                      <label class="locationName">4</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">5</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">6</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">7</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">8</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">9</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">10</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">11</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">12</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">13</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">14</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">999</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">1000</label>
+                    </div>
+                  </div>
+
+                  <!--NOTE: POSICION DE RESIDENCIA CENTER-->
+                  <div class="houses warp centerHouses">
+                    <div class="urbanizationArea">
+                      <label class="locationName">Park</label>
+                    </div>
+
+                    <div class="house homeStatusPending">
+                      <label class="locationName">1</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">2</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">3</label>
+                    </div>
+                    <div class="house homeStatusPending">
+                      <label class="locationName">4</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">5</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">6</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">7</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">8</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">9</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">10</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">11</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">12</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">13</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">14</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">999</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">1000</label>
+                    </div>
+                  </div>
+
+                  <!--NOTE: POSICION DE RESIDENCIA RIGHT-->
+                  <div class="houses warp rightHouses">
+                    <div class="house homeStatusPending">
+                      <label class="locationName">1</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">2</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">3</label>
+                    </div>
+                    <div class="house homeStatusPending">
+                      <label class="locationName">4</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">5</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">6</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">7</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">8</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">9</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">10</label>
+                    </div>
+                  </div>
+
+                  <!--NOTE: POSICION DE RESIDENCIA BOTTOM-->
+                  <div class="houses wrap bottomHouses">
+                    <div class="house homeStatusPending">
+                      <label class="locationName">1</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">2</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">3</label>
+                    </div>
+                    <div class="house homeStatusPending">
+                      <label class="locationName">4</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">5</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">6</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">7</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">8</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">9</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">10</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">11</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">12</label>
+                    </div>    <div class="house homeStatusPending">
+                      <label class="locationName">13</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">14</label>
+                    </div>
+                    <div class="house homeStatusDelayed">
+                      <label class="locationName">1</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">999</label>
+                    </div>
+                    <div class="house homeStatusPaid">
+                      <label class="locationName">1000</label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!--TITLE: CAJA DE  INFORMACION DE LA CASA-->
+              <section class="informationHouse" id="contentResident">
+                <!--NOTE: INFORMACION DE LA RESIDENCIA-->
+                <div class="contentInfHouse" id="informationResident">
+                  <div class="cotainerTitle">
+                    <h3>informacion de residencia</h3>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> residente </label>
+                    <label class="infoUser"> isaac antepara </label>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> mazana </label>
+                    <label class="infoUser"> 1969 </label>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> villa </label>
+                    <label class="infoUser"> 10 </label>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> telefono </label>
+                    <label class="infoUser"> 098888888 </label>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> email de resisndente </label>
+                    <label class="infoUser"> user@gmail.com </label>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> cedula </label>
+                    <label class="infoUser"> 099999999 </label>
+                  </div>
+                  <div class="infHouseUser">
+                    <label class="infoTitel"> empezo a vivir en la casa</label>
+                    <label class="infoUser"> 22/5/2022 </label>
+                  </div>
+                  <div class="containerBtn">
+                    <button class="btnSave" onclick="residenceRateTable()">
+                      Alicuotas
+                    </button>
+                    <button class="btnTrans" onclick="closeBoxResident()">
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+
+                <!--NOTE: REGISTRO DE PROPIETARIO DE LA RESIDENCIA-->
+                <div class="containerDataForm" id="registerResident">
+                  <form class="contentDataForm">
+                    <div class="containerCloseWindows">
+                      <button
+                        class="btnCloseWindow"
+                        onclick="closeBoxResident()"
+                      >
+                        <img
+                          class="imgCloseWindows"
+                          src="../../public/icons/closeWindows.png"
+                          alt="cerrar"
+                        />
+                      </button>
+                    </div>
+                    <div class="cotainerTitle">
+                      <h3>Subir Evidencia</h3>
+                    </div>
+                    <div class="sectionForm">
+                      <label>numero de tramite: </label>
+                      <input type="number" min="0" />
+                    </div>
+                    <div class="sectionForm">
+                      <label>Banco: </label>
+                      <input type="text" />
+                    </div>
+                    <div class="sectionForm">
+                      <label>Fecha de pago: </label>
+                      <input type="date" />
+                    </div>
+                    <div class="sectionForm">
+                      <label>valor de pago $: </label>
+                      <input type="number" min="1" />
+                    </div>
+                    <div class="sectionFormImg">
+                      <label class="inputDocument"
+                        >subir comprobante <input type="file" />
+                        <img
+                          class="inputImg"
+                          src="../../public/icons/uploadDocument.png"
+                        />
+                      </label>
+                      <label class="nameInputFile">hola.PDF</label>
+                    </div>
+                    <div class="btnForm">
+                      <button class="btnSave">guardar</button>
+                      <button class="btnTrans">cancelar</button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <!--TITLE: TABLA DE ALICUOTAS DE LA RESIDENCIA-->
+              <div class="containerTable" id="tableInfoPaidHouse">
+                <table class="table">
+                 
+                  <tr class="tableHeader">
+                    <th class="textHdrTable">año</th>
+                    <th class="textHdrTable">Mes</th>
+                    <th class="textHdrTable">Fecha de pago</th>
+                    <th class="textHdrTable">valor</th>
+                    <th class="textHdrTable">estado</th>
+                    <th class="textHdrTable">verificar</th>
+                    <th class="textHdrTable">evidencia</th>
+                  </tr>
+
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status paidStatus">Pagado</td>
+                    <td class="textBdTable">
+                      <img class="imgBdTable" src="../../public/icons/ok.png" />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/download.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status pendingStatus">pendiente</td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/checklist.png"
+                      />
+                    </td>
+                    <td class="textBdTable">
+                      <img
+                        class="imgBdTable"
+                        src="../../public/icons/upload.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="tableBody">
+                    <td class="textBdTable">2022</td>
+                    <td class="textBdTable">6</td>
+                    <td class="textBdTable">30/12/2021</td>
+                    <td class="textBdTable">$10000</td>
+                    <td class="textBdTable status delayedStatus">retraso</td>
+                    <td class="textBdTable"></td>
+                    <td class="textBdTable"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!--<footer class="footer">Footer</footer>-->
+
+      <!--<header class="header">
+        <div class="containerHeader">
+          <div class="logo"><h2>SIPAU</h2></div>
+        </div>
+      </header>-->
+      <nav class="navigation">
+        <div class="contentNav">
+    
+            <div class="logo"><img src="../../public/icons/logo.png" alt="sipau"><h2>Sipau</h2></div>
+     
+          <ul class="containerItems">
+            <li class="items" id="itemResident" onclick="resident()">
+              Residencias
+            </li>
+            <li class="items" id="itemSinDeuda">Residencias sin deuda</li>
+            <li class="items" id="itemDeuda">Residencias con deuda</li>
+            <li class="items" id="itemSinPorpietario">
+              Residencias sin libres
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

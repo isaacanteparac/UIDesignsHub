@@ -1,0 +1,51 @@
+
+.contentInfHouse{
+    background-color: var(--colorComponet);
+    padding: 5px 10px;
+    width: 280px;
+    height: 540px;
+    border-radius: var(--borderRadiusSection);
+    border: 1px solid var(--borderColorContentMain);
+    display: none;
+}
+
+.contentInfHouse .cotainerTitle h3{
+    font-weight: 500;
+}
+
+.infHouseUser{
+    border-radius: var(--borderRadiusSection);
+    width: 250px;
+    margin: 8px auto;
+    padding: 5px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+
+
+.infHouseUser label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 5px; 
+
+}
+
+.infoTitel{
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #999;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+.infoUser{
+    color: #35393E;
+    font-size: 15px;
+    font-weight: 500;
+
+}
