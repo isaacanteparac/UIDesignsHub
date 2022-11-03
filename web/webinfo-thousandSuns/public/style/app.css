@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  background-color: #fff;
+  width: 100%;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ffcc00;
+}
+
+@media screen and (max-width: 1345px) {
+  .Main-description {
+    margin-bottom: 150px;
+  }
+}

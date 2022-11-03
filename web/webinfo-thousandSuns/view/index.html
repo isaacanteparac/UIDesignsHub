@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/style/index.css" />
+    <script src="../public/logic/btn.js"></script>
+    <script src="../public/logic/animation.js"></script>
+    <title>Thousand Suns</title>
+  </head>
+  <body>
+    <!--TITLE:NAVIGATION-->
+    <nav class="Navigation-divContainer" id="navigation">
+      <button class="Navigation-buttonMenu" onclick="navigation(false)">
+        <div class="Navigation-buttonMenu-lineClose"></div>
+        <div class="Navigation-buttonMenu-lineClose"></div>
+      </button>
+      <ul class="Navigation-divContainer-ul">
+        <li class="Navigation-divContainer-ul-li" onclick="moveSelection('#')">
+          Descripcion
+        </li>
+
+        <li
+          class="Navigation-divContainer-ul-li"
+          onclick="moveSelection('problematicPorject')"
+        >
+          Problematica
+        </li>
+
+        <li class="Navigation-divContainer-startul-li">
+          Proyecto
+          <ul class="Navigation-divContainer-subUl">
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart1')"
+            >
+              parte 1
+            </li>
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart2')"
+            >
+              parte 2
+            </li>
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart3')"
+            >
+              parte 3
+            </li>
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart4')"
+            >
+              parte 4
+            </li>
+          </ul>
+        </li>
+        <li
+          class="Navigation-divContainer-ul-li"
+          onclick="moveSelection('footer')"
+        >
+          Contactos
+        </li>
+      </ul>
+    </nav>
+
+    <!--TITLE:MAIN-->
+    <main class="Main" id="main">
+      <div class="Main-description" id="descriptioProject">
+        <p class="Main-description-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga soluta
+          unde, optio omnis debitis quo voluptates at minima eum ex ratione, qui
+          quae ad dolorum cum eos nulla expedita in. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Fuga soluta unde, optio omnis debitis
+          quo voluptates at minima eum ex ratione, qui quae ad dolorum cum eos
+          nulla expedita in. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Blanditiis maxime nihil a totam, odio necessitatibus magni id
+          praesentium amet ipsa nesciunt natus dignissimos aperiam deserunt
+          sequi aliquid tempora. Quo, ipsum. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Architecto eaque dolorum consequuntur
+          impedit unde quae nulla ab quis! Maxime nobis doloribus rem itaque
+          ducimus quibusdam mollitia reiciendis laborum, exercitationem placeat!
+        </p>
+      </div>
+      <div class="Main-description" id="problematicPorject">
+        <h1 class="Main-description-h1">Problematica</h1>
+        <p class="Main-description-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga soluta
+          unde, optio omnis debitis quo voluptates at minima eum ex ratione, qui
+          quae ad dolorum cum eos nulla expedita in. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Fuga soluta unde, optio omnis debitis
+          quo voluptates at minima eum ex ratione, qui quae ad dolorum cum eos
+          nulla expedita in. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Blanditiis maxime nihil a totam, odio necessitatibus magni id
+          praesentium amet ipsa nesciunt natus dignissimos aperiam deserunt
+          sequi aliquid tempora. Quo, ipsum. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Architecto eaque dolorum consequuntur
+          impedit unde quae nulla ab quis! Maxime nobis doloribus rem itaque
+          ducimus quibusdam mollitia reiciendis laborum, exercitationem placeat!
+        </p>
+      </div>
+      <section class="Main-container" id="projectWork">
+        <div class="Main-container-card-textRight" id="projectPart1">
+          <div class="Main-container-card-contentImg">
+            <img
+              class="Main-container-card-contentImg-img --shadowYellow"
+              src="https://d7lju56vlbdri.cloudfront.net/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/solar-orbiter-toma-imagenes-del-sol-como-nunca-antes/9437612-1-esl-MX/Solar-Orbiter-toma-imagenes-del-Sol-como-nunca-antes.jpg"
+              alt="img1"
+              onclick="windowBlurImg(true, 'https://d7lju56vlbdri.cloudfront.net/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/solar-orbiter-toma-imagenes-del-sol-como-nunca-antes/9437612-1-esl-MX/Solar-Orbiter-toma-imagenes-del-Sol-como-nunca-antes.jpg')"
+            />
+          </div>
+
+          <div class="Main-container-card-description">
+            <h1 class="Main-container-card-description-h1">
+              Informacion de la aplicacion y capturas de pantallas
+            </h1>
+            <p class="Main-container-card-imgLeft-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              soluta unde, optio omnis debitis quo voluptates at minima eum ex
+              ratione, qui quae ad dolorum cum eos nulla expedita in.
+            </p>
+          </div>
+        </div>
+        <div class="Main-container-card-textleft" id="projectPart2">
+          <div class="Main-container-card-description">
+            <h1 class="Main-container-card-description-h1">
+              Informacion de la aplicacion y capturas de pantallas
+            </h1>
+            <p class="Main-container-card-imgLeft-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              soluta unde, optio omnis debitis quo voluptates at minima eum ex
+              ratione, qui quae ad dolorum cum eos nulla expedita in. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Fuga soluta
+              unde, optio omnis debitis quo voluptates at minima eum ex ratione,
+              qui quae ad dolorum cum eos nulla expedita in.
+            </p>
+          </div>
+          <div class="Main-container-card-contentImg">
+            <img
+              class="Main-container-card-contentImg-img --shadowBlue"
+              src="https://www.santander.com.mx/personas/santander-digital/supermovil/assets/img/img-header.png"
+              alt="img2"
+              onclick="windowBlurImg(true, 'https://www.santander.com.mx/personas/santander-digital/supermovil/assets/img/img-header.png')"
+            />
+          </div>
+        </div>
+        <div class="Main-container-card-textRight" id="projectPart3">
+          <div class="Main-container-card-contentImg">
+            <img
+              class="Main-container-card-contentImg-img --shadowGreen"
+              src="https://creatuaplicacion.com/wp-content/uploads/2018/03/creatuaplicacion_app.png"
+              alt="img3"
+              onclick="windowBlurImg(true, 'https://creatuaplicacion.com/wp-content/uploads/2018/03/creatuaplicacion_app.png')"
+            />
+          </div>
+
+          <div class="Main-container-card-description">
+            <h1 class="Main-container-card-description-h1">
+              Informacion de la aplicacion y capturas de pantallas
+            </h1>
+            <p class="Main-container-card-imgLeft-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              soluta unde, optio omnis debitis quo voluptates at minima eum ex
+              ratione, qui quae ad dolorum cum eos nulla expedita in. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Fuga soluta
+              unde, optio omnis debitis quo voluptates at minima eum ex ratione,
+              qui quae ad dolorum cum eos nulla expedita in. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Fuga soluta unde, optio
+              omnis debitis quo voluptates at minima eum ex ratione, qui quae ad
+              dolorum cum eos nulla expedita in.
+            </p>
+          </div>
+        </div>
+        <div class="Main-container-card-textleft" id="projectPart4">
+          <div class="Main-container-card-description">
+            <h1 class="Main-container-card-description-h1">
+              Informacion de la aplicacion y capturas de pantallas
+            </h1>
+            <p class="Main-container-card-imgLeft-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              soluta unde, optio omnis debitis quo voluptates at minima eum ex
+              ratione, qui quae ad dolorum cum eos nulla expedita in. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Fuga soluta
+              unde, optio omnis debitis quo voluptates at minima eum ex ratione,
+              qui quae ad dolorum cum eos nulla expedita in. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Blanditiis maxime nihil a
+              totam, odio necessitatibus magni id praesentium amet ipsa nesciunt
+              natus dignissimos aperiam deserunt sequi aliquid tempora. Quo,
+              ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Fuga soluta unde, optio omnis debitis quo voluptates at minima eum
+              ex ratione, qui quae ad dolorum cum eos nulla expedita in.
+            </p>
+          </div>
+          <div class="Main-container-card-contentImg">
+            <img
+              class="Main-container-card-contentImg-img --shadowPink"
+              src="https://clockify.me/assets/images/time-tracking-app-mobile.png"
+              alt="img4"
+              onclick="windowBlurImg(true, 'https://clockify.me/assets/images/time-tracking-app-mobile.png')"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--TITLE:HEADER-->
+    <header class="Header" id="header">
+      <div class="Header-divLogo">
+        <img src="./../public/img/sun.png" alt="" />
+        <h1 class="Header-divLogo-h1" onclick="moveSelection('')">
+          Thousand Suns
+        </h1>
+      </div>
+      <div class="Navigation">
+        <button
+          class="Navigation-buttonMenu"
+          onclick="navigation()"
+          id="HeaderButtonNav"
+        >
+          <div class="Navigation-buttonMenu-linePlus"></div>
+          <div class="Navigation-buttonMenu-linePlus"></div>
+          <div class="Navigation-buttonMenu-linePlus"></div>
+        </button>
+      </div>
+    </header>
+
+    <!--TTIEL:VIEW IMG-->
+    <div class="Blur" id="windowBlurImg">
+      <button class="Navigation-buttonMenu" onclick="windowBlurImg(false)">
+        <div class="Navigation-buttonMenu-lineClose"></div>
+        <div class="Navigation-buttonMenu-lineClose"></div>
+      </button>
+      <div class="Blur-container">
+        <img id="imgBlur" class="Blur-container-img" src="" alt="img" />
+      </div>
+    </div>
+
+    <!--TITLE:FOOTER-->
+    <footer class="Footer" id="footer">
+      <div class="Footer-madeBy">
+        <label class="Footer-madeBy-label">
+          © 2022 made by Isaac Antepara Cerezo</label
+        >
+      </div>
+      <div class="Footer-boxLinks">
+        <a
+          href="https://github.com/isaacanteparac"
+          class="Footer-boxLinks-a"
+          target="_blank"
+          ><img
+            src="./../public/img/gh.png"
+            alt="github"
+            class="Footer-boxLinks-a-img"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/isaacanteparac/"
+          target="_blank"
+          class="Footer-boxLinks-a"
+          ><img
+            src="./../public/img/lnkd.png"
+            alt="linkedin"
+            class="Footer-boxLinks-a-img"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

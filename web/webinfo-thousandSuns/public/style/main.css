@@ -1,0 +1,224 @@
+.Main {
+  grid-column: col-start 2 / span 10;
+  grid-row: 2;
+  padding-block: 5px;
+  margin-bottom: 100px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Main-description {
+  background-color: transparent;
+  width: 100%;
+}
+
+.Main-description-h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #999;
+  text-align: left;
+  padding-left: 4%;
+}
+
+.Main-description-p {
+  font-family: "Montserrat Alternates", sans-serif;
+  width: 90%;
+  height: 500px;
+  background-color: transparent;
+  font-size: 25px;
+  margin-inline: auto;
+}
+
+.Main-container {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Main-container-card-textRight {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 0;
+  opacity: 0;
+}
+
+.Main-container-card-textleft {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 0;
+  margin-block: 100px;
+  opacity: 0;
+}
+
+.Main-container-card-contentImg {
+  width: 100%;
+  height: 500px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.Main-container-card-contentImg-img {
+  height: 80%;
+  width: auto;
+  object-fit: scale-down;
+  border-radius: 15px;
+  transition: all 0.1s;
+  cursor:zoom-in;
+}
+
+.Main-container-card-textRight:hover .Main-container-card-contentImg-img,
+.Main-container-card-textleft:hover .Main-container-card-contentImg-img {
+  height: 85%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.Main-container-card-textRight:hover .--shadowYellow,
+.Main-container-card-textleft:hover .--shadowYellow {
+  filter: drop-shadow(5px 5px 15px gold);
+}
+
+.Main-container-card-textRight:hover .--shadowBlue,
+.Main-container-card-textleft:hover .--shadowBlue {
+  filter: drop-shadow(5px 5px 15px#0055ff);
+}
+
+.Main-container-card-textRight:hover .--shadowGreen,
+.Main-container-card-textleft:hover .--shadowGreen {
+  filter: drop-shadow(5px 5px 15px#00ffc3);
+}
+
+.Main-container-card-textRight:hover .--shadowPink,
+.Main-container-card-textleft:hover .--shadowPink {
+  filter: drop-shadow(5px 5px 15px#f71bce);
+}
+
+.Main-container-card-description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  padding-inline: 3px;
+}
+
+.Main-container-card-description-h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #14243c;
+}
+
+.Main-container-card-imgLeft-p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 20px;
+  color: #3c519f;
+  max-height: 348px;
+}
+
+.up {
+  animation: up 1s;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bottom {
+  animation: bottom 1s;
+}
+
+@keyframes bottom {
+  0% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.left {
+  animation: left 1s;
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.right {
+  animation: right 1s;
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.Blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #00000069;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.Blur .Navigation-buttonMenu {
+  top: 3%;
+}
+
+.Blur .Navigation-buttonMenu:active{
+  border: 3px solid #F1C40F;
+}
+
+.Blur-container {
+  min-width: 50%;
+  max-width: 80%;
+  min-height: 80%;
+  max-height: 90%;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.Blur-container-img {
+  width: auto;
+  height: auto;
+  object-fit: scale-down;
+}

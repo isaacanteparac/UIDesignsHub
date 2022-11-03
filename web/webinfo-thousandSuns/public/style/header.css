@@ -1,0 +1,36 @@
+header {
+  grid-column: col-start 2 / span 10;
+  grid-row: 1;
+  padding-block: 5px;
+  padding-inline: 10px;
+  display: grid;
+  grid-template-columns: 95% 4%;
+  background-color: #fff;
+  margin-block: 10%;
+}
+
+.Header-divLogo {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.Header-divLogo-h1 {
+  font-family: "Capriola", sans-serif;
+  font-size: 50px;
+  color: #14243c;
+  cursor: default;
+}
+
+.Header-divLogo-h1:hover {
+  text-shadow: 0 0 0.1em #F1C40F, 0 0 0.1em #F1C40F, 0 0 0.1em #F1C40F;
+}
+
+.Header-divNav {
+  background-color: blue;
+}
