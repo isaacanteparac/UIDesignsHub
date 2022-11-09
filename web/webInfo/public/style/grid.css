@@ -1,0 +1,156 @@
+.Grid-3 {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 20px;
+  width: 100%;
+  max-height: 675px;
+  justify-content: center;
+  background-color: transparent;
+  padding-block: 10px;
+  margin-block: 20px;
+}
+
+.Grid-2 {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 20px;
+  width: 100%;
+  max-height: 675px;
+  justify-content: center;
+  background-color: transparent;
+  padding-block: 10px;
+  margin-block: 20px;
+}
+
+.Grid-2 .Grid-boxPicture {
+  width: 90%;
+  height: 675px;
+  background-color: transparent;
+}
+
+.Grid-3 .Grid-boxText:nth-child(2):hover {
+  border: 1px solid #ff0745ac;
+  box-shadow: 5px 5px 5px #ff0745ac;
+}
+
+.Grid-3 .Grid-boxText:nth-child(3):hover {
+  border: 1px solid #ffc107ac;
+  box-shadow: 5px 5px 5px #ffc107ac;
+}
+
+.Grid-2 .Grid-boxText:nth-child(2):hover {
+  border: 1px solid #36bc9bac;
+  box-shadow: 5px 5px 5px #36bc9bac;
+}
+
+.Grid-2 .Grid-boxText:nth-child(3):hover {
+  border: 1px solid #ffc107ac;
+  box-shadow: 5px 5px 5px #ffc107ac;
+}
+
+.Grid-boxPicture,
+.Grid-boxText {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.Grid-boxPicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Grid-boxPicture:hover {
+  transform: translateY(-15px);
+}
+
+.Grid-boxPicture:hover .Grid-boxPicture-img {
+  width: 100%;
+}
+
+.Grid-boxText:hover {
+  transform: translateY(-15px);
+  border: 1px solid #0745ffac;
+  box-shadow: 5px 5px 5px #0745ffac;
+}
+
+.Grid-boxText {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #fafafa;
+  padding-block: 10px;
+  min-height: 400px;
+  box-shadow: 5px 5px 5px #ccc;
+  border: 1px solid #ccc;
+  max-height: 665px;
+}
+
+.Grid-boxText-h2,
+.Grid-boxText-p {
+  padding-inline: 5px;
+}
+
+.Grid-boxText-h2 {
+  color: var(--havelockBlue);
+  font-family: "Capriola", sans-serif;
+  margin-bottom: 10px;
+}
+
+.Grid-boxText-p {
+  color: var(--colorText);
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  background-color: transparent;
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.Grid-boxText-picture {
+  margin: auto;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding-inline: 10px;
+  overflow: hidden;
+}
+
+.Grid-boxText-picture-img {
+  width: 90%;
+  border-radius: 10px;
+  object-fit: scale-down;
+  cursor: zoom-in;
+  transition: all 0.5s;
+}
+
+.Grid-boxText-picture-img:hover {
+  width: 100%;
+}
+
+.Grid-boxPicture-img {
+  object-fit: cover;
+  width: 95%;
+  border-radius: 10px;
+  object-fit: scale-down;
+  cursor: zoom-in;
+  animation-name: imgGrid;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all 0.1s;
+}
+
+@keyframes imgGrid {
+  25% {
+    box-shadow: 0px 5px 0px 0px var(--cabaret);
+  }
+  50% {
+    box-shadow: 0px 5px 0px 0px var(--cabaret), 0px -5px 0 0px var(--havelockBlue);
+  }
+
+}

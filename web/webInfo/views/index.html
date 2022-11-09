@@ -1,0 +1,432 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/style/index.css" />
+    <script src="../public/logic/btn.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="Navigation-divContainer" id="navigation">
+      <button class="Navigation-buttonMenu" onclick="navigation(false)">
+        <div class="Navigation-buttonMenu-lineClose"></div>
+        <div class="Navigation-buttonMenu-lineClose"></div>
+      </button>
+      <ul class="Navigation-divContainer-ul">
+        <li class="Navigation-divContainer-ul-li" onclick="moveSelection('#')">
+          Descripcion
+        </li>
+
+        <li
+          class="Navigation-divContainer-ul-li"
+          onclick="moveSelection('problematicPorject')"
+        >
+          Problematica
+        </li>
+
+        <li class="Navigation-divContainer-startul-li">
+          Proyecto
+          <ul class="Navigation-divContainer-subUl">
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart1')"
+            >
+              parte 1
+            </li>
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart2')"
+            >
+              parte 2
+            </li>
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart3')"
+            >
+              parte 3
+            </li>
+            <li
+              class="Navigation-divContainer-subUl-li"
+              onclick="moveSelection('projectPart4')"
+            >
+              parte 4
+            </li>
+          </ul>
+        </li>
+        <li
+          class="Navigation-divContainer-ul-li"
+          onclick="moveSelection('footer')"
+        >
+          Contactos
+        </li>
+      </ul>
+    </nav>
+    <main className="MainSection" id="main">
+      <section class="InfoProyect">
+        <div class="InfoProyect-boxText">
+          <div class="InfoProyect-boxText-label">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            voluptates ratione dolorum, reiciendis, placeat expedita assumenda
+            cum ducimus maiores, nihil repellendus temporibus labore quasi
+            dolorem! Sed ipsum fugiat dolore. Earum?
+          </div>
+        </div>
+        <picture class="InfoProyect-boxPicture">
+          <img
+            class="InfoProyect-boxPicture-img"
+            src="../public/img/LOGO_IA.png"
+            alt=""
+          />
+        </picture>
+      </section>
+
+      <section class="InfoProyect">
+        <picture class="InfoProyect-boxPicture">
+          <img
+            class="InfoProyect-boxPicture-img"
+            id="imgPicturePresentation"
+            src="../public/img/LOGO_IA.png"
+            alt="isaac antepara c"
+          />
+        </picture>
+        <div class="InfoProyect-boxText">
+          <label class="InfoProyect-boxText-label">
+            Hello, world! I’m{" "}
+            <div class="MyName">
+              <label>I</label>
+              <label>S</label>
+              <label>A</label>
+              <label>A</label>
+              <label>C</label>
+
+              <label>A</label>
+              <label>N</label>
+              <label>T</label>
+              <label>E</label>
+              <label>P</label>
+              <label>A</label>
+              <label>R</label>
+              <label>A</label>
+
+              <label> C</label>
+              <label>E</label>
+              <label>R</label>
+              <label>E</label>
+              <label>Z</label>
+              <label>O,</label>
+            </div>
+            a fullstack developer, but I like to work a lot with the frontend.
+          </label>
+        </div>
+      </section>
+
+      <!--TITLE:GRID IMAGENES 3-->
+      <section class="Grid-3">
+        <picture class="Grid-boxPicture">
+          <img
+            class="Grid-boxPicture-img"
+            src="../public/img/LOGO_IA.png"
+            onclick="windowBlurImg(true, '../public/img/LOGO_IA.png')"
+          />
+        </picture>
+        <picture class="Grid-boxPicture">
+          <img
+            class="Grid-boxPicture-img"
+            src="../public/img/logo_iaPhone.png"
+            onclick="windowBlurImg(true, '../public/img/logo_iaPhone.png')"
+          />
+        </picture>
+        <picture class="Grid-boxPicture">
+          <img
+            class="Grid-boxPicture-img"
+            src="../public/img/logo_iaComputer.png"
+            onclick="windowBlurImg(true, '../public/img/logo_iaComputer.png')"
+          />
+        </picture>
+      </section>
+      <!--TITLE:GRID TEXT 3 e imagenes-->
+      <section class="Grid-3">
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta?
+          </p>
+          <picture class="Grid-boxText-picture">
+            <img
+              class="Grid-boxText-picture-img"
+              src="../public/img/LOGO_IA.png"
+              onclick="windowBlurImg(true, '../public/img/LOGO_IA.png')"
+            />
+          </picture>
+        </div>
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Hic porro exercitationem voluptate
+            corporis, assumenda autem ipsum quasi excepturi libero, perspiciatis
+            est amet debitis facere omnis esse fugiat officia. Molestiae, vero.
+          </p>
+          <picture class="Grid-boxText-picture">
+            <img
+              class="Grid-boxText-picture-img"
+              src="../public/img/logo_iaComputer.png"
+              onclick="windowBlurImg(true, '../public/img/logo_iaComputer.png')"
+            />
+          </picture>
+        </div>
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Hic porro exercitationem voluptate
+            corporis, assumenda autem ipsum quasi excepturi libero, perspiciatis
+            est amet debitis facere omnis esse fugiat officia. Molestiae, vero.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore,
+            suscipit. Deserunt, non iure? Dolorum deserunt tempore voluptatem
+            dolores id minus delectus praesentium adipisci quam esse? Incidunt
+            quis corporis nostrum deleniti.
+          </p>
+          <picture class="Grid-boxText-picture">
+            <img
+              class="Grid-boxText-picture-img"
+              src="../public/img/logo_iaComputer.png"
+              onclick="windowBlurImg(true, '../public/img/logo_iaComputer.png')"
+            />
+          </picture>
+        </div>
+      </section>
+      <!--TITLE:GRID TEXT 3 -->
+      <section class="Grid-3">
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta?
+          </p>
+        </div>
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Hic porro exercitationem voluptate
+            corporis, assumenda autem ipsum quasi excepturi libero, perspiciatis
+            est amet debitis facere omnis esse fugiat officia. Molestiae, vero.
+          </p>
+        </div>
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Hic porro exercitationem voluptate
+            corporis, assumenda autem ipsum quasi excepturi libero, perspiciatis
+            est amet debitis facere omnis esse fugiat officia. Molestiae, vero.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore,
+            suscipit. Deserunt, non iure? Dolorum deserunt tempore voluptatem
+            dolores id minus delectus praesentium adipisci quam esse? Incidunt
+            quis corporis nostrum deleniti.
+          </p>
+        </div>
+      </section>
+
+      <!--TITLE:GRID IMAGENES 2-->
+      <section class="Grid-2">
+        <picture class="Grid-boxPicture">
+          <img
+            class="Grid-boxPicture-img"
+            src="../public/img/LOGO_IA.png"
+            onclick="windowBlurImg(true, '../public/img/LOGO_IA.png')"
+          />
+        </picture>
+        <picture class="Grid-boxPicture">
+          <img
+            class="Grid-boxPicture-img"
+            src="../public/img/logo_iaPhone.png"
+            onclick="windowBlurImg(true, '../public/img/logo_iaPhone.png')"
+          />
+        </picture>
+      </section>
+      <!--TITLE:GRID TEXT 2 -->
+      <section class="Grid-2">
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta?
+          </p>
+        </div>
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Hic porro exercitationem voluptate
+            corporis, assumenda autem ipsum quasi excepturi libero, perspiciatis
+            est amet debitis facere omnis esse fugiat officia. Molestiae, vero.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat et
+            porro accusamus modi. Consectetur adipisci cumque perferendis
+            consequuntur doloremque minima impedit animi repellendus esse error
+            possimus, reprehenderit ipsam aliquid aliquam. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Eligendi doloremque
+            necessitatibus adipisci labore illum ipsum error vel eum, fuga
+            deserunt repellendus. Praesentium, est mollitia! Reiciendis ipsum
+            quis ipsam nostrum qui! Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Ea, enim soluta! Ducimus magnam, quam cumque omnis
+            optio iste aut nulla expedita nobis dicta iure voluptatem dolorem,
+            excepturi sed velit aspernatur.
+          </p>
+        </div>
+      </section>
+      <!--TITLE:GRID TEXT 2 e imagenes-->
+      <section class="Grid-2">
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta?
+          </p>
+          <picture class="Grid-boxText-picture">
+            <img
+              class="Grid-boxText-picture-img"
+              src="../public/img/LOGO_IA.png"
+              onclick="windowBlurImg(true, '../public/img/LOGO_IA.png')"
+            />
+          </picture>
+        </div>
+        <div class="Grid-boxText">
+          <h2 class="Grid-boxText-h2">Title</h2>
+          <p class="Grid-boxText-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            architecto ipsa suscipit doloribus atque doloremque expedita
+            mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
+            deleniti, harum illo unde hic soluta? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Hic porro exercitationem voluptate
+            corporis, assumenda autem ipsum quasi excepturi libero, perspiciatis
+            est amet debitis facere omnis esse fugiat officia. Molestiae, vero.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde amet
+            animi cumque qui laborum eius odio tempora, aliquid facilis
+            reiciendis mollitia quidem ad commodi perspiciatis necessitatibus in
+            perferendis assumenda. Cupiditate?
+          </p>
+          <picture class="Grid-boxText-picture">
+            <img
+              class="Grid-boxText-picture-img"
+              src="../public/img/logo_iaComputer.png"
+              onclick="windowBlurImg(true, '../public/img/logo_iaComputer.png')"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <!--TITLE:HEADER-->
+    <header class="Header" id="header">
+      <div class="Navigation">
+        <button
+          class="Navigation-buttonMenu"
+          onclick="navigation()"
+          id="HeaderButtonNav"
+        >
+          <div class="Navigation-buttonMenu-linePlus"></div>
+          <div class="Navigation-buttonMenu-linePlus"></div>
+          <div class="Navigation-buttonMenu-linePlus"></div>
+        </button>
+      </div>
+    </header>
+
+    <!--TTIEL:VIEW IMG-->
+    <div class="Blur" id="windowBlurImg">
+      <button class="Navigation-buttonMenu" onclick="windowBlurImg(false)">
+        <div class="Navigation-buttonMenu-lineClose"></div>
+        <div class="Navigation-buttonMenu-lineClose"></div>
+      </button>
+      <div class="Blur-container">
+        <img id="imgBlur" class="Blur-container-img" src="" alt="img" />
+      </div>
+    </div>
+
+    <!--TITLE:FOOTER-->
+    <footer class="Footer" id="footer">
+      <div class="team">
+        <h2 class="team-h2">Team</h2>
+        <ul class="team-ul">
+          <li class="team-ul-li">🙂 amanda ledesma bravo</li>
+          <li class="team-ul-li">🙂 isaac david antepara cerezo</li>
+          <li class="team-ul-li">🙂 juan pablo peralta perez</li>
+          <li class="team-ul-li">🙂 jose emilio eguez sempertegui</li>
+          <li class="team-ul-li">🙂 ruben jeremy uzca balladares</li>
+          <li class="team-ul-li">🙂 sebastian nazri adum moreno</li>
+        </ul>
+      </div>
+      <div class="devAndDesing">
+        <div class="Footer-madeBy">
+          <label class="Footer-madeBy-label">
+            © 2022 Designed and developed by Isaac Antepara Cerezo</label
+          >
+        </div>
+        <div class="Footer-boxLinks">
+          <a
+            href="https://github.com/isaacanteparac"
+            class="Footer-boxLinks-a"
+            target="_blank"
+            ><img
+              src="./../public/img/gh.png"
+              alt="github"
+              class="Footer-boxLinks-a-img"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/isaacanteparac/"
+            target="_blank"
+            class="Footer-boxLinks-a"
+            ><img
+              src="./../public/img/lnkd.png"
+              alt="linkedin"
+              class="Footer-boxLinks-a-img"
+          /></a>
+          <a
+            href="https://www.instagram.com/isaacanteparac/"
+            target="_blank"
+            class="Footer-boxLinks-a"
+            ><img
+              src="./../public/img/ig.png"
+              alt="linkedin"
+              class="Footer-boxLinks-a-img"
+          /></a>
+          <a
+            href="https://twitter.com/isaacanteparac"
+            target="_blank"
+            class="Footer-boxLinks-a"
+            ><img
+              src="./../public/img/tw.png"
+              alt="linkedin"
+              class="Footer-boxLinks-a-img"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

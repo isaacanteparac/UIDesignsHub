@@ -1,0 +1,134 @@
+.InfoProyect {
+  width: 100%;
+  height: 650px;
+  *padding-block: 20px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.InfoProyect-boxText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.InfoProyect-boxPicture {
+  border-radius: 20px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.InfoProyect-boxPicture-img {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  object-fit: cover;
+  width: 80%;
+  border: none;
+  max-height: 600px;
+  border-radius: 20px;
+  animation-name: photoIm;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all 0.5s;
+  *opacity: 0;
+}
+
+.InfoProyect-boxPicture-img:hover {
+  transform: translateY(-15px);
+}
+
+@keyframes photoIm {
+  25% {
+    box-shadow: 5px 5px 0 2px var(--cabaret);
+  }
+  50% {
+    box-shadow: 5px 5px 0 2px var(--cabaret), 10px 10px 0 4px var(--keppek);
+  }
+  75% {
+    box-shadow: 5px 5px 0 2px var(--cabaret), 10px 10px 0 4px var(--keppek),
+      15px 15px 0 6px var(--casablanca);
+  }
+  100% {
+    box-shadow: 5px 5px 0 2px var(--cabaret), 10px 10px 0 4px var(--keppek),
+      15px 15px 0 6px var(--casablanca), 20px 20px 0 8px var(--havelockBlue);
+  }
+}
+
+.InfoProyect-boxText-label {
+  font-family: "Raleway", sans-serif;
+  color: var(--colorText);
+  font-size: 40px;
+}
+
+.MyName {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--colorText);
+}
+
+.MyName label:nth-child(1) {
+  color: var(--cabaret);
+}
+.MyName label:nth-child(2) {
+  color: var(--keppek);
+}
+.MyName label:nth-child(3) {
+  color: var(--casablanca);
+}
+.MyName label:nth-child(4) {
+  color: var(--casablanca);
+}
+.MyName label:nth-child(5) {
+  color: var(--havelockBlue);
+}
+
+.MyName label:nth-child(6) {
+  color: var(--casablanca);
+}
+.MyName label:nth-child(7) {
+  color: var(--cabaret);
+}
+.MyName label:nth-child(8) {
+  color: var(--havelockBlue);
+}
+.MyName label:nth-child(9) {
+  color: var(--keppek);
+}
+.MyName label:nth-child(10) {
+  color: var(--cabaret);
+}
+.MyName label:nth-child(11) {
+  color: var(--havelockBlue);
+}
+.MyName label:nth-child(12) {
+  color: var(--casablanca);
+}
+.MyName label:nth-child(13) {
+  color: var(--keppek);
+}
+
+.MyName label:nth-child(14) {
+  color: var(--cabaret);
+}
+.MyName label:nth-child(15) {
+  color: var(--keppek);
+}
+.MyName label:nth-child(16) {
+  color: var(--casablanca);
+}
+.MyName label:nth-child(17) {
+  color: var(--keppek);
+}
+.MyName label:nth-child(18) {
+  color: var(--havelockBlue);
+}
+.MyName label:nth-child(19) {
+  color: var(--casablanca);
+}
