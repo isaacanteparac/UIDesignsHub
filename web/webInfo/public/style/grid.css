@@ -56,11 +56,6 @@
   border-radius: 10px;
   transition: all 0.5s;
 }
-.Grid-boxPicture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .Grid-boxPicture:hover {
   transform: translateY(-15px);
