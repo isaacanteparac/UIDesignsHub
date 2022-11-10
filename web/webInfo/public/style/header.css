@@ -22,9 +22,13 @@ header {
 }
 
 .nameGroup .MyName label{
-  font-size:60px;
+  font-size:40px;
   *font-weight: 600;
   font-family: 'Monoton', cursive;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  font-family: 'Gugi', cursive;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Pacifico', cursive;
 
 
 }
@@ -53,4 +57,8 @@ header {
 
 .Header-divNav {
   background-color: blue;
+}
+
+.logoWeb{
+  width: 200px;
 }

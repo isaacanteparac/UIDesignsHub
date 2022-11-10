@@ -1,0 +1,269 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Capriola&family=Commissioner&family=Fresca&family=Gugi&family=Lato&family=Magra&family=Montserrat+Alternates&family=Pacifico&family=Prompt&family=Raleway&family=Red+Hat+Display&family=Roboto+Flex:opsz@8..144&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      label {
+        font-size: 20px;
+        width: 350px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: #fff;
+        padding-block: 5px;
+        padding-inline: 5px;
+        color: #000;
+        backdrop-filter: blur(5px);
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: flex-start;
+        overflow: hidden;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        cursor: copy;
+      }
+
+      label:hover {
+        background-color: #fafafa;
+        border: 1px solid #0037ffac;
+        -webkit-box-shadow: 0px 0px 14px 0px #0037ffac;
+        -moz-box-shadow: 0px 0px 14px 0px #0037ffac;
+        box-shadow: 0px 0px 14px 0px #0037ffac;
+      }
+
+      .bodyFont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px 30px;
+        padding-inline: 5px;
+        background-color: #fff;
+      }
+
+      .devAndDesing {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-block: 10px;
+        height: 60px;
+      }
+
+      .Footer-madeBy-label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+      }
+
+      .Footer-madeBy-label {
+        font-family: "Capriola", sans-serif;
+        font-size: 20px;
+      }
+
+      .Footer-boxLinks {
+        display: flex;
+        align-items: flex-end;
+        justify-content: right;
+      }
+
+      .Footer-boxLinks-a {
+        text-decoration: none;
+        margin-inline: 5px;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Footer-boxLinks-a-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 17px;
+        padding: 0;
+        object-fit: cover;
+        transition: all 0.1;
+      }
+
+      .Footer-boxLinks-a-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 17px;
+        padding: 0;
+        object-fit: cover;
+        transition: all 0.1;
+      }
+
+      .Footer-boxLinks-a-img:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 100%;
+      }
+      h1 {
+        color: #0037ff;
+        font-size: 50px;
+        font-family: "Capriola", sans-serif;
+        margin-block: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      Footer {
+        background-color: transparent;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      function copyText(cssFont) {
+        document.execCommand(cssFont);
+        var aux = document.createElement("input");
+        aux.setAttribute("value", cssFont);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+        alert(`COPY: ${cssFont}`);
+      }
+
+      function loadFont() {
+        const containerFonts = document.getElementById("containerFonts");
+        const fonts = [
+          { name: "Capriola", font: "font-family: 'Capriola', sans-serif" },
+          { name: "Fresca", font: "font-family: 'Fresca', sans-serif;" },
+          { name: "Gugi", font: "font-family: 'Gugi', cursive;" },
+          {
+            name: "Montserrat Alternate",
+            font: "font-family: 'Montserrat Alternates', sans-serif;",
+          },
+          { name: "Pacific", font: "font-family: 'Pacifico', cursive;" },
+          {
+            name: "Raleway",
+            font: "font-family: 'Raleway', sans-serif;",
+          },
+          {
+            name: "RobotoFlex",
+            font: "font-family: 'Roboto Flex', sans-serif;",
+          },
+          {
+            name: "Baloo Bhaina 2",
+            font: "font-family: 'Baloo Bhaina 2', cursive;",
+          },
+          {
+            name: "lato",
+            font: "font-family: 'Lato', sans-serif",
+          },
+          {
+            name: "prompt",
+            font: "font-family: 'Prompt', sans-serif",
+          },
+          {
+            name: "Red Hat Display",
+            font: "font-family: 'Red Hat Display', sans-serif",
+          },
+          {
+            name: "Commissioner",
+            font: "font-family: 'Commissioner', sans-serif",
+          },
+          {
+            name: "Magra",
+            font: "font-family: 'Magra', sans-serif",
+          },
+          {
+            name: "Zen Dots",
+            font: "font-family: 'Zen Dots', cursive",
+          },
+          {
+            name: "IBM Plex Sans Devanagari",
+            font: "font-family: 'IBM Plex Sans Devanagari', sans-serif",
+          },
+        ];
+
+        fonts.map((font) => {
+          const label_ = document.createElement("label");
+          label_.innerHTML = `🖊️${font.name}<br />💎${font.font}<br />📄a b c d e f g h i j k l m n ñ o p q r s t u w x y z <br />📄A B C D E F G H I J K L M N Ñ O P Q R S T U W X Y Z <br />📄0 1 2 3 4 5 6 7 8 9<br />📄! # $ % & / ( ) = ? ¡ * [ ] _ { }`;
+          label_.setAttribute("style", font.font);
+          label_.id = font.name;
+          label_.onclick = () => copyText(font.font);
+          containerFonts.appendChild(label_);
+        });
+      }
+    </script>
+    <title>fonts used by IA</title>
+  </head>
+  <body onload="loadFont()" class="bodyFont">
+    <h1>fonts you used</h1>
+    <section id="containerFonts" class="bodyFont"></section>
+    <footer>
+      <div class="devAndDesing">
+        <div class="Footer-madeBy">
+          <span class="Footer-madeBy-label">
+            © 2022 Designed and developed by Isaac Antepara C.
+          </span>
+        </div>
+        <div class="Footer-boxLinks">
+          <a
+            href="https://github.com/isaacanteparac"
+            class="Footer-boxLinks-a"
+            target="_blank"
+            ><img
+              src="./img/gh.png"
+              alt="github"
+              class="Footer-boxLinks-a-img"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/isaacanteparac/"
+            target="_blank"
+            class="Footer-boxLinks-a"
+            ><img
+              src="./img/lnkd.png"
+              alt="linkedin"
+              class="Footer-boxLinks-a-img"
+          /></a>
+          <a
+            href="https://www.instagram.com/isaacxac_ui/"
+            target="_blank"
+            class="Footer-boxLinks-a"
+            ><img
+              src="./img/ig.png"
+              alt="instagram"
+              class="Footer-boxLinks-a-img"
+          /></a>
+          <a
+            href="https://twitter.com/isaacanteparac"
+            target="_blank"
+            class="Footer-boxLinks-a"
+            ><img
+              src="./img/tw.png"
+              alt="twitter"
+              class="Footer-boxLinks-a-img"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
