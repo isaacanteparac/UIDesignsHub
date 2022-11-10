@@ -60,5 +60,8 @@ header {
 }
 
 .logoWeb{
-  width: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-inline: 10px;
 }
