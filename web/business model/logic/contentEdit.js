@@ -2,7 +2,7 @@ function createLi(idUl, list) {
   let countEmote = 0;
 
   let ulBoxList = document.getElementById(idUl);
-
+  ulBoxList.innerHTML = "";
   list.map((item) => {
     const newLi = document.createElement("li");
     countEmote++;
@@ -21,11 +21,78 @@ function windowBlurImg(bool = true, url = "") {
   const windowBlurImg = document.getElementById("windowBlurImg");
   const imgBlur = document.getElementById("imgBlur");
   if (bool) {
+    windowBlurFullView(false, {});
     imgBlur.src = "" + url;
-    windowBlurImg.style.display = "flex";
+    imgBlur.setAttribute("style", "display:block");
+    windowBlurImg.setAttribute("style", "display: flex;");
   } else {
     imgBlur.src = "";
-    windowBlurImg.style.display = "none";
+    imgBlur.setAttribute("style", "display:none;");
+    windowBlurImg.setAttribute("style", "display: none;");
+  }
+}
+
+function windowBlurFullView(requireView, data) {
+  const idFullView = {
+    id_fullView: "fullView",
+    id_fullview_boxPicture: "fullview_boxPicture",
+    id_fullview_boxPicture_img: "fullview_boxPicture_img",
+    id_fullview_title: "fullview_title",
+    id_fullview_boxText: "fullview_boxText",
+    id_fullview_boxText_paragraph: "fullview_boxText_paragraph",
+    id_fullview_boxList: "fullview_boxList",
+    id_fullview_boxList_ul: "fullview_boxList_ul",
+  };
+  const windowBlur = document.getElementById("windowBlurImg");
+
+  let id_fullView = document.getElementById(idFullView.id_fullView);
+  let id_fullview_title = document.getElementById(idFullView.id_fullview_title);
+
+  let id_fullview_boxPicture = document.getElementById(
+    idFullView.id_fullview_boxPicture
+  );
+  let id_fullview_boxPicture_img = document.getElementById(
+    idFullView.id_fullview_boxPicture_img
+  );
+
+  let id_fullview_boxText = document.getElementById(
+    idFullView.id_fullview_boxText
+  );
+  let id_fullview_boxText_paragraph = document.getElementById(
+    idFullView.id_fullview_boxText_paragraph
+  );
+
+  let id_fullview_boxList = document.getElementById(
+    idFullView.id_fullview_boxList
+  );
+  let id_fullview_boxList_ul = document.getElementById(
+    idFullView.id_fullview_boxList_ul
+  );
+
+  id_fullview_boxPicture_img.src = "";
+  id_fullview_boxList_ul.innerHTML = "";
+  id_fullview_boxText_paragraph.innerText = "";
+  id_fullview_title.innerText = "";
+
+  if (requireView) {
+    windowBlurImg(false, "");
+    windowBlur.setAttribute("style", "display: flex;");
+    id_fullView.setAttribute("style", "display: grid;");
+    id_fullview_title.innerText = data.textTitle;
+    if (data.requirePicture) {
+      id_fullview_boxPicture_img.src = data.urlPicture;
+      id_fullview_boxPicture.setAttribute("style", "display: flex;");
+    }
+    if (data.requireParagraph) {
+      id_fullview_boxText.setAttribute("style", "display:block;");
+      id_fullview_boxText_paragraph.innerText = data.paragraph;
+    }
+    if (data.requirelist) {
+      createLi(idFullView.id_fullview_boxList_ul, data.list);
+      id_fullview_boxList.setAttribute("style", "display:block;");
+    }
+  } else {
+    id_fullView.setAttribute("style", "display: none;");
   }
 }
 
@@ -44,10 +111,15 @@ function sectionCreate(obejectSection) {
   if (obejectSection.requireParagraph) {
     id_boxText.setAttribute("style", "display:block;");
     id_paragraphBoxText.innerText = obejectSection.paragraph;
+    //TITLE: FULL VIEW
+    id_paragraphBoxText.onclick = () =>
+      windowBlurFullView(true, obejectSection);
   }
   if (obejectSection.requirelist) {
     createLi(obejectSection.id_ulBoxList, obejectSection.list);
     id_boxList.setAttribute("style", "display:block;");
+    //TITLE: FULL VIEW
+    id_boxList.onclick = () => windowBlurFullView(true, obejectSection);
   }
   if (obejectSection.requirePicture) {
     id_imgBoxPicture.src = obejectSection.urlPicture;

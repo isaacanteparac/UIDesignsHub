@@ -1,12 +1,15 @@
-:root{
-    --bodyBG: #000;
-    --colorBorderSection: #fff;
-    --borderRadiusSection: 20px;
-    --borderSize:3px;
-    --colorText: #fff;
-    --colorSubTitle: #fff;
-    --colorTitle: #ffff;
-    --blur: 1.2rem;
-    --contentBG:#00000063;
-    --cabaret: #ff0745;
+:root {
+  --bodyBG: #000;
+  --colorBorderSection: #fff;
+  --borderRadiusSection: 15px;
+  --borderSize: 3px;
+  --colorText: #fff;
+  --colorSubTitle: #fff;
+  --colorTitle: #fff;
+  --blur: 1.2rem;
+  --contentBG: #ffffff39;
+  --cabaret: #ff0745;
+  --fullViewText: #ccc;
 }
+
+/*#000000b3*/

@@ -21,7 +21,6 @@
     <div class="balls colorSun"></div>
     <div class="balls colorMoon"></div>
     <div class="boxBlur">
-
       <div class="gridBig">
         <!--TITLE: SECTION 1-->
         <section class="section-1">
@@ -192,16 +191,42 @@
           </div>
         </section>
       </div>
-
+      <footer class="Footer">
+        <a class="madeBy" href="https://github.com/isaacanteparac"  target="_blank" >@2022 made by Isaac Antepara C.</a>
+      </footer>
     </div>
     <div class="Blur" id="windowBlurImg">
-        <button class="Navigation-buttonMenu" onclick="windowBlurImg(false)">
-          <div class="Navigation-buttonMenu-lineClose"></div>
-          <div class="Navigation-buttonMenu-lineClose"></div>
-        </button>
-        <div class="Blur-container">
-          <img id="imgBlur" class="Blur-container-img" src="" alt="img" />
+      <button class="Navigation-buttonMenu" onclick="windowBlurImg(false)">
+        <div class="Navigation-buttonMenu-lineClose"></div>
+        <div class="Navigation-buttonMenu-lineClose"></div>
+      </button>
+      <div class="Blur-container">
+        <img id="imgBlur" class="Blur-container-img" src="" alt="img" />
+
+        <div class="fullView" id="fullView">
+          <picture class="fullView-picture" id="fullview_boxPicture">
+            <img
+              class="fullView-picture-img"
+              id="fullview_boxPicture_img"
+              src=""
+              alt="imgFullView"
+            />
+          </picture>
+          <div class="fullView-boxtText">
+            <div class="subTitle">
+              <h2 class="subTitle-h2" id="fullview_title"></h2>
+            </div>
+            <div class="contentSection">
+              <div class="boxText" id="fullview_boxText">
+                <p class="boxText-p" id="fullview_boxText_paragraph"></p>
+              </div>
+              <div class="boxList" id="fullview_boxList">
+                <ul class="boxList-ul" id="fullview_boxList_ul"></ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   </body>
 </html>
