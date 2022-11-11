@@ -1,0 +1,79 @@
+.balls {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.colorMoon {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #d54f22,
+    inset -20px 0 80px #d00000, inset 20px 0 300px #d54f22,
+    inset -20px 0 300px #d00000, 0 0 50px #fff, -10px 0 80px #d54f22,
+    10px 0 80px #d00000;
+  filter: blur(5px);
+  animation-name: Moon;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes Moon {
+  10% {
+    transform: translateY(-230px);
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
+      inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
+      inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
+      10px 0 80px #0014d0;
+  }
+  25% {
+    transform: translateX(575px);
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
+      inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
+      inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
+      10px 0 80px #0014d0;
+  }
+  50% {
+    transform: translateX(-575px);
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
+      inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
+      inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
+      10px 0 80px #0014d0;
+  }
+  75% {
+    transform: translateY(230px);
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
+      inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
+      inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
+      10px 0 80px #0014d0;
+  }
+}
+.colorSun {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #eeff00,
+    inset -20px 0 80px #ff0000, inset 20px 0 300px #eeff00,
+    inset -20px 0 300px #ff0000, 0 0 50px #fff, -10px 0 80px #eeff00,
+    10px 0 80px #ff0000;
+  filter: blur(5px);
+  animation-name: sun;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes sun {
+  10% {
+    transform: translateY(220px);
+  }
+  25% {
+    transform: translateX(-575px);
+  }
+  50% {
+    transform: translateX(575px);
+  }
+  75% {
+    transform: translateY(-230px);
+  }
+}

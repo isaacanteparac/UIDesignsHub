@@ -1,0 +1,61 @@
+.title,
+.subTitle {
+  width: 100%;
+  background-color: transparent;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.title-h1 {
+  font-family: "Zen Dots", cursive;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: var(--colorTitle);
+  display: block;
+  text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2),
+    0 0 40px var(--color3), 0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+  color: azure;
+  --color1: azure;
+  --color2: aqua;
+  --color3: dodgerblue;
+  --color4: blue;
+}
+
+.subTitle-h2 {
+  font-family: "Gugi", cursive;
+  text-transform: capitalize;
+  color: var(--colorSubTitle);
+}
+
+.boxText {
+  background-color: transparent;
+  width: 100%;
+  padding-inline: 8px;
+  overflow-y: auto;
+  display: none;
+}
+
+.boxText-p,
+.boxList-ul li {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: var(--colorText);
+}
+
+.boxList-ul li {
+  margin-block: 5px;
+}
+
+.groupContentSection .subTitle-h2 {
+  font-size: 1.2rem;
+}
