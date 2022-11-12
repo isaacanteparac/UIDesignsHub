@@ -28,32 +28,37 @@
     inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
     inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
     10px 0 80px #0014d0;
+    --fullScreen:#ffffffc3;
 }
 
 
-:root {
-  --bodyBG: #000;
-  --colorBorderSection: #fff;
-  --borderRadiusSection: 15px;
-  --borderSize: 3px;
-  --colorText: #fff;
-  --colorSubTitle: #fff;
-  --colorTitle: #fff;
-  --blur: 1.2rem;
-  --contentBG: #000000b3;
-  --contentHoverBg: #0a0a0a;
-  --cabaret: #ff0745;
-  --casablanca: #ffc107;
-  --keppek: #45ff07;
-  --havelockBlue: #0745ff;
-  --bgFullView: #0a0a0a;
-  --fullViewText: #ccc;
-  --borderFullView: #ccc;
-  --bgCard:#0a0a0a;
-  --borderColorCard:#999;
-  --boxSahdowFullView:transparent;
-  --fullViewSubTitle:#999;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bodyBG: #000;
+    --colorBorderSection: #fff;
+    --borderRadiusSection: 15px;
+    --borderSize: 3px;
+    --colorText: #fff;
+    --colorSubTitle: #fff;
+    --colorTitle: #fff;
+    --blur: 1.2rem;
+    --contentBG: #000000b3;
+    --contentHoverBg: #0a0a0a;
+    --cabaret: #ff0745;
+    --casablanca: #ffc107;
+    --keppek: #45ff07;
+    --havelockBlue: #0745ff;
+    --bgFullView: #0a0a0a;
+    --fullViewText: #ccc;
+    --borderFullView: #ccc;
+    --bgCard:#0a0a0a;
+    --borderColorCard:#999;
+    --boxSahdowFullView:transparent;
+    --fullViewSubTitle:#999;
+    --fullScreen:#000000c9;
+  }
 }
 
-
-/*#000000b3  #ffffff39;*/
+.visibleBlock{
+  display: block;
+}

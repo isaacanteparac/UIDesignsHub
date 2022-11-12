@@ -1,6 +1,5 @@
 function createLi(idUl, list) {
   let countEmote = 0;
-
   let ulBoxList = document.getElementById(idUl);
   ulBoxList.innerHTML = "";
   list.map((item) => {
@@ -15,6 +14,63 @@ function createLi(idUl, list) {
       countEmote = 0;
     }
   });
+}
+
+function createParagraph(data) {
+  let boxText = document.createElement("div");
+  boxText.className += "boxText";
+  boxText.setAttribute("style", "display: block;");
+  let paragraph = document.createElement("p");
+  paragraph.className += "boxText-p";
+  paragraph.innerText = data.text;
+  boxText.appendChild(paragraph);
+  if (data.children) {
+    console.log(data.dad);
+    let dad = document.getElementById(data.dad);
+    dad.appendChild(boxText);
+  }
+}
+
+function createPicture(data) {
+  let picture = document.createElement("picture");
+  picture.className = "fullView-picture";
+  picture.setAttribute("style", "display: flex");
+  let img = document.createElement("img");
+  img.className += "fullView-picture-img";
+  img.src = data.src;
+  picture.appendChild(img);
+  if (data.children) {
+    let dad = document.getElementById(data.dad);
+    dad.appendChild(picture);
+  }
+}
+
+function createList(data) {
+  let countEmote = 0;
+  let boxLixt = document.createElement("div");
+  let ul = document.createElement("ul");
+  boxLixt.className += "boxList";
+  boxLixt.setAttribute("style", "display: block;");
+  ul.className += "boxList-ul";
+
+  data.list.map((item) => {
+    let newLi = document.createElement("li");
+    countEmote++;
+    if (countEmote === 1) {
+      newLi.innerText = `${emote[0]} ${item}`;
+      ul.appendChild(newLi);
+    } else {
+      newLi.innerText = `${emote[1]} ${item}`;
+      ul.appendChild(newLi);
+      countEmote = 0;
+    }
+  });
+  boxLixt.appendChild(ul);
+  if (data.children) {
+    console.log(data.dad);
+    let dad = document.getElementById(data.dad);
+    dad.appendChild(boxLixt);
+  }
 }
 
 function windowBlurImg(bool = true, url = "") {
@@ -38,11 +94,14 @@ function windowBlurImg(bool = true, url = "") {
 function windowfullScreen(bool = true) {
   let id_fullscreen = document.getElementById("fullView");
   let btnFullScreen = document.getElementById("btnFullScreen");
+  let boxtextBoxPicture = document.getElementById("boxtextBoxPicture");
+
   if (bool) {
+    boxtextBoxPicture.setAttribute("style", "display: grid;");
     btnFullScreen.setAttribute("style", "display: none;");
     id_fullscreen.setAttribute(
       "style",
-      "display: flex; background:#000000c9;width: 100%; height: 100%; border-radius:0px;"
+      "display: flex; background:var(--fullScreen);width: 100%; height: 100%; border-radius:0px;"
     );
   } else {
     id_fullscreen.setAttribute(
@@ -55,65 +114,20 @@ function windowfullScreen(bool = true) {
 function windowBlurFullView(requireView, data) {
   const idFullView = {
     id_fullView: "fullView",
-    id_fullview_boxPicture: "fullview_boxPicture",
-    id_fullview_boxPicture_img: "fullview_boxPicture_img",
     id_fullview_title: "fullview_title",
-    id_fullview_boxText: "fullview_boxText",
     id_fullview_boxText_paragraph: "fullview_boxText_paragraph",
-    id_fullview_boxList: "fullview_boxList",
-    id_fullview_boxList_ul: "fullview_boxList_ul",
   };
   const windowBlur = document.getElementById("windowBlurImg");
-
   let id_fullView = document.getElementById(idFullView.id_fullView);
   let id_fullview_title = document.getElementById(idFullView.id_fullview_title);
-
-  let id_fullview_boxPicture = document.getElementById(
-    idFullView.id_fullview_boxPicture
-  );
-  let id_fullview_boxPicture_img = document.getElementById(
-    idFullView.id_fullview_boxPicture_img
-  );
-
-  let id_fullview_boxText = document.getElementById(
-    idFullView.id_fullview_boxText
-  );
-  let id_fullview_boxText_paragraph = document.getElementById(
-    idFullView.id_fullview_boxText_paragraph
-  );
-
-  let id_fullview_boxList = document.getElementById(
-    idFullView.id_fullview_boxList
-  );
-  let id_fullview_boxList_ul = document.getElementById(
-    idFullView.id_fullview_boxList_ul
-  );
-
-  id_fullview_boxPicture_img.src = "";
-  id_fullview_boxList_ul.innerHTML = "";
-  id_fullview_boxText_paragraph.innerText = "";
+  boxtextBoxPicture.setAttribute("style", "display:flex;");
   id_fullview_title.innerText = "";
-  btnFullScreen.setAttribute("style", "display: flex; opacity:1;");
-
+  btnFullScreen.setAttribute("style", "display: grid;");
   if (requireView) {
     windowBlurImg(false, "");
     windowBlur.setAttribute("style", "display: flex;");
     id_fullView.setAttribute("style", "display: flex;");
-    id_fullview_boxPicture.setAttribute("style", "display: none;");
     id_fullview_title.innerText = data.textTitle;
-    if (data.requirePicture) {
-      //id_fullView.setAttribute("style", "display: grid;");
-      id_fullview_boxPicture_img.src = data.urlPicture;
-      id_fullview_boxPicture.setAttribute("style", "display: flex;");
-    }
-    if (data.requireParagraph) {
-      id_fullview_boxText.setAttribute("style", "display:block;");
-      id_fullview_boxText_paragraph.innerText = data.paragraph;
-    }
-    if (data.requirelist) {
-      createLi(idFullView.id_fullview_boxList_ul, data.list);
-      id_fullview_boxList.setAttribute("style", "display:block;");
-    }
   } else {
     id_fullView.setAttribute("style", "display: none;");
   }

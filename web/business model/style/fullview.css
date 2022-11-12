@@ -33,6 +33,7 @@
   justify-content: center;
   height: 100%;
   overflow: hidden;
+  display: none;
 }
 
 .fullView-picture-img {
@@ -91,7 +92,7 @@
   align-items: flex-start;
   flex-direction: column;
   background-color: var(--bgCard);
-  box-shadow: 5px 5px 5px var(--bgCard);
+  box-shadow: 5px 5px 5px var(--boxSahdowFullView);
   border: 1px solid var(--borderColorCard);
   overflow-y: auto;
   border-radius: 10px;
@@ -127,4 +128,13 @@
 .fullView-grid-3 .Grid-boxText:nth-child(3) .subTitle-h2 {
   color: var(--casablanca);
   font-size: 20px;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  display: none;
 }

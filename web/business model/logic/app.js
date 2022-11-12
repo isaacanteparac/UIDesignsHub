@@ -38,7 +38,7 @@ function app() {
     id_ulBoxList: "section2_boxList_ul",
     textTitle: "value propositions",
     requireParagraph: false,
-    paragraph:"",
+    paragraph: "",
     requirelist: true,
     list: [
       "item 1 de como comer",
@@ -154,6 +154,32 @@ function app() {
     requirePicture: false,
     urlPicture: "",
   };
+
+  const FullscreenP = {
+    text: "hola mundo",
+    children: true,
+    dad: "boxtextBoxPicture",
+  };
+
+  const FullscreenIMG = {
+    src: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    children: true,
+    dad: "boxtextBoxPicture",
+  };
+
+  const fullScreenList = {
+    list: [
+      "item 1 de como comer",
+      "item dos de como masticas",
+      "item 3 de como correr",
+      "item 5 de como saltar",
+    ],
+    children: true,
+    dad: "fullScreenSection1_content",
+  }
+  createParagraph(FullscreenP);
+  createPicture(FullscreenIMG);
+  createList(fullScreenList);
 
   sectionCreate(section1);
   sectionCreate(section2);
