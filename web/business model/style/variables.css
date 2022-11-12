@@ -1,5 +1,5 @@
 :root {
-  --bodyBG: #3c0078f2;
+  --bodyBG: #3c78f2   ;
   --colorBorderSection: #fff;
   --borderRadiusSection: 15px;
   --borderSize: 3px;
@@ -14,8 +14,12 @@
   --keppek: #45ff07;
   --havelockBlue: #0745ff;
   --bgFullView: #fff;
-  --fullViewText: #0a0a0a;
-  --borderFullView: #0a0a0a;
+  --fullViewText: #000;
+  --borderFullView: #ccc;
+  --bgCard:#fff;
+  --borderColorCard:#999;
+  --boxSahdowFullView:#999;
+  --fullViewSubTitle: var(--havelockBlue);
   --sun: inset 0 0 50px #fff, inset 20px 0 80px #eeff00,
     inset -20px 0 80px #ff0000, inset 20px 0 300px #eeff00,
     inset -20px 0 300px #ff0000, 0 0 50px #fff, -10px 0 80px #eeff00,
@@ -26,28 +30,29 @@
     10px 0 80px #0014d0;
 }
 
-/*
+
 :root {
-  --bodyBG: #ccc;
-  --colorBorderSection: #000;
+  --bodyBG: #000;
+  --colorBorderSection: #fff;
   --borderRadiusSection: 15px;
   --borderSize: 3px;
   --colorText: #fff;
   --colorSubTitle: #fff;
-  --colorTitle: #000;
+  --colorTitle: #fff;
   --blur: 1.2rem;
   --contentBG: #000000b3;
+  --contentHoverBg: #0a0a0a;
   --cabaret: #ff0745;
-  --bgFullView:#fff;
-  --fullViewText: #000;
-  --sun: inset 0 0 50px #fff, inset 20px 0 80px #eeff00,
-    inset -20px 0 80px #ff0000, inset 20px 0 300px #eeff00,
-    inset -20px 0 300px #ff0000, 0 0 50px #fff, -10px 0 80px #eeff00,
-    10px 0 80px #ff0000;
-  --moon: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
-    inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
-    inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
-    10px 0 80px #0014d0;
+  --casablanca: #ffc107;
+  --keppek: #45ff07;
+  --havelockBlue: #0745ff;
+  --bgFullView: #0a0a0a;
+  --fullViewText: #ccc;
+  --borderFullView: #ccc;
+  --bgCard:#0a0a0a;
+  --borderColorCard:#999;
+  --boxSahdowFullView:transparent;
+  --fullViewSubTitle:#999;
 }
 
 

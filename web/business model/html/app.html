@@ -201,14 +201,19 @@
       </footer>
     </div>
     <div class="Blur" id="windowBlurImg">
-      <button class="Navigation-buttonMenu" onclick="windowBlurImg(false)">
-        <div class="Navigation-buttonMenu-lineClose"></div>
-        <div class="Navigation-buttonMenu-lineClose"></div>
-      </button>
+      <div class="contentBtn">
+        <button class="Navigation-buttonMenu" id="btnClosePreview" onclick="windowBlurImg(false)">
+          <div class="Navigation-buttonMenu-lineClose"></div>
+          <div class="Navigation-buttonMenu-lineClose"></div>
+        </button>
+        <button class="Navigation-buttonMenu" id="btnFullScreen"onclick="windowfullScreen()">
+          <img src="../img/full-screen.png" alt="" />
+        </button>
+      </div>
+
       <div class="Blur-container">
         <img id="imgBlur" class="Blur-container-img" src="" alt="img" />
         <div class="fullView" id="fullView">
-
           <div class="fullView-boxtText">
             <div class="subTitle">
               <h2 class="subTitle-h2" id="fullview_title"></h2>
@@ -232,28 +237,31 @@
                 <div class="Grid-boxText">
                   <h2 class="subTitle-h2">Title</h2>
                   <p class="boxText-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-                    architecto ipsa suscipit doloribus atque doloremque expedita
-                    mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
-                    deleniti, harum illo unde hic soluta?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Excepturi architecto ipsa suscipit doloribus atque
+                    doloremque expedita mollitia eos. Sapiente provident illo
+                    cupiditate eos! Molestiae deleniti, harum illo unde hic
+                    soluta?
                   </p>
                 </div>
                 <div class="Grid-boxText">
                   <h2 class="subTitle-h2">Title</h2>
                   <p class="boxText-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-                    architecto ipsa suscipit doloribus atque doloremque expedita
-                    mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
-                    deleniti, harum illo unde hic soluta?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Excepturi architecto ipsa suscipit doloribus atque
+                    doloremque expedita mollitia eos. Sapiente provident illo
+                    cupiditate eos! Molestiae deleniti, harum illo unde hic
+                    soluta?
                   </p>
                 </div>
                 <div class="Grid-boxText">
                   <h2 class="subTitle-h2">Title</h2>
                   <p class="boxText-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-                    architecto ipsa suscipit doloribus atque doloremque expedita
-                    mollitia eos. Sapiente provident illo cupiditate eos! Molestiae
-                    deleniti, harum illo unde hic soluta?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Excepturi architecto ipsa suscipit doloribus atque
+                    doloremque expedita mollitia eos. Sapiente provident illo
+                    cupiditate eos! Molestiae deleniti, harum illo unde hic
+                    soluta?
                   </p>
                 </div>
               </section>

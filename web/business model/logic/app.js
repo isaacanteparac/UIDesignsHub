@@ -1,4 +1,4 @@
-const emote = ["🍁", "🍀"];
+const emote = ["🚀", "👩‍🚀"];
 
 function app() {
   const idTitleMain = document.getElementById("titleMain");

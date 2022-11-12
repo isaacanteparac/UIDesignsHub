@@ -20,8 +20,11 @@ function createLi(idUl, list) {
 function windowBlurImg(bool = true, url = "") {
   const windowBlurImg = document.getElementById("windowBlurImg");
   const imgBlur = document.getElementById("imgBlur");
+  let btnFullScreen = document.getElementById("btnFullScreen");
+
   if (bool) {
     windowBlurFullView(false, {});
+    btnFullScreen.setAttribute("style", "display: none;");
     imgBlur.src = "" + url;
     imgBlur.setAttribute("style", "display:block");
     windowBlurImg.setAttribute("style", "display: flex;");
@@ -29,6 +32,23 @@ function windowBlurImg(bool = true, url = "") {
     imgBlur.src = "";
     imgBlur.setAttribute("style", "display:none;");
     windowBlurImg.setAttribute("style", "display: none;");
+  }
+}
+
+function windowfullScreen(bool = true) {
+  let id_fullscreen = document.getElementById("fullView");
+  let btnFullScreen = document.getElementById("btnFullScreen");
+  if (bool) {
+    btnFullScreen.setAttribute("style", "display: none;");
+    id_fullscreen.setAttribute(
+      "style",
+      "display: flex; background:#000000c9;width: 100%; height: 100%; border-radius:0px;"
+    );
+  } else {
+    id_fullscreen.setAttribute(
+      "style",
+      "displat: none; width:80rem; height: 39rem; border-radius:15px;"
+    );
   }
 }
 
@@ -73,6 +93,7 @@ function windowBlurFullView(requireView, data) {
   id_fullview_boxList_ul.innerHTML = "";
   id_fullview_boxText_paragraph.innerText = "";
   id_fullview_title.innerText = "";
+  btnFullScreen.setAttribute("style", "display: flex; opacity:1;");
 
   if (requireView) {
     windowBlurImg(false, "");
