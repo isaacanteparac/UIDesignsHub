@@ -2,7 +2,8 @@
 .subTitle {
   width: 100%;
   background-color: transparent;
-  height: 8%;
+  min-height: 8%;
+  max-height: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,4 +64,11 @@
 
 .boxList-ul li {
   margin-block: 10px;
+}
+
+.madeBy{
+  font-family: "Capriola", sans-serif;
+  font-size: 20px;
+  color: var(--colorTitle);
+  text-decoration: none;
 }

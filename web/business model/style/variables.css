@@ -1,15 +1,51 @@
 :root {
-  --bodyBG: #000;
+  --bodyBG: #3c78f2   ;
   --colorBorderSection: #fff;
+  --borderRadiusSection: 15px;
+  --borderSize: 3px;
+  --colorText: #0a0a0a;
+  --colorSubTitle: #000;
+  --colorTitle: #fff;
+  --blur: 1.2rem;
+  --contentBG: #ffffff39;
+  --contentHoverBg: #fff;
+  --cabaret: #ff0745;
+  --bgFullView: #fff;
+  --fullViewText: #0a0a0a;
+  --borderFullView: #0a0a0a;
+  --sun: inset 0 0 50px #fff, inset 20px 0 80px #eeff00,
+    inset -20px 0 80px #ff0000, inset 20px 0 300px #eeff00,
+    inset -20px 0 300px #ff0000, 0 0 50px #fff, -10px 0 80px #eeff00,
+    10px 0 80px #ff0000;
+  --moon: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
+    inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
+    inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
+    10px 0 80px #0014d0;
+}
+
+/*
+:root {
+  --bodyBG: #ccc;
+  --colorBorderSection: #000;
   --borderRadiusSection: 15px;
   --borderSize: 3px;
   --colorText: #fff;
   --colorSubTitle: #fff;
-  --colorTitle: #fff;
+  --colorTitle: #000;
   --blur: 1.2rem;
-  --contentBG: #ffffff39;
+  --contentBG: #000000b3;
   --cabaret: #ff0745;
-  --fullViewText: #ccc;
+  --bgFullView:#fff;
+  --fullViewText: #000;
+  --sun: inset 0 0 50px #fff, inset 20px 0 80px #eeff00,
+    inset -20px 0 80px #ff0000, inset 20px 0 300px #eeff00,
+    inset -20px 0 300px #ff0000, 0 0 50px #fff, -10px 0 80px #eeff00,
+    10px 0 80px #ff0000;
+  --moon: inset 0 0 50px #fff, inset 20px 0 80px #2241d5,
+    inset -20px 0 80px #0014d0, inset 20px 0 300px #2241d5,
+    inset -20px 0 300px #0014d0, 0 0 50px #fff, -10px 0 80px #2241d5,
+    10px 0 80px #0014d0;
 }
 
-/*#000000b3*/
+
+/*#000000b3  #ffffff39;*/

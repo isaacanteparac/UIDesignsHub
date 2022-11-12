@@ -32,8 +32,6 @@ section {
   transition: all 0.5s;
 }
 
-
-
 .section-2 {
   background-color: transparent;
 }
@@ -79,8 +77,6 @@ section {
   transition: all 0.5s;
 }
 
-
-
 .boxPicture {
   background-color: transparent;
   width: 100%;
@@ -97,7 +93,6 @@ section {
   transition: all 0.5s;
 }
 
-
 .boxPicture-img {
   border-radius: 10px;
   cursor: zoom-in;
@@ -110,20 +105,11 @@ section {
   width: auto;
 }
 
-
-
-.Footer{
+.Footer {
   background-color: transparent;
   width: 100%;
   height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.madeBy{
-  font-family: "Capriola", sans-serif;
-  font-size: 20px;
-  color: var(--colorSubTitle);
-  text-decoration: none;
 }

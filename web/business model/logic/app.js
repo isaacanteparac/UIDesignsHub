@@ -1,8 +1,8 @@
-const emote = ["☀️", "🌑"];
+const emote = ["🍁", "🍀"];
 
 function app() {
   const idTitleMain = document.getElementById("titleMain");
-  idTitleMain.innerText = "sun & moon";
+  idTitleMain.innerText = "hola mundo 😂🤣🤣🤣";
 
   const section1 = {
     id_title: "section1_title",

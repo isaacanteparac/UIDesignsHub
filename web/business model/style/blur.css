@@ -80,7 +80,7 @@
 }
 
 .fullView {
-  background-color: var(--bodyBG);
+  background-color: var(--bgFullView);
   width: 80rem;
   height: 39rem;
   display: grid;
@@ -90,7 +90,7 @@
   display: none;
   overflow: hidden;
   border-radius: var(--borderRadiusSection);
-  border: 3px solid #999;
+  border: 3px solid var(--borderFullView)
 }
 
 .fullView-picture,
@@ -104,7 +104,7 @@
   overflow: hidden;
   padding-bottom: 10px;
   overflow-y:auto;
-  border-left: 2px dashed #99999986;
+  border-left: 2px dashed var(--borderFullView)
 }
 
 .fullView-picture {
