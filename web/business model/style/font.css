@@ -15,7 +15,7 @@
 }
 
 .title-h1 {
-  font-family: "Zen Dots", cursive;
+  font-family: 'Capriola', sans-serif;
   font-size: 2.5rem;
   text-transform: capitalize;
   color: var(--colorTitle);
@@ -23,7 +23,7 @@
 }
 
 .subTitle-h2 {
-  font-family: "Gugi", cursive;
+  font-family: 'Capriola', sans-serif;
   text-transform: capitalize;
   color: var(--colorSubTitle);
 }

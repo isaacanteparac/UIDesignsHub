@@ -25,6 +25,8 @@
   border: var(--borderSize) solid #ccc;
 }
 
+
+
 @keyframes moveTitleMain {
   0% {
     text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1),

@@ -1,5 +1,5 @@
 :root {
-  --bodyBG: #3c78f2   ;
+  --bodyBG: #3c0078f2;
   --colorBorderSection: #fff;
   --borderRadiusSection: 15px;
   --borderSize: 3px;
@@ -10,6 +10,9 @@
   --contentBG: #ffffff39;
   --contentHoverBg: #fff;
   --cabaret: #ff0745;
+  --casablanca: #ffc107;
+  --keppek: #45ff07;
+  --havelockBlue: #0745ff;
   --bgFullView: #fff;
   --fullViewText: #0a0a0a;
   --borderFullView: #0a0a0a;

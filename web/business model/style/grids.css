@@ -16,3 +16,51 @@
   width: 100%;
   height: 100%;
 }
+
+.fullView-grid-3 {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  gap: 20px;
+  width: 100%;
+  height: 22rem;
+  justify-content: center;
+  background-color: transparent;
+  padding-block: 10px;
+  padding-block-start: 20px;
+  margin-block: 15px;
+}
+
+.Grid-boxText {
+  padding: 10px;
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #ccc;
+  border: 1px solid #ccc;
+
+
+  overflow-y: auto;
+  border-radius: 10px;
+  transition: all 0.5s;
+ 
+}
+
+.Grid-boxText:hover {
+  transform: translateY(-15px);
+  border: 1px solid #0745ffac;
+  box-shadow: 5px 5px 5px #0745ffac;
+}
+
+.fullView-grid-3 .Grid-boxText:nth-child(2):hover {
+  border: 1px solid #ff0745ac;
+  box-shadow: 5px 5px 5px #ff0745ac;
+}
+
+.fullView-grid-3 .Grid-boxText:nth-child(3):hover {
+  border: 1px solid #ffc107ac;
+  box-shadow: 5px 5px 5px #ffc107ac;
+}
+

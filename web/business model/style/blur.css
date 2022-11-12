@@ -47,22 +47,19 @@
   justify-content: center;
   flex-direction: column;
   padding: 5px;
-  background-color: #000;
-  border: 3px solid #999;
+  background-color: var(--cabaret);
 }
 
 .Navigation-buttonMenu:hover {
-  background-color: #000;
-  border: 5px solid #fff;
+  border: 3px solid #fff;
 }
 
 .Navigation-buttonMenu-lineClose {
   height: 4px;
   border-radius: 10px;
   width: 80%;
-  background-color: #2a394e;
   margin-block: 2px;
-  background-color: var(--cabaret);
+  background-color: #fff;
 }
 
 
@@ -77,84 +74,4 @@
   bottom: 3px;
   left: 1px;
   transform: rotate(-50deg);
-}
-
-.fullView {
-  background-color: var(--bgFullView);
-  width: 80rem;
-  height: 39rem;
-  display: grid;
-  grid-template-columns: 40% 59%;
-  margin: auto;
-  gap: 10px;
-  display: none;
-  overflow: hidden;
-  border-radius: var(--borderRadiusSection);
-  border: 3px solid var(--borderFullView)
-}
-
-.fullView-picture,
-.fullView-boxtText {
-  padding: 10px;
-}
-
-.fullView-boxtText {
-  background-color: transparent;
-  height: 99%;
-  overflow: hidden;
-  padding-bottom: 10px;
-  overflow-y:auto;
-  border-left: 2px dashed var(--borderFullView)
-}
-
-.fullView-picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background-color: transparent;
-  overflow: hidden;
-}
-
-.fullView-picture-img {
-  border-radius: 10px;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-}
-
-.fullView-boxtText .subTitle-h2 {
-  text-align: left;
-  color: var(--fullViewText);
-}
-
-.fullView-boxtText .contentSection {
-  margin: 0;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.fullView-boxtText .boxText-p,
-.fullView-boxtText .boxList-ul li {
-  font-size: 18px;
-  color: var(--fullViewText);
-}
-
-.fullView-boxtText .boxText-p {
-  height: auto;
-}
-
-.fullView-boxtText .boxText {
-  height: auto;
-
-}
-
-.fullView-boxtText .boxList {
-  height: auto;
-  width: 95%;
-  margin: auto;
-  overflow: visible;
-  margin-block: 10px;
 }

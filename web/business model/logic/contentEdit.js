@@ -77,9 +77,11 @@ function windowBlurFullView(requireView, data) {
   if (requireView) {
     windowBlurImg(false, "");
     windowBlur.setAttribute("style", "display: flex;");
-    id_fullView.setAttribute("style", "display: grid;");
+    id_fullView.setAttribute("style", "display: flex;");
+    id_fullview_boxPicture.setAttribute("style", "display: none;");
     id_fullview_title.innerText = data.textTitle;
     if (data.requirePicture) {
+      //id_fullView.setAttribute("style", "display: grid;");
       id_fullview_boxPicture_img.src = data.urlPicture;
       id_fullview_boxPicture.setAttribute("style", "display: flex;");
     }
