@@ -155,31 +155,30 @@ function app() {
     urlPicture: "",
   };
 
-  const FullscreenP = {
-    text: "hola mundo",
-    children: true,
-    dad: "boxtextBoxPicture",
-  };
-
-  const FullscreenIMG = {
-    src: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
-    children: true,
-    dad: "boxtextBoxPicture",
-  };
-
-  const fullScreenList = {
+  const FullscreenSection_1 = {
+    idMain: "FS_Sct_1_",
+    classNameSc: {
+      text: "boxText",
+      picture: "fullView-picture",
+      list: "boxList",
+      grid:"grid-2"
+    },
+    boxiD: {
+      text1: `${fullScreen_Section_1.idMain}boxText1`,
+      picture1: `${fullScreen_Section_1.idMain}boxPicture1`,
+      list1: `${fullScreen_Section_1.idMain}boxList1`,
+    },
+    paragraph: "hola mundo",
+    pictureSrc:
+      "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
     list: [
       "item 1 de como comer",
       "item dos de como masticas",
       "item 3 de como correr",
       "item 5 de como saltar",
     ],
-    children: true,
-    dad: "fullScreenSection1_content",
-  }
-  createParagraph(FullscreenP);
-  createPicture(FullscreenIMG);
-  createList(fullScreenList);
+  };
+  fullScreen_Section_1(FullscreenSection_1);
 
   sectionCreate(section1);
   sectionCreate(section2);
@@ -192,3 +191,12 @@ function app() {
 
 //Customer Segments
 //value propositions
+
+function fullScreen_Section_1(FullscreenSection_1) {
+  dadAppend(
+    "boxtextBoxPicture",
+    createParagraph(FullscreenSection_1.paragraph)
+  );
+  dadAppend("boxtextBoxPicture", createPicture(FullscreenSection_1.pictureSrc));
+  dadAppend("fullScreenSection1_content", createList(FullscreenSection_1.list));
+}

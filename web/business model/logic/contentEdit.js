@@ -16,36 +16,43 @@ function createLi(idUl, list) {
   });
 }
 
-function createParagraph(data) {
+function dadAppend(id, box) {
+  let dad = document.getElementById(id);
+  dad.appendChild(box);
+  return dad;
+}
+
+function createBox(classCss, newId, display) {
+  let box = document.createElement("div");
+  box.className += classCss;
+  box.setAttribute("style", `display:${display}`)
+  box.id = newId;
+  return box.id;
+}
+
+function createParagraph(text) {
   let boxText = document.createElement("div");
   boxText.className += "boxText";
   boxText.setAttribute("style", "display: block;");
   let paragraph = document.createElement("p");
   paragraph.className += "boxText-p";
-  paragraph.innerText = data.text;
+  paragraph.innerText = text;
   boxText.appendChild(paragraph);
-  if (data.children) {
-    console.log(data.dad);
-    let dad = document.getElementById(data.dad);
-    dad.appendChild(boxText);
-  }
+  return boxText;
 }
 
-function createPicture(data) {
+function createPicture(url) {
   let picture = document.createElement("picture");
   picture.className = "fullView-picture";
   picture.setAttribute("style", "display: flex");
   let img = document.createElement("img");
   img.className += "fullView-picture-img";
-  img.src = data.src;
+  img.src = url;
   picture.appendChild(img);
-  if (data.children) {
-    let dad = document.getElementById(data.dad);
-    dad.appendChild(picture);
-  }
+  return picture;
 }
 
-function createList(data) {
+function createList(list) {
   let countEmote = 0;
   let boxLixt = document.createElement("div");
   let ul = document.createElement("ul");
@@ -53,7 +60,7 @@ function createList(data) {
   boxLixt.setAttribute("style", "display: block;");
   ul.className += "boxList-ul";
 
-  data.list.map((item) => {
+  list.map((item) => {
     let newLi = document.createElement("li");
     countEmote++;
     if (countEmote === 1) {
@@ -65,13 +72,10 @@ function createList(data) {
       countEmote = 0;
     }
   });
-  boxLixt.appendChild(ul);
-  if (data.children) {
-    console.log(data.dad);
-    let dad = document.getElementById(data.dad);
-    dad.appendChild(boxLixt);
-  }
+  return boxLixt.appendChild(ul);
 }
+
+function createCard(card) {}
 
 function windowBlurImg(bool = true, url = "") {
   const windowBlurImg = document.getElementById("windowBlurImg");
