@@ -54,7 +54,7 @@
 }
 
 .boxText-p,
-.boxList-ul li {
+.boxList-ul-li {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   color: var(--colorText);
@@ -62,7 +62,7 @@
   line-height : 25px;
 }
 
-.boxList-ul li {
+.boxList-ul-li {
   margin-block: 10px;
 }
 

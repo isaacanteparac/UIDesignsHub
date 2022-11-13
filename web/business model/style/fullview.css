@@ -84,7 +84,7 @@
 }
 
 
-.Grid-boxText {
+.card {
   padding: 10px;
   height: 20rem;
   width: 100%;
@@ -99,33 +99,33 @@
   transition: all 0.5s;
 }
 
-.Grid-boxText:hover {
+.card:hover {
   transform: translateY(-15px);
   border: 1px solid #36bc9bac;
   box-shadow: 5px 5px 5px #36bc9bac;
 }
 
-.fullView-grid-3 .Grid-boxText:nth-child(2):hover {
+.fullView-grid-3 .card:nth-child(2):hover {
   border: 1px solid #ff0745ac;
   box-shadow: 5px 5px 5px #ff0745ac;
 }
 
-.fullView-grid-3 .Grid-boxText:nth-child(3):hover {
+.fullView-grid-3 .card:nth-child(3):hover {
   border: 1px solid #ffc107ac;
   box-shadow: 5px 5px 5px #ffc107ac;
 }
 
-.fullView-grid-3 .Grid-boxText:nth-child(1) .subTitle-h2 {
+.fullView-grid-3 .card:nth-child(1) .subTitle-h2 {
   color: var(--keppek);
   font-size: 20px;
 }
 
-.fullView-grid-3 .Grid-boxText:nth-child(2) .subTitle-h2 {
+.fullView-grid-3 .card:nth-child(2) .subTitle-h2 {
   color: var(--cabaret);
   font-size: 20px;
 }
 
-.fullView-grid-3 .Grid-boxText:nth-child(3) .subTitle-h2 {
+.fullView-grid-3 .card:nth-child(3) .subTitle-h2 {
   color: var(--casablanca);
   font-size: 20px;
 }

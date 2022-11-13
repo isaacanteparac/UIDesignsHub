@@ -1,82 +1,3 @@
-function createLi(idUl, list) {
-  let countEmote = 0;
-  let ulBoxList = document.getElementById(idUl);
-  ulBoxList.innerHTML = "";
-  list.map((item) => {
-    const newLi = document.createElement("li");
-    countEmote++;
-    if (countEmote === 1) {
-      newLi.innerText = `${emote[0]} ${item}`;
-      ulBoxList.appendChild(newLi);
-    } else {
-      newLi.innerText = `${emote[1]} ${item}`;
-      ulBoxList.appendChild(newLi);
-      countEmote = 0;
-    }
-  });
-}
-
-function dadAppend(id, box) {
-  let dad = document.getElementById(id);
-  dad.appendChild(box);
-  return dad;
-}
-
-function createBox(classCss, newId, display) {
-  let box = document.createElement("div");
-  box.className += classCss;
-  box.setAttribute("style", `display:${display}`)
-  box.id = newId;
-  return box.id;
-}
-
-function createParagraph(text) {
-  let boxText = document.createElement("div");
-  boxText.className += "boxText";
-  boxText.setAttribute("style", "display: block;");
-  let paragraph = document.createElement("p");
-  paragraph.className += "boxText-p";
-  paragraph.innerText = text;
-  boxText.appendChild(paragraph);
-  return boxText;
-}
-
-function createPicture(url) {
-  let picture = document.createElement("picture");
-  picture.className = "fullView-picture";
-  picture.setAttribute("style", "display: flex");
-  let img = document.createElement("img");
-  img.className += "fullView-picture-img";
-  img.src = url;
-  picture.appendChild(img);
-  return picture;
-}
-
-function createList(list) {
-  let countEmote = 0;
-  let boxLixt = document.createElement("div");
-  let ul = document.createElement("ul");
-  boxLixt.className += "boxList";
-  boxLixt.setAttribute("style", "display: block;");
-  ul.className += "boxList-ul";
-
-  list.map((item) => {
-    let newLi = document.createElement("li");
-    countEmote++;
-    if (countEmote === 1) {
-      newLi.innerText = `${emote[0]} ${item}`;
-      ul.appendChild(newLi);
-    } else {
-      newLi.innerText = `${emote[1]} ${item}`;
-      ul.appendChild(newLi);
-      countEmote = 0;
-    }
-  });
-  return boxLixt.appendChild(ul);
-}
-
-function createCard(card) {}
-
 function windowBlurImg(bool = true, url = "") {
   const windowBlurImg = document.getElementById("windowBlurImg");
   const imgBlur = document.getElementById("imgBlur");
@@ -98,10 +19,8 @@ function windowBlurImg(bool = true, url = "") {
 function windowfullScreen(bool = true) {
   let id_fullscreen = document.getElementById("fullView");
   let btnFullScreen = document.getElementById("btnFullScreen");
-  let boxtextBoxPicture = document.getElementById("boxtextBoxPicture");
 
   if (bool) {
-    boxtextBoxPicture.setAttribute("style", "display: grid;");
     btnFullScreen.setAttribute("style", "display: none;");
     id_fullscreen.setAttribute(
       "style",
@@ -115,23 +34,26 @@ function windowfullScreen(bool = true) {
   }
 }
 
-function windowBlurFullView(requireView, data) {
+function windowBlurFullView(requireView, idFullScreenSect) {
   const idFullView = {
     id_fullView: "fullView",
-    id_fullview_title: "fullview_title",
-    id_fullview_boxText_paragraph: "fullview_boxText_paragraph",
   };
   const windowBlur = document.getElementById("windowBlurImg");
   let id_fullView = document.getElementById(idFullView.id_fullView);
-  let id_fullview_title = document.getElementById(idFullView.id_fullview_title);
-  boxtextBoxPicture.setAttribute("style", "display:flex;");
-  id_fullview_title.innerText = "";
+  let fullScreenSect = document.getElementById(idFullScreenSect);
+  let classMainFullScreen = document.querySelectorAll(".fullView-boxtText");
+
+  classMainFullScreen.forEach((display) => {
+    display.setAttribute("style", "display:none;");
+  });
+
   btnFullScreen.setAttribute("style", "display: grid;");
   if (requireView) {
     windowBlurImg(false, "");
+    fullScreenSect.setAttribute("style", "display:block;");
+
     windowBlur.setAttribute("style", "display: flex;");
     id_fullView.setAttribute("style", "display: flex;");
-    id_fullview_title.innerText = data.textTitle;
   } else {
     id_fullView.setAttribute("style", "display: none;");
   }
@@ -154,13 +76,14 @@ function sectionCreate(obejectSection) {
     id_paragraphBoxText.innerText = obejectSection.paragraph;
     //TITLE: FULL VIEW
     id_paragraphBoxText.onclick = () =>
-      windowBlurFullView(true, obejectSection);
+      windowBlurFullView(true, obejectSection.idFullScreen);
   }
   if (obejectSection.requirelist) {
     createLi(obejectSection.id_ulBoxList, obejectSection.list);
     id_boxList.setAttribute("style", "display:block;");
     //TITLE: FULL VIEW
-    id_boxList.onclick = () => windowBlurFullView(true, obejectSection);
+    id_boxList.onclick = () =>
+      windowBlurFullView(true, obejectSection.idFullScreen);
   }
   if (obejectSection.requirePicture) {
     id_imgBoxPicture.src = obejectSection.urlPicture;
@@ -168,4 +91,84 @@ function sectionCreate(obejectSection) {
       windowBlurImg(true, obejectSection.urlPicture);
     id_boxPicture.setAttribute("style", "display: flex;");
   }
+}
+
+function fullScreenSectionDefault(fullscreenSection) {
+  let fullView = document.getElementById("fullView");
+  let mainBox = createBox(
+    style.div.mainFullScreen,
+    fullscreenSection.idMain,
+    style.visible.none
+  );
+  let mainBoxContent = createBox(
+    style.div.contentFullSection,
+    fullscreenSection.idContent,
+    style.visible.flex
+  );
+  let boxTitleMain = dadAppend(
+    false,
+    createBox(
+      style.div.subTitle,
+      fullscreenSection.idMainTitle,
+      style.visible.block.flex
+    ),
+    createSubTitle(fullscreenSection.textTitle)
+  );
+
+  let boxText1 = dadAppend(
+    false,
+    createBox(
+      style.div.boxText,
+      fullscreenSection.boxiD.text1,
+      style.visible.block
+    ),
+    createParagraph(fullscreenSection.paragraph.p1)
+  );
+
+  let boxPicture1 = dadAppend(
+    false,
+    createBox(
+      style.div.boxPicture,
+      fullscreenSection.boxiD.picture1,
+      style.visible.flex
+    ),
+    createPicture(fullscreenSection.picture.img1)
+  );
+
+  let boxPicture1_boxText1 = createBox(
+    style.div.boxGrid2,
+    fullscreenSection.boxiD.picture_text1,
+    style.visible.flex
+  );
+
+  let boxList = dadAppend(
+    false,
+    createBox(
+      style.div.boxList,
+      fullscreenSection.boxiD.list1,
+      style.visible.block
+    ),
+    createList(fullscreenSection.list.l1)
+  );
+
+  let card1_1 = createCard(fullscreenSection.card.c1[0]);
+  let card1_2 = createCard(fullscreenSection.card.c1[1]);
+  let card1_3 = createCard(fullscreenSection.card.c1[2]);
+  let boxcard1 = createBox(
+    style.div.boxGrid3,
+    fullscreenSection.boxiD.card1,
+    style.visible.grid
+  );
+
+  dadAppend(false, boxcard1, card1_1);
+  dadAppend(false, boxcard1, card1_2);
+  dadAppend(false, boxcard1, card1_3);
+  dadAppend(false, boxPicture1_boxText1, boxText1);
+  dadAppend(false, boxPicture1_boxText1, boxPicture1);
+  mainBoxContent.appendChild(boxPicture1_boxText1);
+  mainBoxContent.appendChild(boxList);
+  mainBoxContent.appendChild(boxcard1);
+  mainBox.append(boxTitleMain);
+  mainBox.appendChild(mainBoxContent);
+  fullView.appendChild(mainBox);
 }
