@@ -8,9 +8,9 @@ const section1 = {
   id_boxList: "section1_boxList",
   id_ulBoxList: "section1_boxList_ul",
   textTitle: "Key Partners",
-  requireParagraph: true,
+  requireParagraph: false,
   paragraph:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   requirelist: true,
   list: [
     "item 1 de como comer",
@@ -19,8 +19,7 @@ const section1 = {
     "item 5 de como saltar",
   ],
   requirePicture: true,
-  urlPicture:
-    "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+  urlPicture: "../../../img/logo-IA-phone.png",
 };
 
 const section2 = {
@@ -43,8 +42,7 @@ const section2 = {
     "item 5 de como saltar",
   ],
   requirePicture: true,
-  urlPicture:
-    "https://aws-modapedia.vogue.es/prod/designs/v1/assets/640x960/1355.jpg",
+  urlPicture: "../../../img/logo-IA-pc.png",
 };
 
 const section3 = {
@@ -59,7 +57,7 @@ const section3 = {
   textTitle: "value propositions",
   requireParagraph: true,
   paragraph:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! ",
   requirelist: true,
   list: [
     "item 1 de como comer",
@@ -130,11 +128,11 @@ const section6 = {
   textTitle: "key resources",
   requireParagraph: true,
   paragraph:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam. Lorem ipsum dolor sit amet consectetur",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam!",
   requirelist: false,
   list: [],
   requirePicture: true,
-  urlPicture: "../../../img/logo-IA-pc.png",
+  urlPicture: "../../../img/logo-IA-square.png",
 };
 
 const section7 = {
@@ -149,7 +147,7 @@ const section7 = {
   textTitle: "channels",
   requireParagraph: true,
   paragraph:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam dolorum eos qui consequatur nam, ad tempore mollitia ut dolore! Ab quo eaque nihil necessitatibus cum debitis atque quisquam architecto.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   requirelist: false,
   list: [],
   requirePicture: false,
@@ -169,10 +167,10 @@ const FullscreenSection_1 = {
     card1: `FS_Sct_1_boxCard1`,
   },
   paragraph: {
-    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    img1: "../../../img/logo-IA-phone.png",
   },
   list: {
     l1: [
@@ -213,10 +211,10 @@ const FullscreenSection_2 = {
     card1: `FS_Sct_2_boxCard1`,
   },
   paragraph: {
-    p1: "hola DUA LIPA",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://aws-modapedia.vogue.es/prod/designs/v1/assets/640x960/1355.jpg",
+    img1: "../../../img/logo-IA-pc.png",
   },
   list: {
     l1: [
@@ -257,10 +255,10 @@ const FullscreenSection_3 = {
     card1: `FS_Sct_3_boxCard1`,
   },
   paragraph: {
-    p1: "hola DUA LIPA",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    img1: "../../../img/logo-IA-phone.png",
   },
   list: {
     l1: [
@@ -301,10 +299,10 @@ const FullscreenSection_4 = {
     card1: `FS_Sct_4_boxCard1`,
   },
   paragraph: {
-    p1: "hola DUA LIPA",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    img1: "../../../img/logo-IA-square.png",
   },
   list: {
     l1: [
@@ -345,10 +343,10 @@ const FullscreenSection_5 = {
     card1: `FS_Sct_5_boxCard1`,
   },
   paragraph: {
-    p1: "hola DUA LIPA",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    img1: "../../../img/logo-IA-pc.png",
   },
   list: {
     l1: [
@@ -389,10 +387,10 @@ const FullscreenSection_6 = {
     card1: `FS_Sct_6_boxCard1`,
   },
   paragraph: {
-    p1: "hola DUA LIPA",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    img1: "../../../img/logo-IA-square.png",
   },
   list: {
     l1: [
@@ -433,10 +431,10 @@ const FullscreenSection_7 = {
     card1: `FS_Sct_7_boxCard1`,
   },
   paragraph: {
-    p1: "hola DUA LIPA",
+    p1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus cupiditate amet temporibus laboriosam inventore, omnis corporis aperiam! Deleniti ratione incidunt voluptas odit alias saepe pariatur atque iusto tempore quis!",
   },
   picture: {
-    img1: "https://pxb.cdn.ciudadano.news/ciudadano/072022/1657726170496/dua-lipa-lipa-jpg..jpg?",
+    img1: "../../../img/logo-IA-square.png",
   },
   list: {
     l1: [

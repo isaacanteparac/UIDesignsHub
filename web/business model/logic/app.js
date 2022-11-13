@@ -1,6 +1,6 @@
 function app() {
   const idTitleMain = document.getElementById("titleMain");
-  idTitleMain.innerText = "Al fin termine";
+  idTitleMain.innerText = "business model";
 
 
   sectionCreate(section1);
