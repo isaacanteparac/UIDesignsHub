@@ -29,7 +29,15 @@
     - animation
 9. JavaScript
 
-**UI web tools 💅**
+
+### Web
+- [Screenshots](https://github.com/isaacanteparac/UI-design/blob/master/web/SCREENSHOT.md)
+- [Video](https://github.com/isaacanteparac/UI-design/tree/master/web/video)
+- [Book](https://github.com/isaacanteparac/UI-design/tree/master/web/book)
+- [Music](https://github.com/isaacanteparac/UI-design/tree/master/web/music)
+- [Urbanization](https://github.com/isaacanteparac/UI-design/tree/master/web/urbanization)
+
+### UI web tools 💅
 - [Image color picker](https://imagecolorpicker.com/es)
 - [Google foonts](https://fonts.google.com/?preview.text=EW&preview.text_type=custom)
 - [Generador de gradiente de color](https://mybrandnewlogo.com/es/generador-de-gradiente-de-color)
@@ -47,10 +55,23 @@
 - [Google Font Pairing](https://www.fontpair.co/all)
 - [Bestfolios - UX/UI design inspiration](https://www.bestfolios.com/portfolios)
 
-### Web
-- [Screenshots](https://github.com/isaacanteparac/UI-design/blob/master/web/SCREENSHOT.md)
-- [Video](https://github.com/isaacanteparac/UI-design/tree/master/web/video)
-- [Book](https://github.com/isaacanteparac/UI-design/tree/master/web/book)
-- [Music](https://github.com/isaacanteparac/UI-design/tree/master/web/music)
-- [Urbanization](https://github.com/isaacanteparac/UI-design/tree/master/web/urbanization)
+### Visual Studio Code extensions 🧩
+- [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+- [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- [MySQL/NoSQL](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)
+- [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+- [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components)
+
+### Chrome extensions 🧩
+- [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related?hl=es)
+- [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=es)
+- [Blackbox - Select. Copy. Paste & Search](https://chrome.google.com/webstore/detail/blackbox-select-copy-past/mcgbeeipkmelnpldkobichboakdfaeon?hl=es)
+- [Chrome Remote Desktop](https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai?hl=es)
+- [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=es)
+- [CSSViewer](https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce/related)
 
