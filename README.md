@@ -29,6 +29,24 @@
     - animation
 9. JavaScript
 
+**UI web tools 💅**
+- [Image color picker](https://imagecolorpicker.com/es)
+- [Google foonts](https://fonts.google.com/?preview.text=EW&preview.text_type=custom)
+- [Generador de gradiente de color](https://mybrandnewlogo.com/es/generador-de-gradiente-de-color)
+- [Convertir PNG a SVG](https://onlineconvertfree.com/es/convert-format/png-to-svg/)
+- [Adobe color](https://color.adobe.com/es/create/color-wheel)
+- [SVG Repo](https://www.svgrepo.com/svg/311167/select-all)
+- [Icons8](https://icons8.com/)
+- [SVG to REACT component](https://react-svgr.com/playground/)
+- [Box Shadow](https://www.cssmatic.com/es/box-shadow)
+- [Neumorphism](https://neumorphism.io/#e0e0e0)
+- [Deep learning color generator](https://colors.eva.design/)
+- [Buttons](https://getcssscan.com/css-buttons-examples)
+- [Only one color generates palette](https://mycolor.space/)
+- [Fsymbols](https://fsymbols.com/es/generadores/tarty/)
+- [Google Font Pairing](https://www.fontpair.co/all)
+- [Bestfolios - UX/UI design inspiration](https://www.bestfolios.com/portfolios)
+
 ### Web
 - [Screenshots](https://github.com/isaacanteparac/UI-design/blob/master/web/SCREENSHOT.md)
 - [Video](https://github.com/isaacanteparac/UI-design/tree/master/web/video)
