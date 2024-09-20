@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Comandos HDFS con Pestañas</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+
+<body>
+    <h2>Generador de Comandos HDFS</h2>
+
+    <div class="container">
+        <form id="hdfsForm">
+            <label for="carpeta">Ruta de la carpeta en HDFS:</label>
+            <input type="text" id="carpeta" name="carpeta" placeholder="ruta/hdfs/carpeta" required>
+
+            <label for="archivo">Nombre del archivo:</label>
+            <input type="text" id="archivo" name="archivo" placeholder="archivo.txt" required>
+
+            <label for="ruta_archivo">Ruta archivo externo:</label>
+            <input type="text" id="ruta_archivo" name="ruta_archivo"
+                placeholder="C:\Users\thisi\Documents\hadoop_docker\data">
+            <button type="button" onclick="generarComandos()">Generar Comandos</button>
+        </form>
+
+        <div class="inicializadorComandos" id="boxInit">
+            <h2>Run</h2>
+            <h3>Start Hadoop</h3>
+            <div class="command-box" id="boxComando0">
+                <p>start-dfs</p>
+                <button onclick="copiarTexto('boxComando0', this)">Copiar</button>
+            </div>
+            <h3>Stop Hadoop</h3>
+            <div class="command-box" id="boxComando1">
+                <p>stop-dfs</p>
+                <button onclick="copiarTexto('boxComando1', this)">Copiar</button>
+            </div>
+            <h3>Start Yarn</h3>
+            <div class="command-box" id="boxComando2">
+                <p>start-yarn</p>
+                <button onclick="copiarTexto('boxComando2', this)">Copiar</button>
+            </div>
+            <h3>Stop Yarn</h3>
+            <div class="command-box" id="boxComando3">
+                <p>stop-yarn</p>
+                <button onclick="copiarTexto('boxComando3', this)">Copiar</button>
+            </div>
+            <h3>Administracion Reporte</h3>
+            <div class="command-box" id="boxComando4">
+                <p>hdfs dfsadmin -report</p>
+                <button onclick="copiarTexto('boxComando4', this)">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab" id="tabsContainer"></div>
+
+    <div id="comandosContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
