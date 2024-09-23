@@ -1,17 +1,45 @@
+:root {
+    /* Variables para tema claro */
+    --background-color: #f3f4f6;
+    --text-color: #333;
+    --primary-color: #45a049;
+    --secondary-color: #2c3e50;
+    --input-background-color: white;
+    --input-border-color: #ddd;
+    --button-hover-color: #3e8e41;
+    --command-box-background: #f4f4f4;
+    --command-box-hover: #d4edda;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Variables para tema oscuro */
+        --background-color: #1e1e1e;
+        --text-color: #e0e0e0;
+        --primary-color: #88c379;
+        --secondary-color: #f1f1f1;
+        --input-background-color: #333;
+        --input-border-color: #555;
+        --button-hover-color: #76b767;
+        --command-box-background: #2e2e2e;
+        --command-box-hover: #447744;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 50px;
-    background-color: #f3f4f6;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 h2 {
-    color: #2c3e50;
+    color: var(--secondary-color);
 }
 
 label {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 
@@ -20,21 +48,35 @@ input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    background-color: var(--input-background-color);
+    border: 1px solid var(--input-border-color);
     border-radius: 8px;
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color)
 }
 
 input:focus {
     outline: none;
-    border-color: #45a049;
+    border-color: var(--primary-color);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+
 button {
     padding: 12px 20px;
-    background-color: #45a049;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
@@ -45,7 +87,7 @@ button {
 }
 
 button:hover {
-    background-color: #3e8e41;
+    background-color: var(--button-hover-color);
     transform: translateY(-2px);
 }
 
@@ -65,6 +107,8 @@ form {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    background-color: var(--input-background-color);
+    color: var(--text-color);
 }
 
 .tab {
@@ -86,7 +130,7 @@ form {
     cursor: pointer;
     padding: 10px 15px;
     transition: 0.3s;
-    border: 4px dashed #45a049;
+    border: 4px dashed var(--primary-color);
     color: #599c5c;
 }
 
@@ -96,7 +140,7 @@ form {
 }
 
 .tab button.active {
-    background-color: #45a049;
+    background-color: var(--primary-color);
     color: #fafafa;
 }
 
@@ -112,7 +156,7 @@ form {
 }
 
 .command-box {
-    background-color: #f4f4f4;
+    background-color: var(--command-box-background);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -123,11 +167,11 @@ form {
 
 /* Estilo que se aplicará al copiar */
 .copiado {
-    background-color: #d4edda !important;
+    background-color: var(--command-box-hover) !important;
 }
 
 .comandoLabel {
-    color: #45a049;
+    color: var(--primary-color);
     margin-right: 8px;
 }
 

@@ -76,6 +76,12 @@ h2 {
     position: relative;
 }
 
+.video_preview{
+    width: 83%;
+    border-radius: 2rem;
+    border: 4px solid #fff;
+}
+
 @media(prefers-reduced-motion: no-preference) {
     @property --angle {
         inherits: true;

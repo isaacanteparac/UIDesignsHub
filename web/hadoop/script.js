@@ -3,22 +3,27 @@ let historialComandos = {};
 function generarComandos() {
     const carpeta = document.getElementById('carpeta').value.trim();
     const archivo = document.getElementById('archivo').value.trim();
-    const rutaArchivo = document.getElementById('ruta_archivo').value.trim();
+    const copyFile = document.getElementById('copy_file').value.trim();
+    const moveFile = document.getElementById('move_file').value.trim();
 
-    if (!carpeta || !archivo) {
+    const getFile = procesarRuta(archivo)
+
+    if (!archivo && !carpeta) {
         alert("Por favor, completa los campos obligatorios.");
         return;
     }
+    console.log(getFile)
 
     const comandos = [
         { label: 'Crear directorio:', comando: `hdfs dfs -mkdir /${carpeta}` },
-        { label: 'Cargar archivo en directorio:', comando: `hdfs dfs -put ${rutaArchivo ? rutaArchivo + '/' : ''}${archivo} /${carpeta}` },
-        { label: 'Descargar archivo de directorio:', comando: `hdfs dfs -get /${carpeta}/${archivo}` },
-        { label: 'Ver contenido del archivo:', comando: `hdfs dfs -cat /${carpeta}/${archivo}` },
-        { label: 'Mover archivo dentro de directorio:', comando: `hdfs dfs -mv /${carpeta}/${archivo} /nueva/ruta/${archivo}` },
+        { label: 'Cargar archivo en directorio:', comando: `hdfs dfs -put ${archivo} /${carpeta}` },
+        { label: 'Descargar archivo de directorio:', comando: `hdfs dfs -get /${carpeta}/${getFile}` },
+        { label: 'Ver contenido del archivo:', comando: `hdfs dfs -cat /${carpeta}/${getFile}` },
+        { label: 'Copiar archivo dentro de directorio:', comando: `hdfs dfs -cp /${carpeta}/${getFile} /${copyFile}` },
+        { label: 'Mover archivo dentro de directorio:', comando: `hdfs dfs -mv /${carpeta}/${getFile} /${moveFile}` },
         { label: 'Ver espacio usado por directorio:', comando: `hdfs dfs -du -h /${carpeta}` },
         { label: 'Eliminar directorio:', comando: `hdfs dfs -rm -R /${carpeta}` },
-        { label: 'Eliminar archivo de directorio:', comando: `hdfs dfs -rm -r /${carpeta}/${archivo}` },
+        { label: 'Eliminar archivo de directorio:', comando: `hdfs dfs -rm -r /${carpeta}/${getFile}` },
         { label: 'Cambiar permisos de la carpeta:', comando: `hdfs dfs -chmod 777 /${carpeta}` },
 
     ];
@@ -30,17 +35,40 @@ function generarComandos() {
     actualizarPestañas();
 }
 
-function actualizarPestañas() {
+
+
+function procesarRuta(ruta) {
+    // Quitar comillas si las tiene
+    ruta = ruta.replace(/"/g, '');
+    archivo = ruta
+    // Verificar si contiene al menos un '\' para determinar si es una ruta
+    if (ruta.includes('\\')) {
+      // Separar la ruta por '\' y tomar el último elemento (nombre del archivo)
+      const partes = ruta.split('\\');
+      return partes[partes.length - 1];
+    } else {
+      // Si no contiene '\', se asume que es un nombre de archivo
+      return ruta;
+    }
+
+  }
+
+  function actualizarPestañas() {
     const tabsContainer = document.getElementById('tabsContainer');
     tabsContainer.innerHTML = '';
 
-    // Crear pestañas para cada ruta en el historial
+    // Actualizar los menús desplegables si hay más de 2 pestañas
+    const copySelect = document.getElementById('copySelect');
+    const moveSelect = document.getElementById('moveSelect');
+
+    copySelect.innerHTML = '<option value="">Seleccionar ruta</option>';
+    moveSelect.innerHTML = '<option value="">Seleccionar ruta</option>';
+
     Object.keys(historialComandos).forEach((ruta, index) => {
         const button = document.createElement('button');
         button.className = 'tablinks';
         button.textContent = "/" + ruta;
         button.onclick = function () {
-
             abrirPestaña(ruta);
         };
         if (index === 0) {
@@ -48,8 +76,28 @@ function actualizarPestañas() {
             abrirPestaña(ruta);
         }
         tabsContainer.appendChild(button);
+
+        // Añadir opciones a los selectores de rutas
+        const optionCopy = document.createElement('option');
+        const optionMove = document.createElement('option');
+        optionCopy.value = ruta;
+        optionMove.value = ruta;
+        optionCopy.textContent = "/" + ruta;
+        optionMove.textContent = "/" + ruta;
+        copySelect.appendChild(optionCopy);
+        moveSelect.appendChild(optionMove);
     });
+
+    // Mostrar o esconder los selectores si hay más de 2 pestañas
+    if (Object.keys(historialComandos).length > 1) {
+        copySelect.style.display = 'inline-block';
+        moveSelect.style.display = 'inline-block';
+    } else {
+        copySelect.style.display = 'none';
+        moveSelect.style.display = 'none';
+    }
 }
+
 
 function abrirPestaña(ruta) {
     const comandos = historialComandos[ruta];
@@ -79,6 +127,13 @@ function abrirPestaña(ruta) {
         currentTab.classList.add('active');
     }
 }
+
+function seleccionarRuta(inputId, selectId) {
+    const selectedValue = document.getElementById(selectId).value;
+    document.getElementById(inputId).value = selectedValue;
+}
+
+
 
 function copiarTexto(id, button) {
     const commandBox = button.parentElement;

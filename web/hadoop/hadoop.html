@@ -16,12 +16,28 @@
             <label for="carpeta">Ruta de la carpeta en HDFS:</label>
             <input type="text" id="carpeta" name="carpeta" placeholder="ruta/hdfs/carpeta" required>
 
-            <label for="archivo">Nombre del archivo:</label>
-            <input type="text" id="archivo" name="archivo" placeholder="archivo.txt" required>
+            <label for="archivo">archivo:</label>
+            <input type="text" id="archivo" name="archivo" placeholder="file.txt or C:\Users\file.txt" >
+       
 
-            <label for="ruta_archivo">Ruta archivo externo:</label>
-            <input type="text" id="ruta_archivo" name="ruta_archivo"
-                placeholder="C:\Users\thisi\Documents\hadoop_docker\data">
+
+            <label for="archivo">Ruta de copiar a..:</label>
+            <div class="input-container">
+                <input type="text" id="copy_file" name="copy_file" placeholder="ruta/hdfs/">
+                <select id="copySelect" style="display: none;" onchange="seleccionarRuta('copy_file', 'copySelect')">
+                    <option value="">Seleccionar ruta</option>
+                </select>
+            </div>
+            
+            <label for="archivo">Ruta de mover a..:</label>
+            <div class="input-container">
+                <input type="text" id="move_file" name="move_file" placeholder="ruta/hdfs/">
+                <select id="moveSelect" style="display: none;" onchange="seleccionarRuta('move_file', 'moveSelect')">
+                    <option value="">Seleccionar ruta</option>
+                </select>
+            </div>
+
+
             <button type="button" onclick="generarComandos()">Generar Comandos</button>
         </form>
 

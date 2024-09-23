@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styled.css">
+
+</head>
+<body>
+    <svg display="none">
+        <symbol id="arrow">
+            <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </symbol>
+    </svg>
+    <h1>{History}</h1>
+    <div id="timeline" class="timeline">
+        <!--<div class="btn-group">
+            <button class="btn" type="button" data-action="expand">Expand All</button>
+            <button class="btn" type="button" data-action="collapse">Collapse All</button>
+        </div>-->
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item1-name" class="timeline__meta">
+                    <!--<time class="timeline__date" datetime="1970-01-01">January 1, 1970</time><br>-->
+                    <strong class="timeline__title">Descargar</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">🐷 Hadoop 3.3.6</p>
+                    <p class="timeline__item-p">🐷 JDKu8</p>
+                    <p class="timeline__item-p">🐷 Respositorio de Github: winutils</p>
+                    <p class="timeline__item-p">🐷 App 7zip</p>
+                    <p class="timeline__item-p">🐷 Editor de texto</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false" aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item6-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2038-01-19">January 19, 2038</time><br>
+                    <strong class="timeline__title">Unix Epochalypse</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Also known as the year 2038 problem, clocks running on a 32-bit signed integer will flip from 3:14:08 AM UTC on this day to 8:45:52 PM UTC on December 13, 1901. Therefore, values only from -2,147,483,648 to 2,147,483,647 for the second are supported.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
