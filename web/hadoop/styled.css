@@ -1,5 +1,4 @@
 :root {
-    /* Variables para tema claro */
     --background-color: #f3f4f6;
     --text-color: #333;
     --primary-color: #45a049;
@@ -10,10 +9,10 @@
     --command-box-background: #f4f4f4;
     --command-box-hover: #d4edda;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Variables para tema oscuro */
+
         --background-color: #1e1e1e;
         --text-color: #e0e0e0;
         --primary-color: #88c379;
@@ -24,7 +23,7 @@
         --command-box-background: #2e2e2e;
         --command-box-hover: #447744;
     }
-}
+}*/
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -49,7 +48,7 @@ input {
     padding: 10px;
     margin-bottom: 20px;
     background-color: var(--input-background-color);
-    border: 1px solid var(--input-border-color);
+    border: 2px solid var(--input-border-color);
     border-radius: 8px;
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -66,11 +65,12 @@ input:focus {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 select {
     padding: 5px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 
@@ -112,10 +112,7 @@ form {
 }
 
 .tab {
-    margin-top: 30px;
-    border-top: 2px solid #ccc;
-    padding-block: 20px;
-    margin-block: 30px;
+    padding-block: 10px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
@@ -130,7 +127,7 @@ form {
     cursor: pointer;
     padding: 10px 15px;
     transition: 0.3s;
-    border: 4px dashed var(--primary-color);
+    border: 2px solid var(--primary-color);
     color: #599c5c;
 }
 
@@ -155,6 +152,13 @@ form {
     font-size: 1rem;
 }
 
+.separator {
+    border: none; 
+    height: 2px;
+    background-color: #ccc;
+    margin: 50px 0; 
+}
+
 .command-box {
     background-color: var(--command-box-background);
     padding: 10px;
@@ -173,6 +177,7 @@ form {
 .comandoLabel {
     color: var(--primary-color);
     margin-right: 8px;
+    font-weight:bolder;
 }
 
 .command-box p {
@@ -205,4 +210,83 @@ form {
         max-width: 100%;
         margin-left: 0;
     }
+}
+
+.boxName {
+    /*background: #DCE35B;
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);
+    background: linear-gradient(to right, #45B649, #DCE35B);
+    height: 20%;
+    border-radius: 1rem;
+    margin-block: 1rem;
+    padding-inline: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    display: none;
+}
+
+
+
+.boxName label {
+    width: 100%;
+    text-align: start;
+    color: #fff;
+}
+
+.boxName h1 {
+    color: #fff;
+  
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    margin: 0;
+    border-radius: 0;
+   /* Ajusta el padding según sea necesario */
+    height: auto;
+    backdrop-filter: blur(5px); /* Desenfoque del fondo */
+    background: rgba(69, 160, 73, 0.37); ;/* Fondo blanco semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed label{
+    display: none;
+}
+
+.fixed h1{
+    color: #000000;
+    margin-block: .625rem;
+    padding: 0;
+}
+
+select {
+    display: inline-block; /* Para que el select ocupe el espacio correcto */
+    width: 200px; /* Ajusta el ancho según lo necesites */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: 2px solid var(--input-border-color); /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background: var(--input-background-color); /* Fondo */
+    color: var(--text-color); /* Color del texto */
+    appearance: none; /* Eliminar el estilo por defecto */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff" width="24" height="24"><path d="M7 10l5 5 5-5z"/></svg>'); /* Flecha personalizada */
+    background-repeat: no-repeat; /* No repetir la flecha */
+    background-position: right 10px center; /* Posición de la flecha */
+    background-size: 16px; /* Tamaño de la flecha */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+select:focus {
+    outline: none; /* Eliminar el borde de enfoque predeterminado */
+    border-color: #45B649; /* Cambiar el color del borde en foco */
+    box-shadow: 0 0 5px rgba(69, 182, 73, 0.5); /* Sombra en foco */
 }

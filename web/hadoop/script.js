@@ -12,7 +12,6 @@ function generarComandos() {
         alert("Por favor, completa los campos obligatorios.");
         return;
     }
-    console.log(getFile)
 
     const comandos = [
         { label: 'Crear directorio:', comando: `hdfs dfs -mkdir /${carpeta}` },
@@ -43,17 +42,17 @@ function procesarRuta(ruta) {
     archivo = ruta
     // Verificar si contiene al menos un '\' para determinar si es una ruta
     if (ruta.includes('\\')) {
-      // Separar la ruta por '\' y tomar el último elemento (nombre del archivo)
-      const partes = ruta.split('\\');
-      return partes[partes.length - 1];
+        // Separar la ruta por '\' y tomar el último elemento (nombre del archivo)
+        const partes = ruta.split('\\');
+        return partes[partes.length - 1];
     } else {
-      // Si no contiene '\', se asume que es un nombre de archivo
-      return ruta;
+        // Si no contiene '\', se asume que es un nombre de archivo
+        return ruta;
     }
 
-  }
+}
 
-  function actualizarPestañas() {
+function actualizarPestañas() {
     const tabsContainer = document.getElementById('tabsContainer');
     tabsContainer.innerHTML = '';
 
@@ -102,13 +101,20 @@ function procesarRuta(ruta) {
 function abrirPestaña(ruta) {
     const comandos = historialComandos[ruta];
     const comandosContainer = document.getElementById('comandosContainer');
+    const boxRuta = document.getElementById("boxRuta");
+    boxRuta.innerHTML = `
+    <label>Te encuentras en... </label>
+    <h1>📁 /${ruta} </h1>
+`;
+
+
     comandosContainer.innerHTML = '';
 
     comandos.forEach(({ label, comando }, index) => {
         const commandBox = document.createElement('div');
         commandBox.className = 'command-box';
         commandBox.innerHTML = `
-    <span class="comandoLabel">${label}</span>
+    <span class="comandoLabel">🐛 ${label}</span>
     <p> ${comando}</p>
     <button onclick="copiarTexto('comando${index}', this)">Copiar</button>
 `;
@@ -154,3 +160,14 @@ function copiarTexto(id, button) {
         commandBox.classList.remove('copiado');
     }, 1000);
 }
+
+window.addEventListener('scroll', function() {
+    const boxRuta = document.getElementById('boxRuta');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > boxRuta.offsetTop) {
+        boxRuta.classList.add('fixed');
+    } else {
+        boxRuta.classList.remove('fixed');
+    }
+});

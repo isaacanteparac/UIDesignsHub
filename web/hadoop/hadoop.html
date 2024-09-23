@@ -10,7 +10,7 @@
 
 <body>
     <h2>Generador de Comandos HDFS</h2>
-
+    <div class="tab" id="tabsContainer"></div>
     <div class="container">
         <form id="hdfsForm">
             <label for="carpeta">Ruta de la carpeta en HDFS:</label>
@@ -36,9 +36,10 @@
                     <option value="">Seleccionar ruta</option>
                 </select>
             </div>
-
-
             <button type="button" onclick="generarComandos()">Generar Comandos</button>
+
+            <div class="boxName" id="boxRuta">
+            </div>
         </form>
 
         <div class="inicializadorComandos" id="boxInit">
@@ -70,9 +71,7 @@
             </div>
         </div>
     </div>
-
-    <div class="tab" id="tabsContainer"></div>
-
+    <hr class="separator">  
     <div id="comandosContainer"></div>
 
     <script src="script.js"></script>
