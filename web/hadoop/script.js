@@ -14,16 +14,18 @@ function generarComandos() {
     }
 
     const comandos = [
-        { label: 'Crear directorio:', comando: `hdfs dfs -mkdir /${carpeta}` },
-        { label: 'Cargar archivo en directorio:', comando: `hdfs dfs -put ${archivo} /${carpeta}` },
-        { label: 'Descargar archivo de directorio:', comando: `hdfs dfs -get /${carpeta}/${getFile}` },
-        { label: 'Ver contenido del archivo:', comando: `hdfs dfs -cat /${carpeta}/${getFile}` },
-        { label: 'Copiar archivo dentro de directorio:', comando: `hdfs dfs -cp /${carpeta}/${getFile} /${copyFile}` },
-        { label: 'Mover archivo dentro de directorio:', comando: `hdfs dfs -mv /${carpeta}/${getFile} /${moveFile}` },
-        { label: 'Ver espacio usado por directorio:', comando: `hdfs dfs -du -h /${carpeta}` },
-        { label: 'Eliminar directorio:', comando: `hdfs dfs -rm -R /${carpeta}` },
-        { label: 'Eliminar archivo de directorio:', comando: `hdfs dfs -rm -r /${carpeta}/${getFile}` },
-        { label: 'Cambiar permisos de la carpeta:', comando: `hdfs dfs -chmod 777 /${carpeta}` },
+        { label: '💻🐋 Crear directorio:', comando: `hdfs dfs -mkdir /${carpeta}` },
+        { label: '🐋 Cargar a docker:', comando: `docker cp ${archivo} hadoop_docker-namenode-1:/tmp/` },
+        { label: '🐋 Cargar archivo en directorio desde docker :', comando: `hdfs dfs -put /tmp/${getFile} /${carpeta}` },
+        { label: '💻 Cargar archivo en directorio:', comando: `hdfs dfs -put ${archivo} /${carpeta}` },
+        { label: '💻🐋 Descargar archivo de directorio:', comando: `hdfs dfs -get /${carpeta}/${getFile}` },
+        { label: '💻🐋 Ver contenido del archivo:', comando: `hdfs dfs -cat /${carpeta}/${getFile}` },
+        { label: '💻🐋 Copiar archivo dentro de directorio:', comando: `hdfs dfs -cp /${carpeta}/${getFile} /${copyFile}` },
+        { label: '💻🐋 Mover archivo dentro de directorio:', comando: `hdfs dfs -mv /${carpeta}/${getFile} /${moveFile}` },
+        { label: '💻🐋 Ver espacio usado por directorio:', comando: `hdfs dfs -du -h /${carpeta}` },
+        { label: '💻🐋 Eliminar directorio:', comando: `hdfs dfs -rm -R /${carpeta}` },
+        { label: '💻🐋 Eliminar archivo de directorio:', comando: `hdfs dfs -rm -r /${carpeta}/${getFile}` },
+        { label: '💻🐋 Cambiar permisos de la carpeta:', comando: `hdfs dfs -chmod 777 /${carpeta}` },
 
     ];
 
@@ -114,7 +116,7 @@ function abrirPestaña(ruta) {
         const commandBox = document.createElement('div');
         commandBox.className = 'command-box';
         commandBox.innerHTML = `
-    <span class="comandoLabel">🐛 ${label}</span>
+    <span class="comandoLabel">${label}</span>
     <p> ${comando}</p>
     <button onclick="copiarTexto('comando${index}', this)">Copiar</button>
 `;
