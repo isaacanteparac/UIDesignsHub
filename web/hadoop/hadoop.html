@@ -16,12 +16,16 @@
             <label for="carpeta">Ruta de la carpeta en HDFS:</label>
             <input type="text" id="carpeta" name="carpeta" placeholder="ruta/hdfs/carpeta" required>
 
-            <label for="archivo">archivo:</label>
+            <label for="archivo">Archivo:</label>
             <input type="text" id="archivo" name="archivo" placeholder="file.txt or C:\Users\file.txt" >
-       
+            <label for="archivo">Nombre Jar:</label>
+            <input type="text" id="namejar" name="namejar" placeholder="WordCount-1.0-SNAPSHOT" >
+            <label for="archivo">Nombre Class ejecucion:</label>
+            <input type="text" id="classexec" name="classexec" placeholder="Main" >
+            <label for="archivo">Salida:</label>
+            <input type="text" id="exitFolder" name="exitFolder" placeholder="ruta/hdfs/carpeta" >
 
-
-            <label for="archivo">Ruta de copiar a..:</label>
+            <label for="archivo">Ruta de copiar a..</label>
             <div class="input-container">
                 <input type="text" id="copy_file" name="copy_file" placeholder="ruta/hdfs/">
                 <select id="copySelect" style="display: none;" onchange="seleccionarRuta('copy_file', 'copySelect')">
@@ -29,7 +33,7 @@
                 </select>
             </div>
             
-            <label for="archivo">Ruta de mover a..:</label>
+            <label for="archivo">Ruta de mover a...</label>
             <div class="input-container">
                 <input type="text" id="move_file" name="move_file" placeholder="ruta/hdfs/">
                 <select id="moveSelect" style="display: none;" onchange="seleccionarRuta('move_file', 'moveSelect')">
@@ -38,8 +42,7 @@
             </div>
             <button type="button" onclick="generarComandos()">Generar Comandos</button>
 
-            <div class="boxName" id="boxRuta">
-            </div>
+            <div class="boxName" id="boxRuta"></div>
         </form>
 
         <div class="inicializadorComandos" id="boxInit">

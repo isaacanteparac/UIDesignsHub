@@ -1,29 +1,32 @@
 :root {
     --background-color: #f3f4f6;
     --text-color: #333;
-    --primary-color: #45a049;
+    --primary-color: #1cba2c;
     --secondary-color: #2c3e50;
     --input-background-color: white;
     --input-border-color: #ddd;
-    --button-hover-color: #3e8e41;
+    --button-hover-color: #1b9728;
     --command-box-background: #f4f4f4;
     --command-box-hover: #d4edda;
+    --header: #000;
 }
-/*
+
 @media (prefers-color-scheme: dark) {
     :root {
 
         --background-color: #1e1e1e;
         --text-color: #e0e0e0;
-        --primary-color: #88c379;
+        --primary-color: #0066ff;
         --secondary-color: #f1f1f1;
         --input-background-color: #333;
         --input-border-color: #555;
-        --button-hover-color: #76b767;
-        --command-box-background: #2e2e2e;
-        --command-box-hover: #447744;
+        --button-hover-color: #0a4aab;
+        --command-box-background: #1e1e1e;
+        --command-box-hover: #031e469d;
+        --header: #fff;
+
     }
-}*/
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -80,7 +83,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 24px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -93,6 +96,8 @@ button:hover {
 
 button:active {
     transform: translateY(1px);
+    border-radius: 8px;
+
 }
 
 .container {
@@ -128,11 +133,11 @@ form {
     padding: 10px 15px;
     transition: 0.3s;
     border: 2px solid var(--primary-color);
-    color: #599c5c;
+    color: var(--header);
 }
 
 .tab button:hover {
-    background-color: #45a0496c;
+    background-color: var(--command-box-hover);
     color: #fff;
 }
 
@@ -175,9 +180,12 @@ form {
 }
 
 .comandoLabel {
-    color: var(--primary-color);
+    color: #fff;
     margin-right: 8px;
-    font-weight:bolder;
+    background-color: #2d2d2d;
+    padding-block: 3px;
+    padding-inline: 5px;
+    border-radius: 10px;
 }
 
 .command-box p {
@@ -227,14 +235,6 @@ form {
     display: none;
 }
 
-
-
-.boxName label {
-    width: 100%;
-    text-align: start;
-    color: #fff;
-}
-
 .boxName h1 {
     color: #fff;
   
@@ -249,23 +249,23 @@ form {
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
     margin: 0;
     border-radius: 0;
+    padding: 5px;
    /* Ajusta el padding según sea necesario */
     height: auto;
     backdrop-filter: blur(5px); /* Desenfoque del fondo */
-    background: rgba(69, 160, 73, 0.37); ;/* Fondo blanco semi-transparente */
+    background: rgba(0, 0, 0, 0.256); ;/* Fondo blanco semi-transparente */
     display: flex;
     align-items: center;
-    justify-content: center;
 }
+
 
 .fixed label{
-    display: none;
-}
+    color: var(--header);
+    width: 100%;
+    font-weight: bold;
+    text-align: start;
+    font-size: 1.5rem;
 
-.fixed h1{
-    color: #000000;
-    margin-block: .625rem;
-    padding: 0;
 }
 
 select {
